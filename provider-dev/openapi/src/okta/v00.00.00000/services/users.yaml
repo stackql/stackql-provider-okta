@@ -12508,6 +12508,12 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+        end_user_sessions:
+          operation:
+            $ref: '#/paths/~1api~1v1~1users~1me~1lifecycle~1delete_sessions/post'
+          response:
+            mediaType: ''
+            openAPIDocKey: '200'
         get_user:
           operation:
             $ref: '#/paths/~1api~1v1~1users~1{id}/get'
@@ -12544,6 +12550,19 @@ components:
           response:
             mediaType: ''
             openAPIDocKey: '200'
+        expire_password:
+          operation:
+            $ref: '#/paths/~1api~1v1~1users~1{id}~1lifecycle~1expire_password/post'
+          response:
+            mediaType: application/json
+            openAPIDocKey: '200'
+        expire_password_with_temp_password:
+          operation:
+            $ref: >-
+              #/paths/~1api~1v1~1users~1{id}~1lifecycle~1expire_password_with_temp_password/post
+          response:
+            mediaType: application/json
+            openAPIDocKey: '200'
         reactivate_user:
           operation:
             $ref: '#/paths/~1api~1v1~1users~1{id}~1lifecycle~1reactivate/post'
@@ -12555,6 +12574,12 @@ components:
             $ref: '#/paths/~1api~1v1~1users~1{id}~1lifecycle~1reset_factors/post'
           response:
             mediaType: ''
+            openAPIDocKey: '200'
+        reset_password:
+          operation:
+            $ref: '#/paths/~1api~1v1~1users~1{id}~1lifecycle~1reset_password/post'
+          response:
+            mediaType: application/json
             openAPIDocKey: '200'
         suspend_user:
           operation:
@@ -12574,6 +12599,40 @@ components:
           response:
             mediaType: ''
             openAPIDocKey: '200'
+        change_password:
+          operation:
+            $ref: >-
+              #/paths/~1api~1v1~1users~1{userId}~1credentials~1change_password/post
+          response:
+            mediaType: application/json
+            openAPIDocKey: '200'
+        change_recovery_question:
+          operation:
+            $ref: >-
+              #/paths/~1api~1v1~1users~1{userId}~1credentials~1change_recovery_question/post
+          response:
+            mediaType: application/json
+            openAPIDocKey: '200'
+        forgot_password:
+          operation:
+            $ref: >-
+              #/paths/~1api~1v1~1users~1{userId}~1credentials~1forgot_password/post
+          response:
+            mediaType: application/json
+            openAPIDocKey: '200'
+        forgot_password_set_new_password:
+          operation:
+            $ref: >-
+              #/paths/~1api~1v1~1users~1{userId}~1credentials~1forgot_password_recovery_question/post
+          response:
+            mediaType: application/json
+            openAPIDocKey: '200'
+        revoke_user_sessions:
+          operation:
+            $ref: '#/paths/~1api~1v1~1users~1{userId}~1sessions/delete'
+          response:
+            mediaType: ''
+            openAPIDocKey: '204'
       sqlVerbs:
         select:
           - $ref: '#/components/x-stackQL-resources/users/methods/list_users'
@@ -12586,31 +12645,6 @@ components:
           - $ref: '#/components/x-stackQL-resources/users/methods/delete_user'
         replace:
           - $ref: '#/components/x-stackQL-resources/users/methods/replace_user'
-    user_sessions:
-      id: okta.users.user_sessions
-      name: user_sessions
-      title: User Sessions
-      methods:
-        end_user_sessions:
-          operation:
-            $ref: '#/paths/~1api~1v1~1users~1me~1lifecycle~1delete_sessions/post'
-          response:
-            mediaType: ''
-            openAPIDocKey: '200'
-        revoke_user_sessions:
-          operation:
-            $ref: '#/paths/~1api~1v1~1users~1{userId}~1sessions/delete'
-          response:
-            mediaType: ''
-            openAPIDocKey: '204'
-      sqlVerbs:
-        select: []
-        insert: []
-        update: []
-        delete:
-          - $ref: >-
-              #/components/x-stackQL-resources/user_sessions/methods/revoke_user_sessions
-        replace: []
     app_links:
       id: okta.users.app_links
       name: app_links
@@ -12682,64 +12716,6 @@ components:
         select:
           - $ref: >-
               #/components/x-stackQL-resources/identity_providers/methods/list_user_identity_providers
-        insert: []
-        update: []
-        delete: []
-        replace: []
-    creds:
-      id: okta.users.creds
-      name: creds
-      title: Creds
-      methods:
-        expire_password:
-          operation:
-            $ref: '#/paths/~1api~1v1~1users~1{id}~1lifecycle~1expire_password/post'
-          response:
-            mediaType: application/json
-            openAPIDocKey: '200'
-        expire_password_with_temp_password:
-          operation:
-            $ref: >-
-              #/paths/~1api~1v1~1users~1{id}~1lifecycle~1expire_password_with_temp_password/post
-          response:
-            mediaType: application/json
-            openAPIDocKey: '200'
-        reset_password:
-          operation:
-            $ref: '#/paths/~1api~1v1~1users~1{id}~1lifecycle~1reset_password/post'
-          response:
-            mediaType: application/json
-            openAPIDocKey: '200'
-        change_password:
-          operation:
-            $ref: >-
-              #/paths/~1api~1v1~1users~1{userId}~1credentials~1change_password/post
-          response:
-            mediaType: application/json
-            openAPIDocKey: '200'
-        change_recovery_question:
-          operation:
-            $ref: >-
-              #/paths/~1api~1v1~1users~1{userId}~1credentials~1change_recovery_question/post
-          response:
-            mediaType: application/json
-            openAPIDocKey: '200'
-        forgot_password:
-          operation:
-            $ref: >-
-              #/paths/~1api~1v1~1users~1{userId}~1credentials~1forgot_password/post
-          response:
-            mediaType: application/json
-            openAPIDocKey: '200'
-        forgot_password_set_new_password:
-          operation:
-            $ref: >-
-              #/paths/~1api~1v1~1users~1{userId}~1credentials~1forgot_password_recovery_question/post
-          response:
-            mediaType: application/json
-            openAPIDocKey: '200'
-      sqlVerbs:
-        select: []
         insert: []
         update: []
         delete: []
@@ -13183,6 +13159,13 @@ components:
           response:
             mediaType: ''
             openAPIDocKey: '204'
+        assign_app_instance_target_to_app_admin_role_for_user:
+          operation:
+            $ref: >-
+              #/paths/~1api~1v1~1users~1{userId}~1roles~1{roleAssignmentId}~1targets~1catalog~1apps~1{appName}~1{appId}/put
+          response:
+            mediaType: ''
+            openAPIDocKey: '204'
       sqlVerbs:
         select:
           - $ref: >-
@@ -13295,26 +13278,6 @@ components:
           - $ref: >-
               #/components/x-stackQL-resources/admin_app_targets/methods/unassign_app_instance_target_from_admin_role_for_user
         replace: []
-    role_target_admin:
-      id: okta.users.role_target_admin
-      name: role_target_admin
-      title: Role Target Admin
-      methods:
-        assign_app_instance_target_to_app_admin_role_for_user:
-          operation:
-            $ref: >-
-              #/paths/~1api~1v1~1users~1{userId}~1roles~1{roleAssignmentId}~1targets~1catalog~1apps~1{appName}~1{appId}/put
-          response:
-            mediaType: ''
-            openAPIDocKey: '204'
-      sqlVerbs:
-        select: []
-        insert: []
-        update: []
-        delete: []
-        replace:
-          - $ref: >-
-              #/components/x-stackQL-resources/role_target_admin/methods/assign_app_instance_target_to_app_admin_role_for_user
     role_group_targets:
       id: okta.users.role_group_targets
       name: role_group_targets

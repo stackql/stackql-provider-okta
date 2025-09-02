@@ -863,10 +863,10 @@ components:
         errorId: sampleQPivGUj_ND5v78vbYWW
         errorCauses: []
   x-stackQL-resources:
-    preregistration_enrollments:
-      id: okta.webauthn_registration.preregistration_enrollments
-      name: preregistration_enrollments
-      title: Preregistration Enrollments
+    enrollments:
+      id: okta.webauthn_registration.enrollments
+      name: enrollments
+      title: Enrollments
       methods:
         activate_preregistration_enrollment:
           operation:
@@ -893,17 +893,6 @@ components:
           response:
             mediaType: ''
             openAPIDocKey: '204'
-      sqlVerbs:
-        select: []
-        insert: []
-        update: []
-        delete: []
-        replace: []
-    enrollments:
-      id: okta.webauthn_registration.enrollments
-      name: enrollments
-      title: Enrollments
-      methods:
         list_web_authn_preregistration_factors:
           operation:
             $ref: >-
