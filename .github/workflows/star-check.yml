@@ -26,8 +26,7 @@ jobs:
         test_query: |
           SELECT repo, count(*) as has_starred
           FROM github.activity.repo_stargazers
-          WHERE (owner = 'stackql' and repo = 'stackql') 
-             OR (owner = '${{ env.current_owner }}' and repo = '${{ env.current_repo }}')
+          WHERE owner = '${{ env.current_owner }}' and repo IN ('stackql','${{ env.current_repo }}')
           AND login = '${{ env.username }}'
           GROUP BY repo;
         expected_results_str: '[{"has_starred":"1","repo":"stackql"},{"has_starred":"1","repo":"${{ env.current_repo }}"}]'

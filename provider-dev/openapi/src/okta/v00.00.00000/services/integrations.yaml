@@ -349,7 +349,7 @@ components:
           description: >-
             The list of Okta management scopes granted to the API Service
             Integration instance. See [Okta management OAuth 2.0
-            scopes](/oauth2/#okta-admin-management).
+            scopes]https://developer.okta.com/docs/api/oauth2/#okta-admin-management.
           items:
             type: string
           example:
@@ -387,7 +387,7 @@ components:
           description: >-
             The list of Okta management scopes granted to the API Service
             Integration instance. See [Okta management OAuth 2.0
-            scopes](/oauth2/#okta-admin-management).
+            scopes]https://developer.okta.com/docs/api/oauth2/#okta-admin-management.
           items:
             type: string
           example:

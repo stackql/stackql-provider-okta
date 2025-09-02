@@ -284,7 +284,7 @@ async function testMetaRoutes() {
 
         if (!hasSelect) {
           results.nonSelectableResourceCount++;
-          results.nonSelectableResources.push(resourceName);
+          results.nonSelectableResources.push(`${resourceData.service}.${resourceName}`);
         }
 
         // Try DESCRIBE EXTENDED if available

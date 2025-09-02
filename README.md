@@ -63,7 +63,7 @@ This step analyzes the service specs and creates a CSV mapping file that defines
    - Flag operations with incomplete mappings (missing resource, method, or SQL verb)
    - Skip operations that are already fully mapped
 
-After running this command, you should review and edit the generated `all_services.csv` file to ensure all operations are properly mapped to appropriate resources.
+Update the resultant `provider-dev/config/all_services.csv` to add the `stackql_resource_name`, `stackql_method_name`, `stackql_verb` values for each operation.
 
 ### 4. Generate Provider
 
@@ -80,8 +80,11 @@ npm run generate-provider -- \
   --skip-files _well_known.yaml \
   --overwrite
 ```
+Make necessary updates to the output docs:
 
-sh provider-dev/scripts/fix_mappings_issue.sh
+```bash
+sh provider-dev/scripts/post_processing.sh
+```
 
 The `--servers` parameter defines the base URL pattern for API requests, with variables that users can customize. For Okta, this allows specifying different subdomains for different Okta instances.
 
@@ -105,12 +108,6 @@ PROVIDER_REGISTRY_ROOT_DIR="$(pwd)/provider-dev/openapi"
 npm run start-server -- --provider okta --registry $PROVIDER_REGISTRY_ROOT_DIR
 ```
 
-```bash
-PROVIDER_REGISTRY_ROOT_DIR="$(pwd)/provider-dev/openapi"
-REG_STR='{"url": "file://'${PROVIDER_REGISTRY_ROOT_DIR}'", "localDocRoot": "'${PROVIDER_REGISTRY_ROOT_DIR}'", "verifyConfig": {"nopVerify": true}}'
-./stackql shell --registry="${REG_STR}"
-```
-
 #### Test Meta Routes
 
 Test all metadata routes (services, resources, methods) in the provider:
@@ -118,109 +115,31 @@ Test all metadata routes (services, resources, methods) in the provider:
 ```bash
 npm run test-meta-routes -- okta --verbose
 ```
-
 When you're done testing, stop the StackQL server:
-
-npm run server-status
 
 ```bash
 npm run stop-server
 ```
+
+use this command to view the server status:
+
+```bash
 npm run server-status
-
-npm run test-meta-routes -- okta --verbose
-
-
-
-### 5. Generate Provider Docs
-
-
-
-
-
-These should include:
-
-- how to get the providers Open API spec (download these to the [`provider-dev/source`](provider-dev/source) dir)
-- if and how to pre process the spec if required
-- how to analyze routes and generate a mapping csv in the [`provider-dev/config`](provider-dev/config) dir
-- how to generate `stackql` extensions referencing the mapping csv using the included `openapi_to_stackql` python module
-- if an how to post process the spec if required
-
-### Steps to test the provider
-
-Steps to inspect and test the provider, such as:
-
-
-
-Provide some reference queries for the provider.
-
-
-```bash
-bash ./bin/openapi-to-stackql.sh analyze \
---input provider-dev/source/snowflake-rest-api-specs-main/specifications \
---output provider-dev/config
 ```
 
-update the resultant `provider-dev/config/all_services.csv` to add the `stackql_resource_name`, `stackql_method_name`, `stackql_verb` values for each operation, save the file as `provider-dev/config/snowflake.csv`
+#### Run test queries
 
-### 3. Pre process the specs
-
-The `common.yaml` contains schemas to be injected into all other service specs, use the following code to do this...
+Run some test queries against the provider using the `stackql shell`:
 
 ```bash
-bash ./provider-dev/scripts/pre_process.sh provider-dev/source/snowflake-rest-api-specs-main/specifications
-```
-
-### 4. Generate the provider
-
-Run the following code to generate the `snowflake` stackql provider:
-
-```bash
-bash ./bin/openapi-to-stackql.sh convert \
---input provider-dev/source/snowflake-rest-api-specs-main/specifications \
---output provider-dev/src/snowflake \
---config provider-dev/config/snowflake.csv \
---provider snowflake \
---servers '[{"url":"https://{endpoint}.snowflakecomputing.com","description":"Multi-tenant Snowflake endpoint","variables":{"endpoint":{"default":"orgid-acctid","description":"Organization and Account Name"}}}]' \
---provider-config '{"auth":{"type":"bearer","credentialsenvvar":"SNOWFLAKE_PAT" }}' \
---skip common.yaml
-```
-
-### 5. Post process the specs
-Post process the specs to remove redundant reference paths:
-
-```bash
-python3 ./provider-dev/scripts/post_process.py provider-dev/src/snowflake/v00.00.00000/services
-```
-
-### 6. Test the provider locally
-
-Download `stackql`: 
-
-```bash
-curl -L https://bit.ly/stackql-zip -O \
-&& unzip stackql-zip
-```
-
-Test the provider locally:
-
-```bash
-PROVIDER_REGISTRY_ROOT_DIR="$(pwd)"
-REG_STR='{"url": "file://'${PROVIDER_REGISTRY_ROOT_DIR}/provider-dev'", "localDocRoot": "'${PROVIDER_REGISTRY_ROOT_DIR}/provider-dev'", "verifyConfig": {"nopVerify": true}}'
+PROVIDER_REGISTRY_ROOT_DIR="$(pwd)/provider-dev/openapi"
+REG_STR='{"url": "file://'${PROVIDER_REGISTRY_ROOT_DIR}'", "localDocRoot": "'${PROVIDER_REGISTRY_ROOT_DIR}'", "verifyConfig": {"nopVerify": true}}'
 ./stackql shell --registry="${REG_STR}"
 ```
 
-```sql
-select name, owner from snowflake.database.databases where endpoint = 'OKXVNMC-VH34026';
+### 6. Publish the provider
 
-SELECT name, bytes, data_retention_time_in_days, table_type FROM snowflake.table.tables WHERE database_name = 'SNOWFLAKE_SAMPLE_DATA' AND schema_name = 'TPCH_SF10' AND endpoint = 'OKXVNMC-VH34026' order by bytes DESC;
-```
-
-### 5. Publish the provider
-
-To publish the provider push the `snowflake` dir to `providers/src` in a feature branch of the [`stackql-provider-registry`](https://github.com/stackql/stackql-provider-registry).  Follow the [registry release flow](https://github.com/stackql/stackql-provider-registry/blob/dev/docs/build-and-deployment.md).
-
-### 6. Test the provider in the `dev` registry
+To publish the provider push the `okta` dir to `providers/src` in a feature branch of the [`stackql-provider-registry`](https://github.com/stackql/stackql-provider-registry).  Follow the [registry release flow](https://github.com/stackql/stackql-provider-registry/blob/dev/docs/build-and-deployment.md).  
 
 Launch the StackQL shell:
 
@@ -229,10 +148,10 @@ export DEV_REG="{ \"url\": \"https://registry-dev.stackql.app/providers\" }"
 ./stackql --registry="${DEV_REG}" shell
 ```
 
-pull the latest dev `snowflake` provider:
+pull the latest dev `okta` provider:
 
 ```sql
-registry pull snowflake;
+registry pull okta;
 ```
 
 Run some test queries
@@ -240,11 +159,9 @@ Run some test queries
 ### 7. Generate web docs
 
 ```bash
-rm -rf ./website/docs/*
-npm i
 npm run generate-docs -- \
-  --provider-name snowflake \
-  --provider-dir ./provider-dev/src/snowflake/v00.00.00000 \
+  --provider-name okta \
+  --provider-dir ./provider-dev/openapi/src/okta/v00.00.00000 \
   --output-dir ./website \
   --provider-data-dir ./provider-dev/docgen/provider-data
 ```  
@@ -255,3 +172,11 @@ npm run generate-docs -- \
 cd website
 yarn start
 ```
+
+## License
+
+MIT
+
+## Contributing
+
+Contributions to the Okta provider are welcome! Please feel free to submit a Pull Request.

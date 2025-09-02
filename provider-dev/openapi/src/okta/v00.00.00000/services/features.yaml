@@ -179,7 +179,7 @@ paths:
 
 
         ![State transitions of a
-        feature](../../../../../images/features/update-ssfeat-flowchart.png
+        feature](/img/update-ssfeat-flowchart.png
         '#width=500px;')
       operationId: updateFeatureLifecycle
       parameters:
