@@ -698,3 +698,9 @@ zones.yaml,/api/v1/zones,createNetworkZone,create_network_zone,post,NetworkZone,
 zones.yaml,/api/v1/zones/{zoneId},replaceNetworkZone,replace_network_zone,put,NetworkZone,NetworkZone,network_zone,network_zones,replace_network_zone,replace
 zones.yaml,/api/v1/zones,listNetworkZones,list_network_zones,get,NetworkZone,NetworkZone,network_zone,network_zones,list_network_zones,select
 zones.yaml,/api/v1/zones/{zoneId},getNetworkZone,get_network_zone,get,NetworkZone,NetworkZone,network_zone,network_zones,get_network_zone,select
+_well_known.yaml,/.well-known/app-authenticator-configuration,getWellKnownAppAuthenticatorConfiguration,get_well_known_app_authenticator_configuration,get,WellKnownAppAuthenticatorConfiguration,Authenticator,authenticator,,,
+_well_known.yaml,/.well-known/apple-app-site-association,getAppleAppSiteAssociationWellKnownURI,get_apple_app_site_association_well_known_uri,get,PublicAppleAppSiteWellKnownURI,AssociatedDomainCustomizations,associated_domain_customizations,,,
+_well_known.yaml,/.well-known/assetlinks.json,getAssetLinksWellKnownURI,get_asset_links_well_known_uri,get,PublicAssetLinksWellKnownURI,AssociatedDomainCustomizations,associated_domain_customizations,,,
+_well_known.yaml,/.well-known/okta-organization,getWellknownOrgMetadata,get_wellknown_org_metadata,get,WellKnownOrgMetadata,OrgSettingMetadata,org_setting_metadata,,,
+_well_known.yaml,/.well-known/ssf-configuration,getWellknownSsfMetadata,get_wellknown_ssf_metadata,get,WellKnownSSFMetadata,SSFTransmitter,ssftransmitter,,,
+_well_known.yaml,/.well-known/webauthn,getWebAuthnWellKnownURI,get_web_authn_well_known_uri,get,PublicWebauthnSiteWellKnownURI,AssociatedDomainCustomizations,associated_domain_customizations,,,

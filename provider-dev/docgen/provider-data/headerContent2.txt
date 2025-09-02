@@ -4,10 +4,10 @@ See also:
 
 ## Installation
 
-To pull the latest version of the `snowflake` provider, run the following command:  
+To pull the latest version of the `okta` provider, run the following command:  
 
 ```bash
-REGISTRY PULL snowflake;
+REGISTRY PULL okta;
 ```
 > To view previous provider versions or to pull a specific provider version, see [here](https://stackql.io/docs/language-spec/registry).  
 
@@ -15,8 +15,8 @@ REGISTRY PULL snowflake;
 
 The following system environment variables are used for authentication by default:  
 
-- <CopyableCode code="SNOWFLAKE_PAT" /> - Snowflake Programmatic Access Token (PAT) (see <a href="https://docs.snowflake.com/developer-guide/snowflake-rest-api/authentication#using-a-programmatic-access-token-pat">Using a programmatic access token (PAT)</a>)
-
+- <CopyableCode code="OKTA_API_TOKEN" /> - Okta API Token (see <a href="https://developer.okta.com/docs/guides/create-an-api-token/">Creating an Okta API Token</a>)
+  
 These variables are sourced at runtime (from the local machine or as CI variables/secrets).  
 
 <details>
@@ -27,7 +27,7 @@ To use different environment variables (instead of the defaults), use the `--aut
 
 ```bash
 
-AUTH='{ "snowflake": { "type": "bearer",  "credentialsenvvar": "YOUR_SNOWFLAKE_PAT_VAR" }}'
+AUTH='{ "okta": { "type": "api_key", "valuePrefix": "SSWS ", "credentialsenvvar": "YOUR_OKTA_API_TOKEN_VAR" }}'
 stackql shell --auth="${AUTH}"
 
 ```
@@ -35,8 +35,18 @@ or using PowerShell:
 
 ```powershell
 
-$Auth = "{ 'snowflake': { 'type': 'bearer',  'credentialsenvvar': 'YOUR_SNOWFLAKE_PAT_VAR' }}"
+$Auth = "{ 'okta': { 'type': 'api_key',  'valuePrefix': 'SSWS ', 'credentialsenvvar': 'YOUR_OKTA_API_TOKEN_VAR' }}"
 stackql.exe shell --auth=$Auth
 
 ```
 </details>
+
+
+## Server Parameters
+
+
+The following parameter is required for the `okta` provider:  
+
+- <CopyableCode code="subdomain" /> - The Okta tenant domain, for example <code>my-company</code> would be supplied if your Okta domain is <code>my-company.okta.com</code>
+
+This parameter must be supplied to the `WHERE` clause of each `SELECT` statement.

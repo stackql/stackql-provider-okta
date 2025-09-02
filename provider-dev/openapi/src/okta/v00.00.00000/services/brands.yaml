@@ -894,7 +894,7 @@ paths:
                 type: string
               description: >-
                 The pagination header containing links to the current and next
-                page of results. See [Pagination](/#pagination) for more
+                page of results. See [Pagination]https://developer.okta.com/docs/api#pagination for more
                 information.
         '403':
           $ref: '#/components/responses/ErrorAccessDenied403'

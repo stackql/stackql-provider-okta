@@ -1,19 +1,19 @@
 ---
-title: snowflake
+title: okta
 hide_title: false
 hide_table_of_contents: false
 keywords:
-  - snowflake
+  - okta
   - stackql
   - infrastructure-as-code
   - configuration-as-data
   - cloud inventory
-description: Query, deploy and manage Snowflake resources using SQL
+description: Query, deploy and manage Okta resources using SQL
 custom_edit_url: null
-image: /img/stackql-snowflake-provider-featured-image.png
+image: /img/stackql-okta-provider-featured-image.png
 id: 'provider-intro'
 ---
 
 import CopyableCode from '@site/src/components/CopyableCode/CopyableCode';
 
-Snowflake for managing data warehousing, analytics, and secure data sharing with scalable cloud-native architecture and pay-as-you-go pricing.
+Authentication and authorization services.  
