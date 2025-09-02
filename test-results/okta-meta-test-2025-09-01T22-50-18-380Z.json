@@ -1,0 +1,855 @@
+{
+  "provider": "okta",
+  "timestamp": "2025-09-01T22:50:16.600Z",
+  "serverInfo": {},
+  "services": [
+    {
+      "name": "_well_known",
+      "title": "_well_known API",
+      "resourceCount": 6
+    },
+    {
+      "name": "agentpools",
+      "title": "agentpools API",
+      "resourceCount": 0
+    },
+    {
+      "name": "api_tokens",
+      "title": "api_tokens API",
+      "resourceCount": 0
+    },
+    {
+      "name": "apps",
+      "title": "apps API",
+      "resourceCount": 0
+    },
+    {
+      "name": "attack_protection",
+      "title": "attack_protection API",
+      "resourceCount": 2
+    },
+    {
+      "name": "authenticators",
+      "title": "authenticators API",
+      "resourceCount": 0
+    },
+    {
+      "name": "authorizationservers",
+      "title": "authorizationservers API",
+      "resourceCount": 0
+    },
+    {
+      "name": "behaviors",
+      "title": "behaviors API",
+      "resourceCount": 0
+    },
+    {
+      "name": "brands",
+      "title": "brands API",
+      "resourceCount": 0
+    },
+    {
+      "name": "captchas",
+      "title": "captchas API",
+      "resourceCount": 0
+    },
+    {
+      "name": "device_access",
+      "title": "device_access API",
+      "resourceCount": 2
+    },
+    {
+      "name": "device_assurances",
+      "title": "device_assurances API",
+      "resourceCount": 0
+    },
+    {
+      "name": "device_integrations",
+      "title": "device_integrations API",
+      "resourceCount": 0
+    },
+    {
+      "name": "device_posture_checks",
+      "title": "device_posture_checks API",
+      "resourceCount": 0
+    },
+    {
+      "name": "devices",
+      "title": "devices API",
+      "resourceCount": 0
+    },
+    {
+      "name": "directories",
+      "title": "directories API",
+      "resourceCount": 0
+    },
+    {
+      "name": "domains",
+      "title": "domains API",
+      "resourceCount": 0
+    },
+    {
+      "name": "email_domains",
+      "title": "email_domains API",
+      "resourceCount": 0
+    },
+    {
+      "name": "email_servers",
+      "title": "email_servers API",
+      "resourceCount": 0
+    },
+    {
+      "name": "eventhooks",
+      "title": "eventhooks API",
+      "resourceCount": 0
+    },
+    {
+      "name": "features",
+      "title": "features API",
+      "resourceCount": 0
+    },
+    {
+      "name": "first_party_app_settings",
+      "title": "first_party_app_settings API",
+      "resourceCount": 0
+    },
+    {
+      "name": "groups",
+      "title": "groups API",
+      "resourceCount": 0
+    },
+    {
+      "name": "hook_keys",
+      "title": "hook_keys API",
+      "resourceCount": 0
+    },
+    {
+      "name": "iam",
+      "title": "iam API",
+      "resourceCount": 0
+    },
+    {
+      "name": "identity_sources",
+      "title": "identity_sources API",
+      "resourceCount": 0
+    },
+    {
+      "name": "idps",
+      "title": "idps API",
+      "resourceCount": 0
+    },
+    {
+      "name": "inlinehooks",
+      "title": "inlinehooks API",
+      "resourceCount": 0
+    },
+    {
+      "name": "integrations",
+      "title": "integrations API",
+      "resourceCount": 0
+    },
+    {
+      "name": "logs",
+      "title": "logs API",
+      "resourceCount": 1
+    },
+    {
+      "name": "logstreams",
+      "title": "logstreams API",
+      "resourceCount": 0
+    },
+    {
+      "name": "mappings",
+      "title": "mappings API",
+      "resourceCount": 0
+    },
+    {
+      "name": "meta",
+      "title": "meta API",
+      "resourceCount": 0
+    },
+    {
+      "name": "oauth2",
+      "title": "oauth2 API",
+      "resourceCount": 0
+    },
+    {
+      "name": "okta_personal_settings",
+      "title": "okta_personal_settings API",
+      "resourceCount": 3
+    },
+    {
+      "name": "org",
+      "title": "org API",
+      "resourceCount": 0
+    },
+    {
+      "name": "orgs",
+      "title": "orgs API",
+      "resourceCount": 1
+    },
+    {
+      "name": "policies",
+      "title": "policies API",
+      "resourceCount": 0
+    },
+    {
+      "name": "principal_rate_limits",
+      "title": "principal_rate_limits API",
+      "resourceCount": 0
+    },
+    {
+      "name": "privileged_access",
+      "title": "privileged_access API",
+      "resourceCount": 0
+    },
+    {
+      "name": "push_providers",
+      "title": "push_providers API",
+      "resourceCount": 0
+    },
+    {
+      "name": "rate_limit_settings",
+      "title": "rate_limit_settings API",
+      "resourceCount": 3
+    },
+    {
+      "name": "realm_assignments",
+      "title": "realm_assignments API",
+      "resourceCount": 0
+    },
+    {
+      "name": "realms",
+      "title": "realms API",
+      "resourceCount": 0
+    },
+    {
+      "name": "risk",
+      "title": "risk API",
+      "resourceCount": 0
+    },
+    {
+      "name": "roles",
+      "title": "roles API",
+      "resourceCount": 0
+    },
+    {
+      "name": "security",
+      "title": "security API",
+      "resourceCount": 1
+    },
+    {
+      "name": "security_events_providers",
+      "title": "security_events_providers API",
+      "resourceCount": 0
+    },
+    {
+      "name": "sessions",
+      "title": "sessions API",
+      "resourceCount": 0
+    },
+    {
+      "name": "ssf",
+      "title": "ssf API",
+      "resourceCount": 2
+    },
+    {
+      "name": "templates",
+      "title": "templates API",
+      "resourceCount": 0
+    },
+    {
+      "name": "threats",
+      "title": "threats API",
+      "resourceCount": 1
+    },
+    {
+      "name": "trustedorigins",
+      "title": "trustedorigins API",
+      "resourceCount": 0
+    },
+    {
+      "name": "users",
+      "title": "users API",
+      "resourceCount": 0
+    },
+    {
+      "name": "webauthn_registration",
+      "title": "webauthn_registration API",
+      "resourceCount": 0
+    },
+    {
+      "name": "zones",
+      "title": "zones API",
+      "resourceCount": 0
+    }
+  ],
+  "resources": [
+    {
+      "name": "app_authenticator_configuration",
+      "service": "_well_known",
+      "fqrn": "okta._well_known.app_authenticator_configuration",
+      "selectable": true,
+      "methodCount": 1,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 1
+        }
+      ],
+      "columnCount": 10,
+      "extendedColumnCount": 10,
+      "extendedMethodCount": 1
+    },
+    {
+      "name": "app_site_association_uri",
+      "service": "_well_known",
+      "fqrn": "okta._well_known.app_site_association_uri",
+      "selectable": true,
+      "methodCount": 1,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 1
+        }
+      ],
+      "extendedMethodCount": 1
+    },
+    {
+      "name": "asset_links_uri",
+      "service": "_well_known",
+      "fqrn": "okta._well_known.asset_links_uri",
+      "selectable": true,
+      "methodCount": 1,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 1
+        }
+      ],
+      "extendedMethodCount": 1
+    },
+    {
+      "name": "org_metadata",
+      "service": "_well_known",
+      "fqrn": "okta._well_known.org_metadata",
+      "selectable": true,
+      "methodCount": 1,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 1
+        }
+      ],
+      "columnCount": 3,
+      "extendedColumnCount": 3,
+      "extendedMethodCount": 1
+    },
+    {
+      "name": "ssf_metadata",
+      "service": "_well_known",
+      "fqrn": "okta._well_known.ssf_metadata",
+      "selectable": true,
+      "methodCount": 1,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 1
+        }
+      ],
+      "columnCount": 8,
+      "extendedColumnCount": 8,
+      "extendedMethodCount": 1
+    },
+    {
+      "name": "web_authn_uri",
+      "service": "_well_known",
+      "fqrn": "okta._well_known.web_authn_uri",
+      "selectable": true,
+      "methodCount": 1,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 1
+        }
+      ],
+      "extendedMethodCount": 1
+    },
+    {
+      "name": "authenticator_settings",
+      "service": "attack_protection",
+      "fqrn": "okta.attack_protection.authenticator_settings",
+      "selectable": true,
+      "methodCount": 2,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 2
+        }
+      ],
+      "columnCount": 1,
+      "extendedColumnCount": 1,
+      "extendedMethodCount": 2
+    },
+    {
+      "name": "lockout_settings",
+      "service": "attack_protection",
+      "fqrn": "okta.attack_protection.lockout_settings",
+      "selectable": true,
+      "methodCount": 2,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 2
+        }
+      ],
+      "columnCount": 1,
+      "extendedColumnCount": 1,
+      "extendedMethodCount": 2
+    },
+    {
+      "name": "mfa_challenge_org_setting",
+      "service": "device_access",
+      "fqrn": "okta.device_access.mfa_challenge_org_setting",
+      "selectable": true,
+      "methodCount": 2,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 2
+        }
+      ],
+      "columnCount": 1,
+      "extendedColumnCount": 1,
+      "extendedMethodCount": 2
+    },
+    {
+      "name": "mfa_recovery_pin_setting",
+      "service": "device_access",
+      "fqrn": "okta.device_access.mfa_recovery_pin_setting",
+      "selectable": true,
+      "methodCount": 2,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 2
+        }
+      ],
+      "columnCount": 1,
+      "extendedColumnCount": 1,
+      "extendedMethodCount": 2
+    },
+    {
+      "name": "system_log_events",
+      "service": "logs",
+      "fqrn": "okta.logs.system_log_events",
+      "selectable": true,
+      "methodCount": 1,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 1
+        }
+      ],
+      "columnCount": 16,
+      "extendedColumnCount": 16,
+      "extendedMethodCount": 1
+    },
+    {
+      "name": "blocked_email_domains",
+      "service": "okta_personal_settings",
+      "fqrn": "okta.okta_personal_settings.blocked_email_domains",
+      "selectable": true,
+      "methodCount": 1,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 1
+        }
+      ],
+      "extendedMethodCount": 1
+    },
+    {
+      "name": "personal_apps_export_block_list",
+      "service": "okta_personal_settings",
+      "fqrn": "okta.okta_personal_settings.personal_apps_export_block_list",
+      "selectable": true,
+      "methodCount": 1,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 1
+        }
+      ],
+      "columnCount": 1,
+      "extendedColumnCount": 1,
+      "extendedMethodCount": 1
+    },
+    {
+      "name": "settings",
+      "service": "okta_personal_settings",
+      "fqrn": "okta.okta_personal_settings.settings",
+      "selectable": true,
+      "methodCount": 1,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 1
+        }
+      ],
+      "extendedMethodCount": 1
+    },
+    {
+      "name": "child_orgs",
+      "service": "orgs",
+      "fqrn": "okta.orgs.child_orgs",
+      "selectable": true,
+      "methodCount": 1,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 1
+        }
+      ],
+      "extendedMethodCount": 1
+    },
+    {
+      "name": "admin_notifications",
+      "service": "rate_limit_settings",
+      "fqrn": "okta.rate_limit_settings.admin_notifications",
+      "selectable": true,
+      "methodCount": 2,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 2
+        }
+      ],
+      "columnCount": 1,
+      "extendedColumnCount": 1,
+      "extendedMethodCount": 2
+    },
+    {
+      "name": "rate_limit_settings_per_client",
+      "service": "rate_limit_settings",
+      "fqrn": "okta.rate_limit_settings.rate_limit_settings_per_client",
+      "selectable": true,
+      "methodCount": 2,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 2
+        }
+      ],
+      "columnCount": 2,
+      "extendedColumnCount": 2,
+      "extendedMethodCount": 2
+    },
+    {
+      "name": "warning_thresholds",
+      "service": "rate_limit_settings",
+      "fqrn": "okta.rate_limit_settings.warning_thresholds",
+      "selectable": true,
+      "methodCount": 2,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 2
+        }
+      ],
+      "columnCount": 1,
+      "extendedColumnCount": 1,
+      "extendedMethodCount": 2
+    },
+    {
+      "name": "ssf_security_event_tokens",
+      "service": "security",
+      "fqrn": "okta.security.ssf_security_event_tokens",
+      "selectable": true,
+      "methodCount": 1,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 1
+        }
+      ],
+      "extendedMethodCount": 1
+    },
+    {
+      "name": "ssf_stream_status",
+      "service": "ssf",
+      "fqrn": "okta.ssf.ssf_stream_status",
+      "selectable": true,
+      "methodCount": 1,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 1
+        }
+      ],
+      "columnCount": 2,
+      "extendedColumnCount": 2,
+      "extendedMethodCount": 1
+    },
+    {
+      "name": "ssf_streams",
+      "service": "ssf",
+      "fqrn": "okta.ssf.ssf_streams",
+      "selectable": true,
+      "methodCount": 6,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 6
+        }
+      ],
+      "columnCount": 9,
+      "extendedColumnCount": 9,
+      "extendedMethodCount": 6
+    },
+    {
+      "name": "current_configuration",
+      "service": "threats",
+      "fqrn": "okta.threats.current_configuration",
+      "selectable": true,
+      "methodCount": 2,
+      "sqlVerbs": [
+        {
+          "verb": "exec",
+          "count": 2
+        }
+      ],
+      "columnCount": 5,
+      "extendedColumnCount": 5,
+      "extendedMethodCount": 2
+    }
+  ],
+  "methods": [
+    {
+      "resource": "app_authenticator_configuration",
+      "service": "_well_known",
+      "sqlVerb": "exec",
+      "fqrn": "okta._well_known.app_authenticator_configuration"
+    },
+    {
+      "resource": "app_site_association_uri",
+      "service": "_well_known",
+      "sqlVerb": "exec",
+      "fqrn": "okta._well_known.app_site_association_uri"
+    },
+    {
+      "resource": "asset_links_uri",
+      "service": "_well_known",
+      "sqlVerb": "exec",
+      "fqrn": "okta._well_known.asset_links_uri"
+    },
+    {
+      "resource": "org_metadata",
+      "service": "_well_known",
+      "sqlVerb": "exec",
+      "fqrn": "okta._well_known.org_metadata"
+    },
+    {
+      "resource": "ssf_metadata",
+      "service": "_well_known",
+      "sqlVerb": "exec",
+      "fqrn": "okta._well_known.ssf_metadata"
+    },
+    {
+      "resource": "web_authn_uri",
+      "service": "_well_known",
+      "sqlVerb": "exec",
+      "fqrn": "okta._well_known.web_authn_uri"
+    },
+    {
+      "resource": "authenticator_settings",
+      "service": "attack_protection",
+      "sqlVerb": "exec",
+      "fqrn": "okta.attack_protection.authenticator_settings"
+    },
+    {
+      "resource": "authenticator_settings",
+      "service": "attack_protection",
+      "sqlVerb": "exec",
+      "fqrn": "okta.attack_protection.authenticator_settings"
+    },
+    {
+      "resource": "lockout_settings",
+      "service": "attack_protection",
+      "sqlVerb": "exec",
+      "fqrn": "okta.attack_protection.lockout_settings"
+    },
+    {
+      "resource": "lockout_settings",
+      "service": "attack_protection",
+      "sqlVerb": "exec",
+      "fqrn": "okta.attack_protection.lockout_settings"
+    },
+    {
+      "resource": "mfa_challenge_org_setting",
+      "service": "device_access",
+      "sqlVerb": "exec",
+      "fqrn": "okta.device_access.mfa_challenge_org_setting"
+    },
+    {
+      "resource": "mfa_challenge_org_setting",
+      "service": "device_access",
+      "sqlVerb": "exec",
+      "fqrn": "okta.device_access.mfa_challenge_org_setting"
+    },
+    {
+      "resource": "mfa_recovery_pin_setting",
+      "service": "device_access",
+      "sqlVerb": "exec",
+      "fqrn": "okta.device_access.mfa_recovery_pin_setting"
+    },
+    {
+      "resource": "mfa_recovery_pin_setting",
+      "service": "device_access",
+      "sqlVerb": "exec",
+      "fqrn": "okta.device_access.mfa_recovery_pin_setting"
+    },
+    {
+      "resource": "system_log_events",
+      "service": "logs",
+      "sqlVerb": "exec",
+      "fqrn": "okta.logs.system_log_events"
+    },
+    {
+      "resource": "blocked_email_domains",
+      "service": "okta_personal_settings",
+      "sqlVerb": "exec",
+      "fqrn": "okta.okta_personal_settings.blocked_email_domains"
+    },
+    {
+      "resource": "personal_apps_export_block_list",
+      "service": "okta_personal_settings",
+      "sqlVerb": "exec",
+      "fqrn": "okta.okta_personal_settings.personal_apps_export_block_list"
+    },
+    {
+      "resource": "settings",
+      "service": "okta_personal_settings",
+      "sqlVerb": "exec",
+      "fqrn": "okta.okta_personal_settings.settings"
+    },
+    {
+      "resource": "child_orgs",
+      "service": "orgs",
+      "sqlVerb": "exec",
+      "fqrn": "okta.orgs.child_orgs"
+    },
+    {
+      "resource": "admin_notifications",
+      "service": "rate_limit_settings",
+      "sqlVerb": "exec",
+      "fqrn": "okta.rate_limit_settings.admin_notifications"
+    },
+    {
+      "resource": "admin_notifications",
+      "service": "rate_limit_settings",
+      "sqlVerb": "exec",
+      "fqrn": "okta.rate_limit_settings.admin_notifications"
+    },
+    {
+      "resource": "rate_limit_settings_per_client",
+      "service": "rate_limit_settings",
+      "sqlVerb": "exec",
+      "fqrn": "okta.rate_limit_settings.rate_limit_settings_per_client"
+    },
+    {
+      "resource": "rate_limit_settings_per_client",
+      "service": "rate_limit_settings",
+      "sqlVerb": "exec",
+      "fqrn": "okta.rate_limit_settings.rate_limit_settings_per_client"
+    },
+    {
+      "resource": "warning_thresholds",
+      "service": "rate_limit_settings",
+      "sqlVerb": "exec",
+      "fqrn": "okta.rate_limit_settings.warning_thresholds"
+    },
+    {
+      "resource": "warning_thresholds",
+      "service": "rate_limit_settings",
+      "sqlVerb": "exec",
+      "fqrn": "okta.rate_limit_settings.warning_thresholds"
+    },
+    {
+      "resource": "ssf_security_event_tokens",
+      "service": "security",
+      "sqlVerb": "exec",
+      "fqrn": "okta.security.ssf_security_event_tokens"
+    },
+    {
+      "resource": "ssf_stream_status",
+      "service": "ssf",
+      "sqlVerb": "exec",
+      "fqrn": "okta.ssf.ssf_stream_status"
+    },
+    {
+      "resource": "ssf_streams",
+      "service": "ssf",
+      "sqlVerb": "exec",
+      "fqrn": "okta.ssf.ssf_streams"
+    },
+    {
+      "resource": "ssf_streams",
+      "service": "ssf",
+      "sqlVerb": "exec",
+      "fqrn": "okta.ssf.ssf_streams"
+    },
+    {
+      "resource": "ssf_streams",
+      "service": "ssf",
+      "sqlVerb": "exec",
+      "fqrn": "okta.ssf.ssf_streams"
+    },
+    {
+      "resource": "ssf_streams",
+      "service": "ssf",
+      "sqlVerb": "exec",
+      "fqrn": "okta.ssf.ssf_streams"
+    },
+    {
+      "resource": "ssf_streams",
+      "service": "ssf",
+      "sqlVerb": "exec",
+      "fqrn": "okta.ssf.ssf_streams"
+    },
+    {
+      "resource": "ssf_streams",
+      "service": "ssf",
+      "sqlVerb": "exec",
+      "fqrn": "okta.ssf.ssf_streams"
+    },
+    {
+      "resource": "current_configuration",
+      "service": "threats",
+      "sqlVerb": "exec",
+      "fqrn": "okta.threats.current_configuration"
+    },
+    {
+      "resource": "current_configuration",
+      "service": "threats",
+      "sqlVerb": "exec",
+      "fqrn": "okta.threats.current_configuration"
+    }
+  ],
+  "errors": [],
+  "verbs": {
+    "exec": 35
+  },
+  "summary": {
+    "totalServices": 56,
+    "totalResources": 22,
+    "totalMethods": 35,
+    "selectableMethods": 0,
+    "insertableMethods": 0,
+    "updatableMethods": 0,
+    "deletableMethods": 0,
+    "executableMethods": 35,
+    "errors": 0
+  },
+  "executionTime": 1.778
+}
