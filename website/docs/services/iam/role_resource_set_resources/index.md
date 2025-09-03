@@ -64,8 +64,6 @@ The following fields are returned by `SELECT` queries:
 </TabItem>
 <TabItem value="get_resource_set_resource">
 
-Success
-
 <table>
 <thead>
     <tr>

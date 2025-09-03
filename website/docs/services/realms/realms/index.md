@@ -84,8 +84,6 @@ The following fields are returned by `SELECT` queries:
 </TabItem>
 <TabItem value="get_realm">
 
-Success
-
 <table>
 <thead>
     <tr>

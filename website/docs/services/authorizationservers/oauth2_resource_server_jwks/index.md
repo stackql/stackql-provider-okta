@@ -40,8 +40,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_oauth2_resource_server_json_web_keys">
 
-Success
-
 <table>
 <thead>
     <tr>

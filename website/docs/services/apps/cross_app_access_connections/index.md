@@ -40,8 +40,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="get_all_cross_app_access_connections">
 
-Success
-
 <table>
 <thead>
     <tr>
@@ -85,8 +83,6 @@ Success
 </table>
 </TabItem>
 <TabItem value="get_cross_app_access_connection">
-
-Success
 
 <table>
 <thead>

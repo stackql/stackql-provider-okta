@@ -41,8 +41,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_grants_for_user_and_client">
 
-Success
-
 <table>
 <thead>
     <tr>
@@ -117,8 +115,6 @@ Success
 </TabItem>
 <TabItem value="list_user_grants">
 
-Success
-
 <table>
 <thead>
     <tr>
@@ -192,8 +188,6 @@ Success
 </table>
 </TabItem>
 <TabItem value="get_user_grant">
-
-Success
 
 <table>
 <thead>

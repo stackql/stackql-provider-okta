@@ -40,8 +40,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_oauth2_claims">
 
-Success
-
 <table>
 <thead>
     <tr>
@@ -110,8 +108,6 @@ Success
 </table>
 </TabItem>
 <TabItem value="get_oauth2_claim">
-
-Success
 
 <table>
 <thead>

@@ -40,8 +40,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_group_rules">
 
-Success
-
 <table>
 <thead>
     <tr>
@@ -95,8 +93,6 @@ Success
 </table>
 </TabItem>
 <TabItem value="get_group_rule">
-
-Success
 
 <table>
 <thead>

@@ -40,8 +40,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_user_types">
 
-Success
-
 <table>
 <thead>
     <tr>
@@ -105,8 +103,6 @@ Success
 </table>
 </TabItem>
 <TabItem value="get_user_type">
-
-Success
 
 <table>
 <thead>

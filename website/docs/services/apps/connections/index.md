@@ -39,8 +39,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="get_default_provisioning_connection_for_application">
 
-Success
-
 <table>
 <thead>
     <tr>

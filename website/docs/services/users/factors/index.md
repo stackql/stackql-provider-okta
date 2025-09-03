@@ -41,8 +41,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_factors">
 
-Success
-
 <table>
 <thead>
     <tr>
@@ -107,8 +105,6 @@ Success
 </TabItem>
 <TabItem value="get_factor">
 
-Success
-
 <table>
 <thead>
     <tr>
@@ -122,8 +118,6 @@ Success
 </table>
 </TabItem>
 <TabItem value="get_factor_transaction_status">
-
-Success
 
 <table>
 <thead>

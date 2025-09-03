@@ -40,8 +40,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_refresh_tokens_for_user_and_client">
 
-Success
-
 <table>
 <thead>
     <tr>
@@ -110,8 +108,6 @@ Success
 </table>
 </TabItem>
 <TabItem value="get_refresh_token_for_user_and_client">
-
-Success
 
 <table>
 <thead>

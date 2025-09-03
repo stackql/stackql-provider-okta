@@ -39,8 +39,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_log_events">
 
-Success
-
 <table>
 <thead>
     <tr>

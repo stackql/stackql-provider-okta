@@ -40,8 +40,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_yubikey_otp_tokens">
 
-Success
-
 <table>
 <thead>
     <tr>
@@ -95,8 +93,6 @@ Success
 </table>
 </TabItem>
 <TabItem value="get_yubikey_otp_token_by_id">
-
-Success
 
 <table>
 <thead>

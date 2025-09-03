@@ -39,8 +39,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_users_with_role_assignments">
 
-Success
-
 <table>
 <thead>
     <tr>

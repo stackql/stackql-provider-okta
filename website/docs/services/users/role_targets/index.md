@@ -39,8 +39,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="get_role_targets_by_user_id_and_role_id">
 
-Success
-
 <table>
 <thead>
     <tr>

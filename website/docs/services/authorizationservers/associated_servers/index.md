@@ -39,8 +39,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_associated_servers_by_trusted_type">
 
-Success
-
 <table>
 <thead>
     <tr>

@@ -39,8 +39,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_okta_support_cases">
 
-Success
-
 <table>
 <thead>
     <tr>

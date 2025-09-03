@@ -39,8 +39,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="get_public_key">
 
-Success
-
 <table>
 <thead>
     <tr>

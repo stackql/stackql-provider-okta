@@ -39,8 +39,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_assigned_applications_for_group">
 
-Success
-
 <table>
 <thead>
     <tr>

@@ -40,8 +40,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_csrs_for_identity_provider">
 
-Success
-
 <table>
 <thead>
     <tr>
@@ -80,8 +78,6 @@ Success
 </table>
 </TabItem>
 <TabItem value="get_csr_for_identity_provider">
-
-Success
 
 <table>
 <thead>
