@@ -64,8 +64,6 @@ The following fields are returned by `SELECT` queries:
 </TabItem>
 <TabItem value="get_email_domain">
 
-Success
-
 <table>
 <thead>
     <tr>

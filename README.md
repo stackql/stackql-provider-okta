@@ -170,8 +170,20 @@ npm run generate-docs -- \
 
 ```bash
 cd website
+# test build
+yarn build
+
+# run local dev server
 yarn start
 ```
+
+### 9. Publish web docs to GitHub Pages
+
+Under __Pages__ in the repository, in the __Build and deployment__ section select __GitHub Actions__ as the __Source__.  In Netlify DNS create the following records:  
+
+| Source Domain | Record Type  | Target |
+|---------------|--------------|--------|
+| okta-provider.stackql.io | CNAME | stackql.github.io |
 
 ## License
 

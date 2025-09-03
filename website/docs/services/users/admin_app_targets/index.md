@@ -39,8 +39,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_application_targets_for_application_administrator_role_for_user">
 
-Success
-
 <table>
 <thead>
     <tr>

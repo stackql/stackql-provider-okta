@@ -39,8 +39,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="get_role_assignment_governance_grant">
 
-Success
-
 <table>
 <thead>
     <tr>

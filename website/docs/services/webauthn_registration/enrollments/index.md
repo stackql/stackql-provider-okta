@@ -39,8 +39,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_web_authn_preregistration_factors">
 
-Success
-
 <table>
 <thead>
     <tr>

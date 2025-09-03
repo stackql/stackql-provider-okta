@@ -39,8 +39,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_org_contact_types">
 
-Success
-
 <table>
 <thead>
     <tr>

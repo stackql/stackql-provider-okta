@@ -40,8 +40,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_identity_source_sessions">
 
-Success
-
 <table>
 <thead>
     <tr>
@@ -85,8 +83,6 @@ Success
 </table>
 </TabItem>
 <TabItem value="get_identity_source_session">
-
-Success
 
 <table>
 <thead>

@@ -39,8 +39,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_oauth2_clients_for_authorization_server">
 
-Success
-
 <table>
 <thead>
     <tr>

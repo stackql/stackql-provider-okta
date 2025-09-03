@@ -39,8 +39,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_active_identity_provider_signing_key">
 
-Success
-
 <table>
 <thead>
     <tr>

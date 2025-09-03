@@ -39,8 +39,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_policy_apps">
 
-Success
-
 <table>
 <thead>
     <tr>

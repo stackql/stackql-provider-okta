@@ -39,8 +39,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_group_users">
 
-Success
-
 <table>
 <thead>
     <tr>

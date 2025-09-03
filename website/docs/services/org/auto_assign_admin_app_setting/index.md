@@ -39,8 +39,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="get_auto_assign_admin_app_setting">
 
-Success
-
 <table>
 <thead>
     <tr>

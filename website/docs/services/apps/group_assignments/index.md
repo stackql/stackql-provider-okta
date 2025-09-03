@@ -40,8 +40,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_application_group_assignments">
 
-Success
-
 <table>
 <thead>
     <tr>
@@ -85,8 +83,6 @@ Success
 </table>
 </TabItem>
 <TabItem value="get_application_group_assignment">
-
-Success
 
 <table>
 <thead>

@@ -109,8 +109,6 @@ The following fields are returned by `SELECT` queries:
 </TabItem>
 <TabItem value="get_realm_assignment">
 
-Success
-
 <table>
 <thead>
     <tr>

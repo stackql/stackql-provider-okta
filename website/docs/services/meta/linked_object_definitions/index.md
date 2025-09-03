@@ -40,8 +40,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_linked_object_definitions">
 
-Success
-
 <table>
 <thead>
     <tr>
@@ -70,8 +68,6 @@ Success
 </table>
 </TabItem>
 <TabItem value="get_linked_object_definition">
-
-Success
 
 <table>
 <thead>

@@ -40,8 +40,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_assigned_roles_for_user">
 
-Success
-
 <table>
 <thead>
     <tr>
@@ -55,8 +53,6 @@ Success
 </table>
 </TabItem>
 <TabItem value="get_user_assigned_role">
-
-Success
 
 <table>
 <thead>

@@ -39,8 +39,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="get_third_party_admin_setting">
 
-Success
-
 <table>
 <thead>
     <tr>

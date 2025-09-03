@@ -40,8 +40,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_network_zones">
 
-Success
-
 <table>
 <thead>
     <tr>
@@ -100,8 +98,6 @@ Success
 </table>
 </TabItem>
 <TabItem value="get_network_zone">
-
-Success
 
 <table>
 <thead>

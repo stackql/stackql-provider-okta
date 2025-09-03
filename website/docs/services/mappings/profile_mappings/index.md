@@ -40,8 +40,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_profile_mappings">
 
-Success
-
 <table>
 <thead>
     <tr>
@@ -75,8 +73,6 @@ Success
 </table>
 </TabItem>
 <TabItem value="get_profile_mapping">
-
-Success
 
 <table>
 <thead>

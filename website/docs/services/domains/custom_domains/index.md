@@ -40,8 +40,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_custom_domains">
 
-Success
-
 <table>
 <thead>
     <tr>
@@ -60,8 +58,6 @@ Success
 </table>
 </TabItem>
 <TabItem value="get_custom_domain">
-
-Success
 
 <table>
 <thead>

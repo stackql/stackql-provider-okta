@@ -40,8 +40,6 @@ The following fields are returned by `SELECT` queries:
 >
 <TabItem value="list_trusted_origins">
 
-Success
-
 <table>
 <thead>
     <tr>
@@ -105,8 +103,6 @@ Success
 </table>
 </TabItem>
 <TabItem value="get_trusted_origin">
-
-Success
 
 <table>
 <thead>
