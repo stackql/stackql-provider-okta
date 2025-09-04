@@ -120,14 +120,14 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_email_domain"><CopyableCode code="create_email_domain" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__displayName"><code>data__displayName</code></a>, <a href="#parameter-data__userName"><code>data__userName</code></a></td>
     <td></td>
     <td>Creates an Email Domain in your org</td>
 </tr>
 <tr>
     <td><a href="#replace_email_domain"><CopyableCode code="replace_email_domain" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__displayName"><code>data__displayName</code></a>, <a href="#parameter-data__userName"><code>data__userName</code></a></td>
     <td></td>
     <td>Replaces associated username and sender display name by `emailDomainId`</td>
 </tr>

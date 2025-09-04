@@ -110,7 +110,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_email_server"><CopyableCode code="create_email_server" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__host"><code>data__host</code></a>, <a href="#parameter-data__port"><code>data__port</code></a>, <a href="#parameter-data__username"><code>data__username</code></a>, <a href="#parameter-data__password"><code>data__password</code></a>, <a href="#parameter-data__alias"><code>data__alias</code></a></td>
     <td></td>
     <td>Creates a custom email SMTP server configuration for your org</td>
 </tr>
@@ -131,7 +131,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#test_email_server"><CopyableCode code="test_email_server" /></a></td>
     <td><CopyableCode code="exec" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-from"><code>from</code></a>, <a href="#parameter-to"><code>to</code></a></td>
     <td></td>
     <td>Tests the specified custom SMTP Server configuration</td>
 </tr>

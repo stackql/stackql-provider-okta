@@ -179,7 +179,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="exec" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
     <td></td>
-    <td>Links an Okta user to an existing SAML or social identity provider (IdP).<br /><br />The SAML IdP must have `honorPersistentNameId` set to `true` to use this API.<br />The [Name Identifier Format](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/IdentityProvider/#tag/IdentityProvider/operation/replaceIdentityProvider!path=protocol/0/settings&t=request) of the incoming assertion must be `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`.</td>
+    <td>Links an Okta user to an existing SAML or social identity provider (IdP).<br /><br />The SAML IdP must have `honorPersistentNameId` set to `true` to use this API.<br />The [Name Identifier Format](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/IdentityProvider/#tag/IdentityProvider/operation/replaceIdentityProvider!path=protocol/0/settings&t=request) of the incoming assertion must be `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`.</td>
 </tr>
 </tbody>
 </table>
@@ -305,7 +305,7 @@ WHERE subdomain = '{{ subdomain }}' --required;
 >
 <TabItem value="link_user_to_identity_provider">
 
-Links an Okta user to an existing SAML or social identity provider (IdP).<br /><br />The SAML IdP must have `honorPersistentNameId` set to `true` to use this API.<br />The [Name Identifier Format](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/IdentityProvider/#tag/IdentityProvider/operation/replaceIdentityProvider!path=protocol/0/settings&t=request) of the incoming assertion must be `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`.
+Links an Okta user to an existing SAML or social identity provider (IdP).<br /><br />The SAML IdP must have `honorPersistentNameId` set to `true` to use this API.<br />The [Name Identifier Format](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/IdentityProvider/#tag/IdentityProvider/operation/replaceIdentityProvider!path=protocol/0/settings&t=request) of the incoming assertion must be `urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`.
 
 ```sql
 EXEC okta.idps.idp_users.link_user_to_identity_provider 

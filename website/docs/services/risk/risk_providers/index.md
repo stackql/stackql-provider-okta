@@ -170,14 +170,14 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_risk_provider"><CopyableCode code="create_risk_provider" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a>, <a href="#parameter-data__clientId"><code>data__clientId</code></a>, <a href="#parameter-data__action"><code>data__action</code></a>, <a href="#parameter-data__id"><code>data__id</code></a>, <a href="#parameter-data___links"><code>data___links</code></a></td>
     <td></td>
     <td>Creates a risk provider object. You can create a maximum of three risk provider objects.</td>
 </tr>
 <tr>
     <td><a href="#replace_risk_provider"><CopyableCode code="replace_risk_provider" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a>, <a href="#parameter-data__clientId"><code>data__clientId</code></a>, <a href="#parameter-data__action"><code>data__action</code></a>, <a href="#parameter-data__id"><code>data__id</code></a>, <a href="#parameter-data___links"><code>data___links</code></a></td>
     <td></td>
     <td>Replaces the properties for a given risk provider object ID</td>
 </tr>

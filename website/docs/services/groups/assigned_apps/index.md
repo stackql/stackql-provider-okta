@@ -56,7 +56,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="_embedded" /></td>
     <td><code>object</code></td>
-    <td>Embedded resources related to the app using the [JSON Hypertext Application Language](https://datatracker.ietf.org/doc/html/draft-kelly-json-hal-06) specification. If the `expand=user/&#123;userId&#125;` query parameter is specified, then the assigned [Application User](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationUsers/) is embedded.</td>
+    <td>Embedded resources related to the app using the [JSON Hypertext Application Language](https://datatracker.ietf.org/doc/html/draft-kelly-json-hal-06) specification. If the `expand=user/&#123;userId&#125;` query parameter is specified, then the assigned [Application User](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationUsers/) is embedded.</td>
 </tr>
 <tr>
     <td><CopyableCode code="_links" /></td>
@@ -76,7 +76,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="features" /></td>
     <td><code>array</code></td>
-    <td>Enabled app features &gt; **Note:** See [Application Features](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationFeatures/) for app provisioning features. </td>
+    <td>Enabled app features &gt; **Note:** See [Application Features](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationFeatures/) for app provisioning features. </td>
 </tr>
 <tr>
     <td><CopyableCode code="label" /></td>
@@ -148,7 +148,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="select" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
     <td><a href="#parameter-after"><code>after</code></a>, <a href="#parameter-limit"><code>limit</code></a></td>
-    <td>Lists all apps that are assigned to a group. See [Application Groups API](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationGroups/).</td>
+    <td>Lists all apps that are assigned to a group. See [Application Groups API](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationGroups/).</td>
 </tr>
 </tbody>
 </table>
@@ -194,7 +194,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 >
 <TabItem value="list_assigned_applications_for_group">
 
-Lists all apps that are assigned to a group. See [Application Groups API](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationGroups/).
+Lists all apps that are assigned to a group. See [Application Groups API](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationGroups/).
 
 ```sql
 SELECT

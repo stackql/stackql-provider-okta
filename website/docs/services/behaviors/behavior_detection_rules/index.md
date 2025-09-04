@@ -170,14 +170,14 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_behavior_detection_rule"><CopyableCode code="create_behavior_detection_rule" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a>, <a href="#parameter-data__type"><code>data__type</code></a></td>
     <td></td>
     <td>Creates a new behavior detection rule</td>
 </tr>
 <tr>
     <td><a href="#replace_behavior_detection_rule"><CopyableCode code="replace_behavior_detection_rule" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a>, <a href="#parameter-data__type"><code>data__type</code></a></td>
     <td></td>
     <td>Replaces a Behavior Detection Rule by `behaviorId`</td>
 </tr>

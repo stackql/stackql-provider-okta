@@ -210,14 +210,14 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_authorization_server_policy_rule"><CopyableCode code="create_authorization_server_policy_rule" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a>, <a href="#parameter-data__conditions"><code>data__conditions</code></a>, <a href="#parameter-data__type"><code>data__type</code></a></td>
     <td></td>
     <td>Creates a policy rule for the specified Custom Authorization Server and Policy</td>
 </tr>
 <tr>
     <td><a href="#replace_authorization_server_policy_rule"><CopyableCode code="replace_authorization_server_policy_rule" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a>, <a href="#parameter-data__conditions"><code>data__conditions</code></a>, <a href="#parameter-data__type"><code>data__type</code></a></td>
     <td></td>
     <td>Replaces the configuration of the Policy Rule defined in the specified Custom Authorization Server and Policy</td>
 </tr>

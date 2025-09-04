@@ -210,14 +210,14 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_policy"><CopyableCode code="create_policy" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a>, <a href="#parameter-data__type"><code>data__type</code></a></td>
     <td><a href="#parameter-activate"><code>activate</code></a></td>
     <td>Creates a policy. There are many types of policies that you can create. See [Policies](https://developer.okta.com/docs/concepts/policies/) for an overview of the types of policies available and links to more indepth information.</td>
 </tr>
 <tr>
     <td><a href="#replace_policy"><CopyableCode code="replace_policy" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a>, <a href="#parameter-data__type"><code>data__type</code></a></td>
     <td></td>
     <td>Replaces the properties of a policy identified by `policyId`</td>
 </tr>

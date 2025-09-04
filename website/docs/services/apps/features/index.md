@@ -128,7 +128,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="select" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
     <td></td>
-    <td>Lists all features for an app<br />&gt; **Note:** This request returns an error if provisioning isn't enabled for the app.<br />&gt; To set up provisioning, see [Update the default provisioning connection](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationConnections/#tag/ApplicationConnections/operation/updateDefaultProvisioningConnectionForApplication).<br /></td>
+    <td>Lists all features for an app<br />&gt; **Note:** This request returns an error if provisioning isn't enabled for the app.<br />&gt; To set up provisioning, see [Update the default provisioning connection](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationConnections/#tag/ApplicationConnections/operation/updateDefaultProvisioningConnectionForApplication).<br /></td>
 </tr>
 <tr>
     <td><a href="#get_feature_for_application"><CopyableCode code="get_feature_for_application" /></a></td>
@@ -179,7 +179,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 >
 <TabItem value="list_features_for_application">
 
-Lists all features for an app<br />&gt; **Note:** This request returns an error if provisioning isn't enabled for the app.<br />&gt; To set up provisioning, see [Update the default provisioning connection](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationConnections/#tag/ApplicationConnections/operation/updateDefaultProvisioningConnectionForApplication).<br />
+Lists all features for an app<br />&gt; **Note:** This request returns an error if provisioning isn't enabled for the app.<br />&gt; To set up provisioning, see [Update the default provisioning connection](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationConnections/#tag/ApplicationConnections/operation/updateDefaultProvisioningConnectionForApplication).<br />
 
 ```sql
 SELECT

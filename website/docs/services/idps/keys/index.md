@@ -200,7 +200,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_identity_provider_key"><CopyableCode code="create_identity_provider_key" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__x5c"><code>data__x5c</code></a></td>
     <td></td>
     <td>Creates a new X.509 certificate credential in the identity provider (IdP) key store<br />&gt; **Note:** RSA-based certificates are supported for all IdP types. Okta currently supports EC-based certificates only for the `X509` IdP type. For EC-based certificates we support only P-256, P-384, and P-521 curves.</td>
 </tr>

@@ -52,7 +52,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_child_org"><CopyableCode code="create_child_org" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__admin"><code>data__admin</code></a>, <a href="#parameter-data__edition"><code>data__edition</code></a>, <a href="#parameter-data__name"><code>data__name</code></a>, <a href="#parameter-data__subdomain"><code>data__subdomain</code></a></td>
     <td></td>
     <td>Creates an org (child org) that has the same features as the current requesting org (parent org).<br />A child org inherits any new features added to the parent org, but new features added to the child org aren't propagated back to the parent org.<br />&gt; **Notes:**<br />&gt; * Some features associated with products, such as Atspoke, Workflows, and Okta Identity Governance, aren't propagated to the child org.<br />&gt; * Wait at least 30 seconds after a 201-Created response before you make API requests to the new child org.<br />&gt; * For rate limits, see [Org creation rate limits](https://developer.okta.com/docs/reference/rl-additional-limits/#org-creation-rate-limits).</td>
 </tr>

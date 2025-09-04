@@ -72,7 +72,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="credentials" /></td>
     <td><code>object</code></td>
-    <td>Specifies a user's credentials for the app. This parameter can be omitted for apps with [sign-on mode](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/getApplication!c=200&path=0/signOnMode&t=response) (`signOnMode`) or [authentication schemes](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/getApplication!c=200&path=0/credentials/scheme&t=response) (`credentials.scheme`) that don't require credentials. </td>
+    <td>Specifies a user's credentials for the app. This parameter can be omitted for apps with [sign-on mode](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/getApplication!c=200&path=0/signOnMode&t=response) (`signOnMode`) or [authentication schemes](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/getApplication!c=200&path=0/credentials/scheme&t=response) (`credentials.scheme`) that don't require credentials. </td>
 </tr>
 <tr>
     <td><CopyableCode code="externalId" /></td>
@@ -97,7 +97,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="profile" /></td>
     <td><code>object</code></td>
-    <td>Specifies the default and custom profile properties for a user. Properties that are visible in the Admin Console for an app assignment can also be assigned through the API. Some properties are reference properties that are imported from the target app and can't be configured. See [profile](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/User/#tag/User/operation/getUser!c=200&path=profile&t=response). </td>
+    <td>Specifies the default and custom profile properties for a user. Properties that are visible in the Admin Console for an app assignment can also be assigned through the API. Some properties are reference properties that are imported from the target app and can't be configured. See [profile](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/User/#tag/User/operation/getUser!c=200&path=profile&t=response). </td>
 </tr>
 <tr>
     <td><CopyableCode code="scope" /></td>
@@ -156,7 +156,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="credentials" /></td>
     <td><code>object</code></td>
-    <td>Specifies a user's credentials for the app. This parameter can be omitted for apps with [sign-on mode](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/getApplication!c=200&path=0/signOnMode&t=response) (`signOnMode`) or [authentication schemes](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/getApplication!c=200&path=0/credentials/scheme&t=response) (`credentials.scheme`) that don't require credentials. </td>
+    <td>Specifies a user's credentials for the app. This parameter can be omitted for apps with [sign-on mode](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/getApplication!c=200&path=0/signOnMode&t=response) (`signOnMode`) or [authentication schemes](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/getApplication!c=200&path=0/credentials/scheme&t=response) (`credentials.scheme`) that don't require credentials. </td>
 </tr>
 <tr>
     <td><CopyableCode code="externalId" /></td>
@@ -181,7 +181,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="profile" /></td>
     <td><code>object</code></td>
-    <td>Specifies the default and custom profile properties for a user. Properties that are visible in the Admin Console for an app assignment can also be assigned through the API. Some properties are reference properties that are imported from the target app and can't be configured. See [profile](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/User/#tag/User/operation/getUser!c=200&path=profile&t=response). </td>
+    <td>Specifies the default and custom profile properties for a user. Properties that are visible in the Admin Console for an app assignment can also be assigned through the API. Some properties are reference properties that are imported from the target app and can't be configured. See [profile](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/User/#tag/User/operation/getUser!c=200&path=profile&t=response). </td>
 </tr>
 <tr>
     <td><CopyableCode code="scope" /></td>
@@ -240,7 +240,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#assign_user_to_application"><CopyableCode code="assign_user_to_application" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__id"><code>data__id</code></a></td>
     <td></td>
     <td>Assigns a user to an app for:<br /><br />  * SSO only&lt;br&gt;<br />    Assignments to SSO apps typically don't include a user profile.<br />    However, if your SSO app requires a profile but doesn't have provisioning enabled, you can add profile attributes in the request body.<br /><br />  * SSO and provisioning&lt;br&gt;<br />    Assignments to SSO and provisioning apps typically include credentials and an app-specific profile.<br />    Profile mappings defined for the app are applied first before applying any profile properties that are specified in the request body.<br />    &gt; **Notes:**<br />    &gt; * When Universal Directory is enabled, you can only specify profile properties that aren't defined in profile mappings.<br />    &gt; * Omit mapped properties during assignment to minimize assignment errors.</td>
 </tr>
@@ -287,7 +287,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 <tr id="parameter-expand">
     <td><CopyableCode code="expand" /></td>
     <td><code>string</code></td>
-    <td>An optional query parameter to return the corresponding [User](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/User/) object in the `_embedded` property. Valid value: `user`</td>
+    <td>An optional query parameter to return the corresponding [User](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/User/) object in the `_embedded` property. Valid value: `user`</td>
 </tr>
 <tr id="parameter-limit">
     <td><CopyableCode code="limit" /></td>
@@ -430,7 +430,7 @@ syncState
       value: object
       description: >
         Specifies a user's credentials for the app.
-This parameter can be omitted for apps with [sign-on mode](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/getApplication!c=200&path=0/signOnMode&t=response) (`signOnMode`) or [authentication schemes](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/getApplication!c=200&path=0/credentials/scheme&t=response) (`credentials.scheme`) that don't require credentials.
+This parameter can be omitted for apps with [sign-on mode](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/getApplication!c=200&path=0/signOnMode&t=response) (`signOnMode`) or [authentication schemes](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/getApplication!c=200&path=0/credentials/scheme&t=response) (`credentials.scheme`) that don't require credentials.
 
     - name: id
       value: string
@@ -443,7 +443,7 @@ This parameter can be omitted for apps with [sign-on mode](https://developer.okt
         Specifies the default and custom profile properties for a user.
 Properties that are visible in the Admin Console for an app assignment can also be assigned through the API.
 Some properties are reference properties that are imported from the target app and can't be configured.
-See [profile](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/User/#tag/User/operation/getUser!c=200&path=profile&t=response).
+See [profile](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/User/#tag/User/operation/getUser!c=200&path=profile&t=response).
 
     - name: scope
       value: string

@@ -160,14 +160,14 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_security_events_provider_instance"><CopyableCode code="create_security_events_provider_instance" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a>, <a href="#parameter-data__settings"><code>data__settings</code></a>, <a href="#parameter-data__type"><code>data__type</code></a></td>
     <td></td>
     <td>Creates a Security Events Provider instance</td>
 </tr>
 <tr>
     <td><a href="#replace_security_events_provider_instance"><CopyableCode code="replace_security_events_provider_instance" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a>, <a href="#parameter-data__settings"><code>data__settings</code></a>, <a href="#parameter-data__type"><code>data__type</code></a></td>
     <td></td>
     <td>Replaces a Security Events Provider instance specified by `id`</td>
 </tr>

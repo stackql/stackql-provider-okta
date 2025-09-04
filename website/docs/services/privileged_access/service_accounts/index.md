@@ -72,7 +72,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="containerOrn" /></td>
     <td><code>string</code></td>
-    <td>The [ORN](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/guides/roles/#okta-resource-name-orn) of the relevant resource.  Use the specific app ORN format (`orn:&#123;partition&#125;:idp:&#123;yourOrgId&#125;:apps:&#123;appType&#125;:&#123;appId&#125;`) to identify an Okta app instance in your org. (example: orn:okta:idp:00o1n8sbwArJ7OQRw406:apps:salesforce:0oa1gjh63g214q0Hq0g4)</td>
+    <td>The [ORN](https://developer.okta.com/docs/api/openapi/okta-management/guides/roles/#okta-resource-name-orn) of the relevant resource.  Use the specific app ORN format (`orn:&#123;partition&#125;:idp:&#123;yourOrgId&#125;:apps:&#123;appType&#125;:&#123;appId&#125;`) to identify an Okta app instance in your org. (example: orn:okta:idp:00o1n8sbwArJ7OQRw406:apps:salesforce:0oa1gjh63g214q0Hq0g4)</td>
 </tr>
 <tr>
     <td><CopyableCode code="created" /></td>
@@ -156,7 +156,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="containerOrn" /></td>
     <td><code>string</code></td>
-    <td>The [ORN](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/guides/roles/#okta-resource-name-orn) of the relevant resource.  Use the specific app ORN format (`orn:&#123;partition&#125;:idp:&#123;yourOrgId&#125;:apps:&#123;appType&#125;:&#123;appId&#125;`) to identify an Okta app instance in your org. (example: orn:okta:idp:00o1n8sbwArJ7OQRw406:apps:salesforce:0oa1gjh63g214q0Hq0g4)</td>
+    <td>The [ORN](https://developer.okta.com/docs/api/openapi/okta-management/guides/roles/#okta-resource-name-orn) of the relevant resource.  Use the specific app ORN format (`orn:&#123;partition&#125;:idp:&#123;yourOrgId&#125;:apps:&#123;appType&#125;:&#123;appId&#125;`) to identify an Okta app instance in your org. (example: orn:okta:idp:00o1n8sbwArJ7OQRw406:apps:salesforce:0oa1gjh63g214q0Hq0g4)</td>
 </tr>
 <tr>
     <td><CopyableCode code="created" /></td>
@@ -240,7 +240,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_app_service_account"><CopyableCode code="create_app_service_account" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a>, <a href="#parameter-data__containerOrn"><code>data__containerOrn</code></a>, <a href="#parameter-data__username"><code>data__username</code></a></td>
     <td></td>
     <td>Creates a new app service account for managing an app account</td>
 </tr>
@@ -423,7 +423,7 @@ username
     - name: containerOrn
       value: string
       description: >
-        The [ORN](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/guides/roles/#okta-resource-name-orn) of the relevant resource.
+        The [ORN](https://developer.okta.com/docs/api/openapi/okta-management/guides/roles/#okta-resource-name-orn) of the relevant resource.
 
 Use the specific app ORN format (`orn:{partition}:idp:{yourOrgId}:apps:{appType}:{appId}`) to identify an Okta app instance in your org.
         

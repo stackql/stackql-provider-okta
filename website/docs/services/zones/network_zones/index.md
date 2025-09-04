@@ -190,14 +190,14 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_network_zone"><CopyableCode code="create_network_zone" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a>, <a href="#parameter-data__type"><code>data__type</code></a></td>
     <td></td>
     <td>Creates a Network Zone<br />* For an IP Network Zone, you must define either `gateways` or `proxies`.<br />* For a Dynamic Network Zone, you must define at least one of the following: `asns`, `locations`, or `proxyType`.<br />* For an Enhanced Dynamic Network Zone, you must define at least one of the following: `asns`, `locations`, or `ipServiceCategories`.</td>
 </tr>
 <tr>
     <td><a href="#replace_network_zone"><CopyableCode code="replace_network_zone" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a>, <a href="#parameter-data__type"><code>data__type</code></a></td>
     <td></td>
     <td>Replaces a Network Zone by `zoneId`. The replaced Network Zone type must be the same as the existing type.<br />You can replace the usage (`POLICY`, `BLOCKLIST`) of a Network Zone by updating the `usage` attribute.<br /><br />**IP exempt zone**&lt;br&gt;<br />If you have the IP exempt zone feature enabled, you can allow traffic from specific gateway IPs irrespective of Okta ThreatInsight configurations, blocked network zones, or IP change events within Identity Threat Protection with Okta AI.&lt;br&gt;<br />&lt;br&gt;<br />When you enable this feature, Okta creates a zone called `DefaultExemptIpZone`. Gateway IPs that you add to this zone always have access to Okta resources. See [IP exempt zone](https://help.okta.com/okta_help.htm?type=oie&id=csh-about-ip-exempt-zone).<br /><br />&gt; **Note:** You can't add trusted proxy IPs to this zone, delete the zone, or create additional exempt IP zones.</td>
 </tr>
@@ -206,7 +206,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="delete" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
     <td></td>
-    <td>Deletes a Network Zone by `zoneId`<br />&gt; **Notes:**<br />&gt; * You can't delete a Network Zone that's used by a [Policy](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Policy/) or [Rule](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Policy/#tag/Policy/operation/listPolicyRules).<br />&gt; * For Okta Identity Engine orgs, you can't delete a Network Zone with an ACTIVE `status`. &lt;x-lifecycle class="oie"&gt;&lt;/x-lifecycle&gt;</td>
+    <td>Deletes a Network Zone by `zoneId`<br />&gt; **Notes:**<br />&gt; * You can't delete a Network Zone that's used by a [Policy](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Policy/) or [Rule](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Policy/#tag/Policy/operation/listPolicyRules).<br />&gt; * For Okta Identity Engine orgs, you can't delete a Network Zone with an ACTIVE `status`. &lt;x-lifecycle class="oie"&gt;&lt;/x-lifecycle&gt;</td>
 </tr>
 <tr>
     <td><a href="#activate_network_zone"><CopyableCode code="activate_network_zone" /></a></td>
@@ -439,7 +439,7 @@ usage;
 >
 <TabItem value="delete_network_zone">
 
-Deletes a Network Zone by `zoneId`<br />&gt; **Notes:**<br />&gt; * You can't delete a Network Zone that's used by a [Policy](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Policy/) or [Rule](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Policy/#tag/Policy/operation/listPolicyRules).<br />&gt; * For Okta Identity Engine orgs, you can't delete a Network Zone with an ACTIVE `status`. &lt;x-lifecycle class="oie"&gt;&lt;/x-lifecycle&gt;
+Deletes a Network Zone by `zoneId`<br />&gt; **Notes:**<br />&gt; * You can't delete a Network Zone that's used by a [Policy](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Policy/) or [Rule](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Policy/#tag/Policy/operation/listPolicyRules).<br />&gt; * For Okta Identity Engine orgs, you can't delete a Network Zone with an ACTIVE `status`. &lt;x-lifecycle class="oie"&gt;&lt;/x-lifecycle&gt;
 
 ```sql
 DELETE FROM okta.zones.network_zones

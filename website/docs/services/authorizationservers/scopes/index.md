@@ -200,14 +200,14 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_oauth2_scope"><CopyableCode code="create_oauth2_scope" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a></td>
     <td></td>
     <td>Creates a custom token scope</td>
 </tr>
 <tr>
     <td><a href="#replace_oauth2_scope"><CopyableCode code="replace_oauth2_scope" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a></td>
     <td></td>
     <td>Replaces a custom token scope</td>
 </tr>

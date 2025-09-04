@@ -200,14 +200,14 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_principal_rate_limit_entity"><CopyableCode code="create_principal_rate_limit_entity" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__principalId"><code>data__principalId</code></a>, <a href="#parameter-data__principalType"><code>data__principalType</code></a></td>
     <td></td>
     <td>Creates a new principal rate limit entity. Okta only allows one principal rate limit entity per org and principal.</td>
 </tr>
 <tr>
     <td><a href="#replace_principal_rate_limit_entity"><CopyableCode code="replace_principal_rate_limit_entity" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__principalId"><code>data__principalId</code></a>, <a href="#parameter-data__principalType"><code>data__principalType</code></a></td>
     <td></td>
     <td>Replaces a principal rate limit entity by `principalRateLimitId`</td>
 </tr>

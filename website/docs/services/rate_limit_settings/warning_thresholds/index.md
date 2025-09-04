@@ -83,7 +83,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#replace_rate_limit_settings_warning_threshold"><CopyableCode code="replace_rate_limit_settings_warning_threshold" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__warningThreshold"><code>data__warningThreshold</code></a></td>
     <td></td>
     <td>Replaces the Rate Limit Warning Threshold Percentage and returns the configured property</td>
 </tr>

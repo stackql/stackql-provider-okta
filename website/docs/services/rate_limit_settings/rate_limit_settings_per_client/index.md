@@ -88,7 +88,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#replace_rate_limit_settings_per_client"><CopyableCode code="replace_rate_limit_settings_per_client" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__defaultMode"><code>data__defaultMode</code></a></td>
     <td></td>
     <td>Replaces the Per-Client Rate Limit Settings and returns the configured properties</td>
 </tr>

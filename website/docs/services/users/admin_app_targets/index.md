@@ -81,7 +81,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="features" /></td>
     <td><code>array</code></td>
-    <td>Features supported by the app. See app [features](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/listApplications!c=200&path=0/features&t=response).</td>
+    <td>Features supported by the app. See app [features](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/listApplications!c=200&path=0/features&t=response).</td>
 </tr>
 <tr>
     <td><CopyableCode code="lastUpdated" /></td>
@@ -91,7 +91,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="signOnModes" /></td>
     <td><code>array</code></td>
-    <td>Authentication mode for the app. See app [signOnMode](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/listApplications!c=200&path=0/signOnMode&t=response).</td>
+    <td>Authentication mode for the app. See app [signOnMode](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/listApplications!c=200&path=0/signOnMode&t=response).</td>
 </tr>
 <tr>
     <td><CopyableCode code="status" /></td>

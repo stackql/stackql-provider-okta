@@ -66,7 +66,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="excludeZones" /></td>
     <td><code>array</code></td>
-    <td>Accepts a list of [Network Zone](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/NetworkZone/) IDs. IPs in the excluded network zones aren't logged or blocked. This ensures that traffic from known, trusted IPs isn't accidentally logged or blocked.</td>
+    <td>Accepts a list of [Network Zone](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/NetworkZone/) IDs. IPs in the excluded network zones aren't logged or blocked. This ensures that traffic from known, trusted IPs isn't accidentally logged or blocked.</td>
 </tr>
 <tr>
     <td><CopyableCode code="lastUpdated" /></td>
@@ -103,7 +103,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#update_configuration"><CopyableCode code="update_configuration" /></a></td>
     <td><CopyableCode code="update" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__action"><code>data__action</code></a></td>
     <td></td>
     <td>Updates the ThreatInsight configuration for the org</td>
 </tr>

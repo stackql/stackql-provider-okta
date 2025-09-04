@@ -161,7 +161,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#add_resource_set_resource"><CopyableCode code="add_resource_set_resource" /></a></td>
     <td><CopyableCode code="exec" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-resourceOrnOrUrl"><code>resourceOrnOrUrl</code></a>, <a href="#parameter-conditions"><code>conditions</code></a></td>
     <td></td>
     <td>Adds a resource with conditions for a resource set</td>
 </tr>

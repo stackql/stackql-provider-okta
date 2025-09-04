@@ -61,7 +61,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="delete" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
     <td></td>
-    <td>Unassigns an app instance target from an `APP_ADMIN` role assignment to a group<br /><br />&gt; **Note:** You can't remove the last app instance target from a role assignment.<br />&gt; If you need a role assignment that applies to all apps, delete the `APP_ADMIN` role assignment with the target and create another one. See [Unassign a group role](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/RoleAssignmentBGroup/#tag/RoleAssignmentBGroup/operation/unassignRoleFromGroup).</td>
+    <td>Unassigns an app instance target from an `APP_ADMIN` role assignment to a group<br /><br />&gt; **Note:** You can't remove the last app instance target from a role assignment.<br />&gt; If you need a role assignment that applies to all apps, delete the `APP_ADMIN` role assignment with the target and create another one. See [Unassign a group role](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/RoleAssignmentBGroup/#tag/RoleAssignmentBGroup/operation/unassignRoleFromGroup).</td>
 </tr>
 </tbody>
 </table>
@@ -120,7 +120,7 @@ subdomain = '{{ subdomain }}' --required;
 >
 <TabItem value="unassign_app_instance_target_to_app_admin_role_for_group">
 
-Unassigns an app instance target from an `APP_ADMIN` role assignment to a group<br /><br />&gt; **Note:** You can't remove the last app instance target from a role assignment.<br />&gt; If you need a role assignment that applies to all apps, delete the `APP_ADMIN` role assignment with the target and create another one. See [Unassign a group role](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/RoleAssignmentBGroup/#tag/RoleAssignmentBGroup/operation/unassignRoleFromGroup).
+Unassigns an app instance target from an `APP_ADMIN` role assignment to a group<br /><br />&gt; **Note:** You can't remove the last app instance target from a role assignment.<br />&gt; If you need a role assignment that applies to all apps, delete the `APP_ADMIN` role assignment with the target and create another one. See [Unassign a group role](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/RoleAssignmentBGroup/#tag/RoleAssignmentBGroup/operation/unassignRoleFromGroup).
 
 ```sql
 DELETE FROM okta.groups.app_instance_targets

@@ -184,14 +184,14 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_email_customization"><CopyableCode code="create_email_customization" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__subject"><code>data__subject</code></a>, <a href="#parameter-data__body"><code>data__body</code></a></td>
     <td></td>
     <td>Creates a new Email Customization<br /><br />&lt;x-lifecycle class="ea"&gt;&lt;/x-lifecycle&gt; If Custom languages for Okta Email Templates is enabled, you can create a customization for any BCP47 language in addition to the Okta-supported languages.<br /></td>
 </tr>
 <tr>
     <td><a href="#replace_email_customization"><CopyableCode code="replace_email_customization" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__subject"><code>data__subject</code></a>, <a href="#parameter-data__body"><code>data__body</code></a></td>
     <td></td>
     <td>Replaces an email customization using property values<br /><br />&lt;x-lifecycle class="ea"&gt;&lt;/x-lifecycle&gt; If Custom languages for Okta Email Templates is disabled, requests to update a customization for an additional language return a `404 Not Found` error response.<br /></td>
 </tr>

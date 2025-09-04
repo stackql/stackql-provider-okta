@@ -72,7 +72,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="template" /></td>
     <td><code>string</code></td>
-    <td>Text of the Template, including any [macros](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Template/)</td>
+    <td>Text of the Template, including any [macros](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Template/)</td>
 </tr>
 <tr>
     <td><CopyableCode code="translations" /></td>
@@ -121,7 +121,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="template" /></td>
     <td><code>string</code></td>
-    <td>Text of the Template, including any [macros](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Template/)</td>
+    <td>Text of the Template, including any [macros](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Template/)</td>
 </tr>
 <tr>
     <td><CopyableCode code="translations" /></td>
@@ -326,7 +326,7 @@ type
     - name: template
       value: string
       description: >
-        Text of the Template, including any [macros](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Template/)
+        Text of the Template, including any [macros](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Template/)
         
     - name: translations
       value: object

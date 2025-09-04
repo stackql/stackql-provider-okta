@@ -52,7 +52,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="permissions" /></td>
     <td><code>array</code></td>
-    <td>Array of permissions assigned to the role. See [Permissions](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/guides/permissions).</td>
+    <td>Array of permissions assigned to the role. See [Permissions](https://developer.okta.com/docs/api/openapi/okta-management/guides/permissions).</td>
 </tr>
 </tbody>
 </table>
@@ -86,7 +86,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="label" /></td>
     <td><code>string</code></td>
-    <td>The assigned Okta [permission](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/guides/permissions) (example: okta.users.read)</td>
+    <td>The assigned Okta [permission](https://developer.okta.com/docs/api/openapi/okta-management/guides/permissions) (example: okta.users.read)</td>
 </tr>
 <tr>
     <td><CopyableCode code="lastUpdated" /></td>

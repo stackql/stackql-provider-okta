@@ -83,7 +83,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#replace_rate_limit_settings_admin_notifications"><CopyableCode code="replace_rate_limit_settings_admin_notifications" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__notificationsEnabled"><code>data__notificationsEnabled</code></a></td>
     <td></td>
     <td>Replaces the Rate Limit Admin Notification Settings and returns the configured properties</td>
 </tr>

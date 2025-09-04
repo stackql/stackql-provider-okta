@@ -167,7 +167,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#update_cross_app_access_connection"><CopyableCode code="update_cross_app_access_connection" /></a></td>
     <td><CopyableCode code="update" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__status"><code>data__status</code></a></td>
     <td></td>
     <td>Updates the Cross App Access connection with the specified ID<br /></td>
 </tr>
