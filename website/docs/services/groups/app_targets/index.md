@@ -81,7 +81,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="features" /></td>
     <td><code>array</code></td>
-    <td>Features supported by the app. See app [features](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/listApplications!c=200&path=0/features&t=response).</td>
+    <td>Features supported by the app. See app [features](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/listApplications!c=200&path=0/features&t=response).</td>
 </tr>
 <tr>
     <td><CopyableCode code="lastUpdated" /></td>
@@ -91,7 +91,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="signOnModes" /></td>
     <td><code>array</code></td>
-    <td>Authentication mode for the app. See app [signOnMode](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/listApplications!c=200&path=0/signOnMode&t=response).</td>
+    <td>Authentication mode for the app. See app [signOnMode](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/listApplications!c=200&path=0/signOnMode&t=response).</td>
 </tr>
 <tr>
     <td><CopyableCode code="status" /></td>
@@ -147,7 +147,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="delete" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
     <td></td>
-    <td>Unassigns an OIN app target from an `APP_ADMIN` role assignment to a group<br /><br />&gt; **Note:** You can't remove the last app target from a role assignment.<br />&gt; If you need a role assignment that applies to all apps, delete the `APP_ADMIN` role assignment with the target and create another one. See [Unassign a group role](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/RoleAssignmentBGroup/#tag/RoleAssignmentBGroup/operation/unassignRoleFromGroup).<br /></td>
+    <td>Unassigns an OIN app target from an `APP_ADMIN` role assignment to a group<br /><br />&gt; **Note:** You can't remove the last app target from a role assignment.<br />&gt; If you need a role assignment that applies to all apps, delete the `APP_ADMIN` role assignment with the target and create another one. See [Unassign a group role](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/RoleAssignmentBGroup/#tag/RoleAssignmentBGroup/operation/unassignRoleFromGroup).<br /></td>
 </tr>
 </tbody>
 </table>
@@ -251,7 +251,7 @@ subdomain = '{{ subdomain }}' --required;
 >
 <TabItem value="unassign_app_target_to_admin_role_for_group">
 
-Unassigns an OIN app target from an `APP_ADMIN` role assignment to a group<br /><br />&gt; **Note:** You can't remove the last app target from a role assignment.<br />&gt; If you need a role assignment that applies to all apps, delete the `APP_ADMIN` role assignment with the target and create another one. See [Unassign a group role](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/RoleAssignmentBGroup/#tag/RoleAssignmentBGroup/operation/unassignRoleFromGroup).<br />
+Unassigns an OIN app target from an `APP_ADMIN` role assignment to a group<br /><br />&gt; **Note:** You can't remove the last app target from a role assignment.<br />&gt; If you need a role assignment that applies to all apps, delete the `APP_ADMIN` role assignment with the target and create another one. See [Unassign a group role](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/RoleAssignmentBGroup/#tag/RoleAssignmentBGroup/operation/unassignRoleFromGroup).<br />
 
 ```sql
 DELETE FROM okta.groups.app_targets

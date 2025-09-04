@@ -145,14 +145,14 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_custom_domain"><CopyableCode code="create_custom_domain" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__certificateSourceType"><code>data__certificateSourceType</code></a>, <a href="#parameter-data__domain"><code>data__domain</code></a></td>
     <td></td>
     <td>Creates your custom domain</td>
 </tr>
 <tr>
     <td><a href="#replace_custom_domain"><CopyableCode code="replace_custom_domain" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__brandId"><code>data__brandId</code></a></td>
     <td></td>
     <td>Replaces a custom domain's brand</td>
 </tr>
@@ -166,7 +166,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#upsert_certificate"><CopyableCode code="upsert_certificate" /></a></td>
     <td><CopyableCode code="exec" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-certificate"><code>certificate</code></a>, <a href="#parameter-certificateChain"><code>certificateChain</code></a>, <a href="#parameter-privateKey"><code>privateKey</code></a>, <a href="#parameter-type"><code>type</code></a></td>
     <td></td>
     <td>Upserts (creates or renews) the `MANUAL` certificate for the custom domain<br /><br />&gt; **Notes:**<br />&gt; * If the existing `certificateSourceType` is `OKTA_MANAGED`, this operation changes the source type to `MANUAL`. Okta no longer manages and renews certificates for this domain after you provide a user-managed certificate.<br />&gt; * Okta supports TLS certificates and private keys that are PEM-encoded and 2048, 3072, or 4096 bits. See the [Custom domain guide](https://developer.okta.com/docs/guides/custom-url-domain/main/) for more details.</td>
 </tr>

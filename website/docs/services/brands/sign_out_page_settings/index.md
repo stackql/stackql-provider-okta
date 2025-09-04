@@ -90,7 +90,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#replace_sign_out_page_settings"><CopyableCode code="replace_sign_out_page_settings" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__type"><code>data__type</code></a></td>
     <td></td>
     <td>Replaces the sign-out page settings</td>
 </tr>

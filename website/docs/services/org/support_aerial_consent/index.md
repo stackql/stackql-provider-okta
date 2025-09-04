@@ -98,7 +98,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#grant_aerial_consent"><CopyableCode code="grant_aerial_consent" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__accountId"><code>data__accountId</code></a></td>
     <td></td>
     <td>Grants an Okta Aerial account consent to manage your org. If the org is a child org, consent is taken from the parent org. Grant calls directly to the child are not allowed.</td>
 </tr>

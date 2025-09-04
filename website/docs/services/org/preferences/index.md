@@ -88,7 +88,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#upload_org_logo"><CopyableCode code="upload_org_logo" /></a></td>
     <td><CopyableCode code="exec" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-file"><code>file</code></a></td>
     <td></td>
     <td>Uploads and replaces the logo for your organization</td>
 </tr>

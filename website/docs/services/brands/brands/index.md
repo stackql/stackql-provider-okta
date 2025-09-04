@@ -194,14 +194,14 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_brand"><CopyableCode code="create_brand" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a></td>
     <td></td>
     <td>Creates a new brand in your org</td>
 </tr>
 <tr>
     <td><a href="#replace_brand"><CopyableCode code="replace_brand" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a></td>
     <td></td>
     <td>Replaces a brand by `brandId`<br /><br />Passing an invalid `brandId` returns a `404 Not Found` status code with the error code `E0000007`.<br /><br />Not providing `agreeToCustomPrivacyPolicy` with `customPrivacyPolicyUrl` returns a `400 Bad Request` status code with the error code `E0000001`.<br /><br /></td>
 </tr>

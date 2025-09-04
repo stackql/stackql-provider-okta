@@ -90,7 +90,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#replace_email_settings"><CopyableCode code="replace_email_settings" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__recipients"><code>data__recipients</code></a></td>
     <td></td>
     <td>Replaces an email template's settings</td>
 </tr>

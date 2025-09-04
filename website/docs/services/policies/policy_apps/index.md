@@ -56,7 +56,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="_embedded" /></td>
     <td><code>object</code></td>
-    <td>Embedded resources related to the app using the [JSON Hypertext Application Language](https://datatracker.ietf.org/doc/html/draft-kelly-json-hal-06) specification. If the `expand=user/&#123;userId&#125;` query parameter is specified, then the assigned [Application User](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationUsers/) is embedded.</td>
+    <td>Embedded resources related to the app using the [JSON Hypertext Application Language](https://datatracker.ietf.org/doc/html/draft-kelly-json-hal-06) specification. If the `expand=user/&#123;userId&#125;` query parameter is specified, then the assigned [Application User](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationUsers/) is embedded.</td>
 </tr>
 <tr>
     <td><CopyableCode code="_links" /></td>
@@ -76,7 +76,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="features" /></td>
     <td><code>array</code></td>
-    <td>Enabled app features &gt; **Note:** See [Application Features](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationFeatures/) for app provisioning features. </td>
+    <td>Enabled app features &gt; **Note:** See [Application Features](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationFeatures/) for app provisioning features. </td>
 </tr>
 <tr>
     <td><CopyableCode code="label" /></td>
@@ -148,7 +148,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="select" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
     <td></td>
-    <td>Lists all applications mapped to a policy identified by `policyId`<br /><br />&gt; **Note:** Use [List all resources mapped to a Policy](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Policy/#tag/Policy/operation/listPolicyMappings) to list all applications mapped to a policy.</td>
+    <td>Lists all applications mapped to a policy identified by `policyId`<br /><br />&gt; **Note:** Use [List all resources mapped to a Policy](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Policy/#tag/Policy/operation/listPolicyMappings) to list all applications mapped to a policy.</td>
 </tr>
 </tbody>
 </table>
@@ -184,7 +184,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 >
 <TabItem value="list_policy_apps">
 
-Lists all applications mapped to a policy identified by `policyId`<br /><br />&gt; **Note:** Use [List all resources mapped to a Policy](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Policy/#tag/Policy/operation/listPolicyMappings) to list all applications mapped to a policy.
+Lists all applications mapped to a policy identified by `policyId`<br /><br />&gt; **Note:** Use [List all resources mapped to a Policy](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Policy/#tag/Policy/operation/listPolicyMappings) to list all applications mapped to a policy.
 
 ```sql
 SELECT

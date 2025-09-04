@@ -90,7 +90,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#replace_brand_well_known_uri"><CopyableCode code="replace_brand_well_known_uri" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__representation"><code>data__representation</code></a></td>
     <td></td>
     <td>Replaces the content of a customized well-known URI that you specify.<br /><br />There are endpoint-specific format requirements when you update the content of a customized well-known URI. See [Customize associated domains](https://developer.okta.com/docs/guides/custom-well-known-uri/main/).</td>
 </tr>

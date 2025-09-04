@@ -13,7 +13,7 @@ The `@stackql/provider-utils` package offers several utilities that this provide
 To use the Okta provider with StackQL, you'll need:
 
 1. An Okta account with appropriate API credentials
-2. An Okta API token with sufficient permissions for the resources you want to access
+2. An Okta API token with sufficient permissions for the resources you want to access, export this as `OKTA_API_TOKEN`
 3. StackQL CLI installed on your system (see [StackQL](https://github.com/stackql/stackql))
 
 ### 1. Download the Open API Specification
@@ -76,7 +76,7 @@ npm run generate-provider -- \
   --output-dir provider-dev/openapi/src/okta \
   --config-path provider-dev/config/all_services.csv \
   --servers '[{"url": "https://{subdomain}.okta.com/", "variables": {"subdomain": {"default": "my-org","description": "The domain of your organization. This can be a provided subdomain of an official okta domain (okta.com, oktapreview.com, etc) or one of your configured custom domains."}}}]' \
-  --provider-config '{"config": {"auth": {"credentialsenvvar": "OKTA_API_TOKEN","type": "api_key","valuePrefix": "SSWS "}}}' \
+  --provider-config '{"auth": {"credentialsenvvar": "OKTA_API_TOKEN","type": "api_key","valuePrefix": "SSWS "}}' \
   --skip-files _well_known.yaml \
   --overwrite
 ```
@@ -144,7 +144,7 @@ To publish the provider push the `okta` dir to `providers/src` in a feature bran
 Launch the StackQL shell:
 
 ```bash
-export DEV_REG="{ \"url\": \"https://registry-dev.stackql.app/providers\" }"
+export DEV_REG="{ \"url\": \"https://registry-dev.stackql.app/providers\", \"verifyConfig\": { \"nopVerify\": true }}"
 ./stackql --registry="${DEV_REG}" shell
 ```
 
@@ -154,7 +154,24 @@ pull the latest dev `okta` provider:
 registry pull okta;
 ```
 
-Run some test queries
+Run some test queries, for example...
+
+```sql
+SELECT
+id,
+activated,
+created,
+lastLogin,
+lastUpdated,
+passwordChanged,
+JSON_EXTRACT(profile, '$.email') as email,
+JSON_EXTRACT(profile, '$.firstName') as first_name,
+JSON_EXTRACT(profile, '$.lastName') as last_name,
+status,
+statusChanged
+FROM okta.users.users
+WHERE subdomain = 'your-subdomain';
+```
 
 ### 7. Generate web docs
 

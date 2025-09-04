@@ -220,7 +220,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#grant_consent_to_scope"><CopyableCode code="grant_consent_to_scope" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__issuer"><code>data__issuer</code></a>, <a href="#parameter-data__scopeId"><code>data__scopeId</code></a></td>
     <td></td>
     <td>Grants consent for the app to request an OAuth 2.0 Okta scope</td>
 </tr>

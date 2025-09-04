@@ -57,7 +57,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="_embedded" /></td>
     <td><code>object</code></td>
-    <td>Embedded resources related to the app using the [JSON Hypertext Application Language](https://datatracker.ietf.org/doc/html/draft-kelly-json-hal-06) specification. If the `expand=user/&#123;userId&#125;` query parameter is specified, then the assigned [Application User](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationUsers/) is embedded.</td>
+    <td>Embedded resources related to the app using the [JSON Hypertext Application Language](https://datatracker.ietf.org/doc/html/draft-kelly-json-hal-06) specification. If the `expand=user/&#123;userId&#125;` query parameter is specified, then the assigned [Application User](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationUsers/) is embedded.</td>
 </tr>
 <tr>
     <td><CopyableCode code="_links" /></td>
@@ -77,7 +77,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="features" /></td>
     <td><code>array</code></td>
-    <td>Enabled app features &gt; **Note:** See [Application Features](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationFeatures/) for app provisioning features. </td>
+    <td>Enabled app features &gt; **Note:** See [Application Features](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationFeatures/) for app provisioning features. </td>
 </tr>
 <tr>
     <td><CopyableCode code="label" /></td>
@@ -146,7 +146,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="_embedded" /></td>
     <td><code>object</code></td>
-    <td>Embedded resources related to the app using the [JSON Hypertext Application Language](https://datatracker.ietf.org/doc/html/draft-kelly-json-hal-06) specification. If the `expand=user/&#123;userId&#125;` query parameter is specified, then the assigned [Application User](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationUsers/) is embedded.</td>
+    <td>Embedded resources related to the app using the [JSON Hypertext Application Language](https://datatracker.ietf.org/doc/html/draft-kelly-json-hal-06) specification. If the `expand=user/&#123;userId&#125;` query parameter is specified, then the assigned [Application User](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationUsers/) is embedded.</td>
 </tr>
 <tr>
     <td><CopyableCode code="_links" /></td>
@@ -166,7 +166,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="features" /></td>
     <td><code>array</code></td>
-    <td>Enabled app features &gt; **Note:** See [Application Features](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationFeatures/) for app provisioning features. </td>
+    <td>Enabled app features &gt; **Note:** See [Application Features](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationFeatures/) for app provisioning features. </td>
 </tr>
 <tr>
     <td><CopyableCode code="label" /></td>
@@ -238,7 +238,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="select" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
     <td><a href="#parameter-q"><code>q</code></a>, <a href="#parameter-after"><code>after</code></a>, <a href="#parameter-useOptimization"><code>useOptimization</code></a>, <a href="#parameter-limit"><code>limit</code></a>, <a href="#parameter-filter"><code>filter</code></a>, <a href="#parameter-expand"><code>expand</code></a>, <a href="#parameter-includeNonDeleted"><code>includeNonDeleted</code></a></td>
-    <td>Lists all apps in the org with pagination. A subset of apps can be returned that match a supported filter expression or query. The results are [paginated]https://developer.okta.com/docs/api#pagination according to the `limit` parameter. If there are multiple pages of results, the header contains a `next` link. Treat the link as an opaque value (follow it, don't parse it).<br /><br />&gt; **Note:** To list all of a member's assigned app links, use the [List all assigned app links endpoint in the User Resources API](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/UserResources/#tag/UserResources/operation/listAppLinks).</td>
+    <td>Lists all apps in the org with pagination. A subset of apps can be returned that match a supported filter expression or query. The results are [paginated]https://developer.okta.com/docs/api#pagination according to the `limit` parameter. If there are multiple pages of results, the header contains a `next` link. Treat the link as an opaque value (follow it, don't parse it).<br /><br />&gt; **Note:** To list all of a member's assigned app links, use the [List all assigned app links endpoint in the User Resources API](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/UserResources/#tag/UserResources/operation/listAppLinks).</td>
 </tr>
 <tr>
     <td><a href="#get_application"><CopyableCode code="get_application" /></a></td>
@@ -250,14 +250,14 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_application"><CopyableCode code="create_application" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__signOnMode"><code>data__signOnMode</code></a>, <a href="#parameter-data__label"><code>data__label</code></a></td>
     <td><a href="#parameter-activate"><code>activate</code></a>, <a href="#parameter-OktaAccessGateway-Agent"><code>OktaAccessGateway-Agent</code></a></td>
-    <td>Creates an app instance in your Okta org.<br /><br />You can either create an OIN app instance or a custom app instance:<br />* OIN app instances have prescribed `name` (key app definition) and `signOnMode` options. See the [OIN schemas](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/schema/GoogleApplication) for the request body.<br />* For custom app instances, select the [signOnMode](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/createApplication!path=0/signOnMode&t=request) that pertains to your app and specify the required parameters in the request body.<br /></td>
+    <td>Creates an app instance in your Okta org.<br /><br />You can either create an OIN app instance or a custom app instance:<br />* OIN app instances have prescribed `name` (key app definition) and `signOnMode` options. See the [OIN schemas](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/schema/GoogleApplication) for the request body.<br />* For custom app instances, select the [signOnMode](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/createApplication!path=0/signOnMode&t=request) that pertains to your app and specify the required parameters in the request body.<br /></td>
 </tr>
 <tr>
     <td><a href="#replace_application"><CopyableCode code="replace_application" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__signOnMode"><code>data__signOnMode</code></a>, <a href="#parameter-data__label"><code>data__label</code></a></td>
     <td></td>
     <td>Replaces properties for an application<br />&gt; **Notes:**<br />&gt; * All required properties must be specified in the request body<br />&gt; * You can't modify system-assigned properties, such as `id`, `name`, `status`, `created`, and `lastUpdated`. The values for these properties in the PUT request body are ignored.<br /></td>
 </tr>
@@ -285,7 +285,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#upload_application_logo"><CopyableCode code="upload_application_logo" /></a></td>
     <td><CopyableCode code="exec" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-file"><code>file</code></a></td>
     <td></td>
     <td>Uploads a logo for the app instance.<br />If the app already has a logo, this operation replaces the previous logo.<br /><br />The logo is visible in the Admin Console as an icon for your app instance.<br />If you have one `appLink` object configured, this logo also appears in the End-User Dashboard as an icon for your app.<br />&gt; **Note:** If you have multiple `appLink` objects, use the Admin Console to add logos for each app link.<br />&gt; You can't use the API to add logos for multiple app links.<br /></td>
 </tr>
@@ -294,7 +294,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="exec" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
     <td></td>
-    <td>Assigns an app to an [authentication policy](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Policy/), identified by `policyId`.<br />If the app was previously assigned to another policy, this operation replaces that assignment with the updated policy identified by `policyId`.<br /><br />&gt; **Note:** When you [merge duplicate authentication policies](https://help.okta.com/okta_help.htm?type=oie&id=ext-merge-auth-policies),<br />the policy and mapping CRUD operations may be unavailable during the consolidation. When the consolidation is complete, you receive an email with merged results.</td>
+    <td>Assigns an app to an [authentication policy](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Policy/), identified by `policyId`.<br />If the app was previously assigned to another policy, this operation replaces that assignment with the updated policy identified by `policyId`.<br /><br />&gt; **Note:** When you [merge duplicate authentication policies](https://help.okta.com/okta_help.htm?type=oie&id=ext-merge-auth-policies),<br />the policy and mapping CRUD operations may be unavailable during the consolidation. When the consolidation is complete, you receive an email with merged results.</td>
 </tr>
 <tr>
     <td><a href="#preview_samlmetadata_for_application"><CopyableCode code="preview_samlmetadata_for_application" /></a></td>
@@ -347,7 +347,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 <tr id="parameter-expand">
     <td><CopyableCode code="expand" /></td>
     <td><code>string</code></td>
-    <td>An optional query parameter to return the specified [Application User](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationUsers/) in the `_embedded` property. Valid value: `expand=user/&#123;userId&#125;`</td>
+    <td>An optional query parameter to return the specified [Application User](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/ApplicationUsers/) in the `_embedded` property. Valid value: `expand=user/&#123;userId&#125;`</td>
 </tr>
 <tr id="parameter-filter">
     <td><CopyableCode code="filter" /></td>
@@ -388,7 +388,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 >
 <TabItem value="list_applications">
 
-Lists all apps in the org with pagination. A subset of apps can be returned that match a supported filter expression or query. The results are [paginated]https://developer.okta.com/docs/api#pagination according to the `limit` parameter. If there are multiple pages of results, the header contains a `next` link. Treat the link as an opaque value (follow it, don't parse it).<br /><br />&gt; **Note:** To list all of a member's assigned app links, use the [List all assigned app links endpoint in the User Resources API](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/UserResources/#tag/UserResources/operation/listAppLinks).
+Lists all apps in the org with pagination. A subset of apps can be returned that match a supported filter expression or query. The results are [paginated]https://developer.okta.com/docs/api#pagination according to the `limit` parameter. If there are multiple pages of results, the header contains a `next` link. Treat the link as an opaque value (follow it, don't parse it).<br /><br />&gt; **Note:** To list all of a member's assigned app links, use the [List all assigned app links endpoint in the User Resources API](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/UserResources/#tag/UserResources/operation/listAppLinks).
 
 ```sql
 SELECT
@@ -458,7 +458,7 @@ AND expand = '{{ expand }}';
 >
 <TabItem value="create_application">
 
-Creates an app instance in your Okta org.<br /><br />You can either create an OIN app instance or a custom app instance:<br />* OIN app instances have prescribed `name` (key app definition) and `signOnMode` options. See the [OIN schemas](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/schema/GoogleApplication) for the request body.<br />* For custom app instances, select the [signOnMode](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/createApplication!path=0/signOnMode&t=request) that pertains to your app and specify the required parameters in the request body.<br />
+Creates an app instance in your Okta org.<br /><br />You can either create an OIN app instance or a custom app instance:<br />* OIN app instances have prescribed `name` (key app definition) and `signOnMode` options. See the [OIN schemas](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/schema/GoogleApplication) for the request body.<br />* For custom app instances, select the [signOnMode](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/createApplication!path=0/signOnMode&t=request) that pertains to your app and specify the required parameters in the request body.<br />
 
 ```sql
 INSERT INTO okta.apps.applications (
@@ -681,7 +681,7 @@ EXEC okta.apps.applications.upload_application_logo
 </TabItem>
 <TabItem value="assign_application_policy">
 
-Assigns an app to an [authentication policy](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Policy/), identified by `policyId`.<br />If the app was previously assigned to another policy, this operation replaces that assignment with the updated policy identified by `policyId`.<br /><br />&gt; **Note:** When you [merge duplicate authentication policies](https://help.okta.com/okta_help.htm?type=oie&id=ext-merge-auth-policies),<br />the policy and mapping CRUD operations may be unavailable during the consolidation. When the consolidation is complete, you receive an email with merged results.
+Assigns an app to an [authentication policy](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Policy/), identified by `policyId`.<br />If the app was previously assigned to another policy, this operation replaces that assignment with the updated policy identified by `policyId`.<br /><br />&gt; **Note:** When you [merge duplicate authentication policies](https://help.okta.com/okta_help.htm?type=oie&id=ext-merge-auth-policies),<br />the policy and mapping CRUD operations may be unavailable during the consolidation. When the consolidation is complete, you receive an email with merged results.
 
 ```sql
 EXEC okta.apps.applications.assign_application_policy 

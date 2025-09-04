@@ -210,14 +210,14 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_event_hook"><CopyableCode code="create_event_hook" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a>, <a href="#parameter-data__events"><code>data__events</code></a>, <a href="#parameter-data__channel"><code>data__channel</code></a></td>
     <td></td>
     <td>Creates a new event hook for your organization in `ACTIVE` status. You pass an event hook object in the JSON payload<br />of your request. That object represents the set of required information about the event hook you're registering, including:<br />  * The URI of your external service<br />  * The [events](https://developer.okta.com/docs/reference/api/event-types/) in Okta you want to subscribe to<br />  * An optional event hook filter that can reduce the number of event hook calls. This is a self-service Early Access (EA) feature.<br />    See [Create an event hook filter](https://developer.okta.com/docs/concepts/event-hooks/#create-an-event-hook-filter).<br /><br />    Additionally, you can specify a secret API key for Okta to pass to your external service endpoint for security verification. Note that the API key you set here is unrelated to the Okta API token<br />you must supply when making calls to Okta APIs. Optionally, you can specify extra headers that Okta passes to your external<br />service with each call.<br />Your external service must use a valid HTTPS endpoint.</td>
 </tr>
 <tr>
     <td><a href="#replace_event_hook"><CopyableCode code="replace_event_hook" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a>, <a href="#parameter-data__events"><code>data__events</code></a>, <a href="#parameter-data__channel"><code>data__channel</code></a></td>
     <td></td>
     <td>Replaces an event hook. Okta validates the new properties before replacing the existing values.<br />Some event hook properties are immutable and can't be updated. Refer to the parameter description in the request body schema.<br /><br />&gt;**Note:** Updating the `channel` property requires you to verify the hook again.</td>
 </tr>

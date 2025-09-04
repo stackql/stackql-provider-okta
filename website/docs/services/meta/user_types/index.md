@@ -200,7 +200,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_user_type"><CopyableCode code="create_user_type" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a>, <a href="#parameter-data__displayName"><code>data__displayName</code></a></td>
     <td></td>
     <td>Creates a new user type. Okta automatically creates a `default` user type for your org. You may add up to nine additional user types.<br />&gt; **Note**: New user types are based on the current default schema template. Modifications to this schema do not automatically propagate to previously created user types.</td>
 </tr>
@@ -214,7 +214,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#replace_user_type"><CopyableCode code="replace_user_type" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a>, <a href="#parameter-data__displayName"><code>data__displayName</code></a>, <a href="#parameter-data__description"><code>data__description</code></a></td>
     <td></td>
     <td>Replaces an existing user type. This operation is a full update.<br />&gt; **Note**: The `name` of an existing user type can't be changed, but must be part of the request body. You can only replace the `displayName` and `description` elements.</td>
 </tr>

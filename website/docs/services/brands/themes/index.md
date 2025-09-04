@@ -244,14 +244,14 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#replace_brand_theme"><CopyableCode code="replace_brand_theme" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__primaryColorHex"><code>data__primaryColorHex</code></a>, <a href="#parameter-data__secondaryColorHex"><code>data__secondaryColorHex</code></a>, <a href="#parameter-data__signInPageTouchPointVariant"><code>data__signInPageTouchPointVariant</code></a>, <a href="#parameter-data__endUserDashboardTouchPointVariant"><code>data__endUserDashboardTouchPointVariant</code></a>, <a href="#parameter-data__errorPageTouchPointVariant"><code>data__errorPageTouchPointVariant</code></a>, <a href="#parameter-data__emailTemplateTouchPointVariant"><code>data__emailTemplateTouchPointVariant</code></a></td>
     <td></td>
     <td>Replaces a theme for a brand</td>
 </tr>
 <tr>
     <td><a href="#upload_brand_theme_background_image"><CopyableCode code="upload_brand_theme_background_image" /></a></td>
     <td><CopyableCode code="exec" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-file"><code>file</code></a></td>
     <td></td>
     <td>Uploads and replaces the background image for the theme. The file must be in PNG, JPG, or GIF format and less than 2 MB in size.</td>
 </tr>
@@ -265,7 +265,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#upload_brand_theme_favicon"><CopyableCode code="upload_brand_theme_favicon" /></a></td>
     <td><CopyableCode code="exec" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-file"><code>file</code></a></td>
     <td></td>
     <td>Uploads and replaces the favicon for the theme</td>
 </tr>
@@ -279,7 +279,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#upload_brand_theme_logo"><CopyableCode code="upload_brand_theme_logo" /></a></td>
     <td><CopyableCode code="exec" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-file"><code>file</code></a></td>
     <td></td>
     <td>Uploads and replaces the logo for the theme. The file must be in PNG, JPG, or GIF format and less than 100kB in size. For best results use landscape orientation, a transparent background, and a minimum size of 300px by 50px to prevent upscaling.</td>
 </tr>

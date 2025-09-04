@@ -67,7 +67,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="isDefault" /></td>
     <td><code>boolean</code></td>
-    <td>Indicates the default realm. Existing users will start out in the default realm and can be moved to other realms individually or through realm assignments. See [Realms Assignments API](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/RealmAssignment/).</td>
+    <td>Indicates the default realm. Existing users will start out in the default realm and can be moved to other realms individually or through realm assignments. See [Realms Assignments API](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/RealmAssignment/).</td>
 </tr>
 <tr>
     <td><CopyableCode code="lastUpdated" /></td>
@@ -111,7 +111,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="isDefault" /></td>
     <td><code>boolean</code></td>
-    <td>Indicates the default realm. Existing users will start out in the default realm and can be moved to other realms individually or through realm assignments. See [Realms Assignments API](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/RealmAssignment/).</td>
+    <td>Indicates the default realm. Existing users will start out in the default realm and can be moved to other realms individually or through realm assignments. See [Realms Assignments API](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/RealmAssignment/).</td>
 </tr>
 <tr>
     <td><CopyableCode code="lastUpdated" /></td>

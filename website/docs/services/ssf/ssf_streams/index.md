@@ -78,21 +78,21 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_ssf_stream"><CopyableCode code="create_ssf_stream" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__events_requested"><code>data__events_requested</code></a>, <a href="#parameter-data__delivery"><code>data__delivery</code></a></td>
     <td></td>
     <td>Creates an SSF Stream for an event receiver to start receiving security events in the form of Security Event Tokens (SETs) from Okta.<br /><br />An SSF Stream is associated with the Client ID of the OAuth 2.0 access token used to create the stream. The Client ID is provided by Okta for an [OAuth 2.0 app integration](https://help.okta.com/okta_help.htm?id=ext_Apps_App_Integration_Wizard-oidc). One SSF Stream is allowed for each Client ID, hence, one SSF Stream is allowed for each app integration in Okta.<br /><br />A maximum of 10 SSF Stream configurations can be created for one org.</td>
 </tr>
 <tr>
     <td><a href="#update_ssf_stream"><CopyableCode code="update_ssf_stream" /></a></td>
     <td><CopyableCode code="update" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__events_requested"><code>data__events_requested</code></a>, <a href="#parameter-data__delivery"><code>data__delivery</code></a></td>
     <td></td>
     <td>Updates properties for an existing SSF Stream configuration.<br /><br />If the `stream_id` isn't provided in the request body, the associated stream with the Client ID (through the request OAuth 2.0 access token) is updated.</td>
 </tr>
 <tr>
     <td><a href="#replace_ssf_stream"><CopyableCode code="replace_ssf_stream" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__events_requested"><code>data__events_requested</code></a>, <a href="#parameter-data__delivery"><code>data__delivery</code></a></td>
     <td></td>
     <td>Replaces all properties for an existing SSF Stream configuration.<br /><br />If the `stream_id` isn't provided in the request body, the associated stream with the Client ID (through the request OAuth 2.0 access token) is replaced.</td>
 </tr>
@@ -106,7 +106,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#verify_ssf_stream"><CopyableCode code="verify_ssf_stream" /></a></td>
     <td><CopyableCode code="exec" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-stream_id"><code>stream_id</code></a></td>
     <td></td>
     <td>Verifies an SSF Stream by publishing a Verification Event requested by a Security Events Provider.<br /><br />&gt; **Note:** A successful response doesn't indicate that the Verification Event<br />    was transmitted successfully, only that Okta has transmitted the event or will<br />    at some point in the future. The SSF Receiver is responsible for validating and acknowledging<br />    successful transmission of the request by responding with HTTP Response Status Code 202.</td>
 </tr>

@@ -140,9 +140,9 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_resource_set"><CopyableCode code="create_resource_set" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__description"><code>data__description</code></a>, <a href="#parameter-data__label"><code>data__label</code></a>, <a href="#parameter-data__resources"><code>data__resources</code></a></td>
     <td></td>
-    <td>Creates a new resource set. See [Supported resources](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/guides/roles/#supported-resources).<br /><br />&gt; **Note:** The maximum number of `resources` allowed in a resource set object is 1000. Resources are identified by either an Okta Resource Name (ORN) or by a REST URL format. See [Okta Resource Name](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/guides/roles/#okta-resource-name-orn).</td>
+    <td>Creates a new resource set. See [Supported resources](https://developer.okta.com/docs/api/openapi/okta-management/guides/roles/#supported-resources).<br /><br />&gt; **Note:** The maximum number of `resources` allowed in a resource set object is 1000. Resources are identified by either an Okta Resource Name (ORN) or by a REST URL format. See [Okta Resource Name](https://developer.okta.com/docs/api/openapi/okta-management/guides/roles/#okta-resource-name-orn).</td>
 </tr>
 <tr>
     <td><a href="#replace_resource_set"><CopyableCode code="replace_resource_set" /></a></td>
@@ -239,7 +239,7 @@ WHERE subdomain = '{{ subdomain }}' -- required;
 >
 <TabItem value="create_resource_set">
 
-Creates a new resource set. See [Supported resources](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/guides/roles/#supported-resources).<br /><br />&gt; **Note:** The maximum number of `resources` allowed in a resource set object is 1000. Resources are identified by either an Okta Resource Name (ORN) or by a REST URL format. See [Okta Resource Name](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/guides/roles/#okta-resource-name-orn).
+Creates a new resource set. See [Supported resources](https://developer.okta.com/docs/api/openapi/okta-management/guides/roles/#supported-resources).<br /><br />&gt; **Note:** The maximum number of `resources` allowed in a resource set object is 1000. Resources are identified by either an Okta Resource Name (ORN) or by a REST URL format. See [Okta Resource Name](https://developer.okta.com/docs/api/openapi/okta-management/guides/roles/#okta-resource-name-orn).
 
 ```sql
 INSERT INTO okta.iam.role_resource_sets (
@@ -285,7 +285,7 @@ lastUpdated
     - name: resources
       value: array
       description: >
-        The endpoint (URL) that references all resource objects included in the resource set. Resources are identified by either an Okta Resource Name (ORN) or by a REST URL format. See [Okta Resource Name](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/guides/roles/#okta-resource-name-orn).
+        The endpoint (URL) that references all resource objects included in the resource set. Resources are identified by either an Okta Resource Name (ORN) or by a REST URL format. See [Okta Resource Name](https://developer.okta.com/docs/api/openapi/okta-management/guides/roles/#okta-resource-name-orn).
         
 ```
 </TabItem>

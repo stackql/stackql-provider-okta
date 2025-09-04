@@ -140,14 +140,14 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_role"><CopyableCode code="create_role" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__label"><code>data__label</code></a>, <a href="#parameter-data__description"><code>data__description</code></a>, <a href="#parameter-data__permissions"><code>data__permissions</code></a></td>
     <td></td>
     <td>Creates a custom role</td>
 </tr>
 <tr>
     <td><a href="#replace_role"><CopyableCode code="replace_role" /></a></td>
     <td><CopyableCode code="replace" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__label"><code>data__label</code></a>, <a href="#parameter-data__description"><code>data__description</code></a></td>
     <td></td>
     <td>Replaces the label and description for a custom role by `roleIdOrLabel`</td>
 </tr>
@@ -285,7 +285,7 @@ lastUpdated
     - name: permissions
       value: array
       description: >
-        Array of permissions that the role grants. See [Permissions](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/guides/permissions).
+        Array of permissions that the role grants. See [Permissions](https://developer.okta.com/docs/api/openapi/okta-management/guides/permissions).
         
 ```
 </TabItem>

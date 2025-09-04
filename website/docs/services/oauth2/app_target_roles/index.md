@@ -81,7 +81,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="features" /></td>
     <td><code>array</code></td>
-    <td>Features supported by the app. See app [features](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/listApplications!c=200&path=0/features&t=response).</td>
+    <td>Features supported by the app. See app [features](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/listApplications!c=200&path=0/features&t=response).</td>
 </tr>
 <tr>
     <td><CopyableCode code="lastUpdated" /></td>
@@ -91,7 +91,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="signOnModes" /></td>
     <td><code>array</code></td>
-    <td>Authentication mode for the app. See app [signOnMode](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/listApplications!c=200&path=0/signOnMode&t=response).</td>
+    <td>Authentication mode for the app. See app [signOnMode](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/listApplications!c=200&path=0/signOnMode&t=response).</td>
 </tr>
 <tr>
     <td><CopyableCode code="status" /></td>
@@ -147,14 +147,14 @@ The following methods are available for this resource:
     <td><CopyableCode code="delete" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
     <td></td>
-    <td>Unassigns an OIN app target for a role assignment to a client app<br /><br />&gt; **Note:** You can't remove the last OIN app target from a role assignment.<br />&gt; If you need a role assignment that applies to all apps, delete the role assignment with the target and create another one. See [Unassign a client role](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/RoleAssignmentClient/#tag/RoleAssignmentClient/operation/deleteRoleFromClient).</td>
+    <td>Unassigns an OIN app target for a role assignment to a client app<br /><br />&gt; **Note:** You can't remove the last OIN app target from a role assignment.<br />&gt; If you need a role assignment that applies to all apps, delete the role assignment with the target and create another one. See [Unassign a client role](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/RoleAssignmentClient/#tag/RoleAssignmentClient/operation/deleteRoleFromClient).</td>
 </tr>
 <tr>
     <td><a href="#remove_app_target_instance_role_for_client"><CopyableCode code="remove_app_target_instance_role_for_client" /></a></td>
     <td><CopyableCode code="delete" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
     <td></td>
-    <td>Unassigns an app instance target from a role assignment to a client app<br /><br />&gt; **Note:** You can't remove the last app instance target from a role assignment.<br />&gt; If you need a role assignment that applies to all the apps, delete the role assignment with the instance target and create another one.  See [Unassign a client role](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/RoleAssignmentClient/#tag/RoleAssignmentClient/operation/deleteRoleFromClient).</td>
+    <td>Unassigns an app instance target from a role assignment to a client app<br /><br />&gt; **Note:** You can't remove the last app instance target from a role assignment.<br />&gt; If you need a role assignment that applies to all the apps, delete the role assignment with the instance target and create another one.  See [Unassign a client role](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/RoleAssignmentClient/#tag/RoleAssignmentClient/operation/deleteRoleFromClient).</td>
 </tr>
 <tr>
     <td><a href="#assign_app_target_instance_role_for_client"><CopyableCode code="assign_app_target_instance_role_for_client" /></a></td>
@@ -266,7 +266,7 @@ subdomain = '{{ subdomain }}' --required;
 >
 <TabItem value="remove_app_target_role_from_client">
 
-Unassigns an OIN app target for a role assignment to a client app<br /><br />&gt; **Note:** You can't remove the last OIN app target from a role assignment.<br />&gt; If you need a role assignment that applies to all apps, delete the role assignment with the target and create another one. See [Unassign a client role](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/RoleAssignmentClient/#tag/RoleAssignmentClient/operation/deleteRoleFromClient).
+Unassigns an OIN app target for a role assignment to a client app<br /><br />&gt; **Note:** You can't remove the last OIN app target from a role assignment.<br />&gt; If you need a role assignment that applies to all apps, delete the role assignment with the target and create another one. See [Unassign a client role](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/RoleAssignmentClient/#tag/RoleAssignmentClient/operation/deleteRoleFromClient).
 
 ```sql
 DELETE FROM okta.oauth2.app_target_roles
@@ -275,7 +275,7 @@ WHERE subdomain = '{{ subdomain }}' --required;
 </TabItem>
 <TabItem value="remove_app_target_instance_role_for_client">
 
-Unassigns an app instance target from a role assignment to a client app<br /><br />&gt; **Note:** You can't remove the last app instance target from a role assignment.<br />&gt; If you need a role assignment that applies to all the apps, delete the role assignment with the instance target and create another one.  See [Unassign a client role](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/RoleAssignmentClient/#tag/RoleAssignmentClient/operation/deleteRoleFromClient).
+Unassigns an app instance target from a role assignment to a client app<br /><br />&gt; **Note:** You can't remove the last app instance target from a role assignment.<br />&gt; If you need a role assignment that applies to all the apps, delete the role assignment with the instance target and create another one.  See [Unassign a client role](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/RoleAssignmentClient/#tag/RoleAssignmentClient/operation/deleteRoleFromClient).
 
 ```sql
 DELETE FROM okta.oauth2.app_target_roles

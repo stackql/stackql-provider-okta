@@ -54,21 +54,21 @@ The following methods are available for this resource:
     <td><CopyableCode code="insert" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
     <td></td>
-    <td>Grants Okta Support temporary access to your org as an administrator for eight hours<br /><br />&gt; **Note:** This resource is deprecated. Use the [Update an Okta Support case](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/OrgSettingSupport/#tag/OrgSettingSupport/operation/updateOktaSupportCase) resource to grant Okta Support access for a support case.<br />&gt; For the corresponding Okta Admin Console feature, see [Give access to Okta Support](https://help.okta.com/okta_help.htm?type=oie&id=settings-support-access).</td>
+    <td>Grants Okta Support temporary access to your org as an administrator for eight hours<br /><br />&gt; **Note:** This resource is deprecated. Use the [Update an Okta Support case](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/OrgSettingSupport/#tag/OrgSettingSupport/operation/updateOktaSupportCase) resource to grant Okta Support access for a support case.<br />&gt; For the corresponding Okta Admin Console feature, see [Give access to Okta Support](https://help.okta.com/okta_help.htm?type=oie&id=settings-support-access).</td>
 </tr>
 <tr>
     <td><a href="#revoke_okta_support"><CopyableCode code="revoke_okta_support" /></a></td>
     <td><CopyableCode code="delete" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
     <td></td>
-    <td>Revokes Okta Support access to your org<br /><br />&gt; **Note:** This resource is deprecated. Use the [Update an Okta Support case](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/OrgSettingSupport/#tag/OrgSettingSupport/operation/updateOktaSupportCase) resource to revoke Okta Support access for a support case.<br />&gt; For the corresponding Okta Admin Console feature, see [Give access to Okta Support](https://help.okta.com/okta_help.htm?type=oie&id=settings-support-access).</td>
+    <td>Revokes Okta Support access to your org<br /><br />&gt; **Note:** This resource is deprecated. Use the [Update an Okta Support case](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/OrgSettingSupport/#tag/OrgSettingSupport/operation/updateOktaSupportCase) resource to revoke Okta Support access for a support case.<br />&gt; For the corresponding Okta Admin Console feature, see [Give access to Okta Support](https://help.okta.com/okta_help.htm?type=oie&id=settings-support-access).</td>
 </tr>
 <tr>
     <td><a href="#extend_okta_support"><CopyableCode code="extend_okta_support" /></a></td>
     <td><CopyableCode code="exec" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
     <td></td>
-    <td>Extends the length of time that Okta Support can access your org by 24 hours. This means that 24 hours are added to the remaining access time.<br /><br />&gt; **Note:** This resource is deprecated. Use the [Update an Okta Support case](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/OrgSettingSupport/#tag/OrgSettingSupport/operation/updateOktaSupportCase) resource to extend Okta Support access for a support case.<br />&gt; For the corresponding Okta Admin Console feature, see [Give access to Okta Support](https://help.okta.com/okta_help.htm?type=oie&id=settings-support-access).</td>
+    <td>Extends the length of time that Okta Support can access your org by 24 hours. This means that 24 hours are added to the remaining access time.<br /><br />&gt; **Note:** This resource is deprecated. Use the [Update an Okta Support case](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/OrgSettingSupport/#tag/OrgSettingSupport/operation/updateOktaSupportCase) resource to extend Okta Support access for a support case.<br />&gt; For the corresponding Okta Admin Console feature, see [Give access to Okta Support](https://help.okta.com/okta_help.htm?type=oie&id=settings-support-access).</td>
 </tr>
 </tbody>
 </table>
@@ -105,7 +105,7 @@ Parameters can be passed in the `WHERE` clause of a query. Check the [Methods](#
 >
 <TabItem value="grant_okta_support">
 
-Grants Okta Support temporary access to your org as an administrator for eight hours<br /><br />&gt; **Note:** This resource is deprecated. Use the [Update an Okta Support case](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/OrgSettingSupport/#tag/OrgSettingSupport/operation/updateOktaSupportCase) resource to grant Okta Support access for a support case.<br />&gt; For the corresponding Okta Admin Console feature, see [Give access to Okta Support](https://help.okta.com/okta_help.htm?type=oie&id=settings-support-access).
+Grants Okta Support temporary access to your org as an administrator for eight hours<br /><br />&gt; **Note:** This resource is deprecated. Use the [Update an Okta Support case](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/OrgSettingSupport/#tag/OrgSettingSupport/operation/updateOktaSupportCase) resource to grant Okta Support access for a support case.<br />&gt; For the corresponding Okta Admin Console feature, see [Give access to Okta Support](https://help.okta.com/okta_help.htm?type=oie&id=settings-support-access).
 
 ```sql
 INSERT INTO okta.org.okta_support (
@@ -140,7 +140,7 @@ SELECT
 >
 <TabItem value="revoke_okta_support">
 
-Revokes Okta Support access to your org<br /><br />&gt; **Note:** This resource is deprecated. Use the [Update an Okta Support case](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/OrgSettingSupport/#tag/OrgSettingSupport/operation/updateOktaSupportCase) resource to revoke Okta Support access for a support case.<br />&gt; For the corresponding Okta Admin Console feature, see [Give access to Okta Support](https://help.okta.com/okta_help.htm?type=oie&id=settings-support-access).
+Revokes Okta Support access to your org<br /><br />&gt; **Note:** This resource is deprecated. Use the [Update an Okta Support case](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/OrgSettingSupport/#tag/OrgSettingSupport/operation/updateOktaSupportCase) resource to revoke Okta Support access for a support case.<br />&gt; For the corresponding Okta Admin Console feature, see [Give access to Okta Support](https://help.okta.com/okta_help.htm?type=oie&id=settings-support-access).
 
 ```sql
 DELETE FROM okta.org.okta_support
@@ -160,7 +160,7 @@ WHERE subdomain = '{{ subdomain }}' --required;
 >
 <TabItem value="extend_okta_support">
 
-Extends the length of time that Okta Support can access your org by 24 hours. This means that 24 hours are added to the remaining access time.<br /><br />&gt; **Note:** This resource is deprecated. Use the [Update an Okta Support case](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/OrgSettingSupport/#tag/OrgSettingSupport/operation/updateOktaSupportCase) resource to extend Okta Support access for a support case.<br />&gt; For the corresponding Okta Admin Console feature, see [Give access to Okta Support](https://help.okta.com/okta_help.htm?type=oie&id=settings-support-access).
+Extends the length of time that Okta Support can access your org by 24 hours. This means that 24 hours are added to the remaining access time.<br /><br />&gt; **Note:** This resource is deprecated. Use the [Update an Okta Support case](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/OrgSettingSupport/#tag/OrgSettingSupport/operation/updateOktaSupportCase) resource to extend Okta Support access for a support case.<br />&gt; For the corresponding Okta Admin Console feature, see [Give access to Okta Support](https://help.okta.com/okta_help.htm?type=oie&id=settings-support-access).
 
 ```sql
 EXEC okta.org.okta_support.extend_okta_support 

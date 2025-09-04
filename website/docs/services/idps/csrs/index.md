@@ -152,7 +152,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="insert" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
     <td></td>
-    <td>Generates a new key pair and returns a certificate signing request (CSR) for it<br />&gt; **Note:** The private key isn't listed in the [signing key credentials for the identity provider (IdP)](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/IdentityProviderSigningKeys/#tag/IdentityProviderSigningKeys/operation/listIdentityProviderSigningKeys) until it's published.</td>
+    <td>Generates a new key pair and returns a certificate signing request (CSR) for it<br />&gt; **Note:** The private key isn't listed in the [signing key credentials for the identity provider (IdP)](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/IdentityProviderSigningKeys/#tag/IdentityProviderSigningKeys/operation/listIdentityProviderSigningKeys) until it's published.</td>
 </tr>
 <tr>
     <td><a href="#revoke_csr_for_identity_provider"><CopyableCode code="revoke_csr_for_identity_provider" /></a></td>
@@ -245,7 +245,7 @@ WHERE subdomain = '{{ subdomain }}' -- required;
 >
 <TabItem value="generate_csr_for_identity_provider">
 
-Generates a new key pair and returns a certificate signing request (CSR) for it<br />&gt; **Note:** The private key isn't listed in the [signing key credentials for the identity provider (IdP)](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/IdentityProviderSigningKeys/#tag/IdentityProviderSigningKeys/operation/listIdentityProviderSigningKeys) until it's published.
+Generates a new key pair and returns a certificate signing request (CSR) for it<br />&gt; **Note:** The private key isn't listed in the [signing key credentials for the identity provider (IdP)](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/IdentityProviderSigningKeys/#tag/IdentityProviderSigningKeys/operation/listIdentityProviderSigningKeys) until it's published.
 
 ```sql
 INSERT INTO okta.idps.csrs (

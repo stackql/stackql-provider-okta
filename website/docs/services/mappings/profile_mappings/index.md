@@ -120,7 +120,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#update_profile_mapping"><CopyableCode code="update_profile_mapping" /></a></td>
     <td><CopyableCode code="update" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__properties"><code>data__properties</code></a>, <a href="#parameter-data__expression"><code>data__expression</code></a>, <a href="#parameter-data__pushStatus"><code>data__pushStatus</code></a></td>
     <td></td>
     <td>Updates an existing profile mapping by adding, updating, or removing one or many property mappings</td>
 </tr>

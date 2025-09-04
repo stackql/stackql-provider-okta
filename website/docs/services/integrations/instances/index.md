@@ -190,7 +190,7 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_api_service_integration_instance"><CopyableCode code="create_api_service_integration_instance" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__type"><code>data__type</code></a>, <a href="#parameter-data__grantedScopes"><code>data__grantedScopes</code></a></td>
     <td></td>
     <td>Creates and authorizes an API Service Integration instance</td>
 </tr>

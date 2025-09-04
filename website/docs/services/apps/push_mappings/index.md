@@ -200,14 +200,14 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_group_push_mapping"><CopyableCode code="create_group_push_mapping" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__sourceGroupId"><code>data__sourceGroupId</code></a></td>
     <td></td>
     <td>Creates or links a group push mapping.<br /><br />**Note:** Either `targetGroupId` or `targetGroupName` must be provided, but not both. If `targetGroupId` is provided, it links to an existing group. If `targetGroupName` is provided, it creates a new group.</td>
 </tr>
 <tr>
     <td><a href="#update_group_push_mapping"><CopyableCode code="update_group_push_mapping" /></a></td>
     <td><CopyableCode code="update" /></td>
-    <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__status"><code>data__status</code></a></td>
     <td></td>
     <td>Updates the status of a group push mapping</td>
 </tr>

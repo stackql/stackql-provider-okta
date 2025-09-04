@@ -145,14 +145,14 @@ The following methods are available for this resource:
 <tr>
     <td><a href="#create_authenticator_enrollment"><CopyableCode code="create_authenticator_enrollment" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-userId"><code>userId</code></a>, <a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-userId"><code>userId</code></a>, <a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__authenticatorId"><code>data__authenticatorId</code></a>, <a href="#parameter-data__profile"><code>data__profile</code></a></td>
     <td></td>
     <td>Creates a Phone authenticator enrollment that's automatically activated</td>
 </tr>
 <tr>
     <td><a href="#create_tac_authenticator_enrollment"><CopyableCode code="create_tac_authenticator_enrollment" /></a></td>
     <td><CopyableCode code="insert" /></td>
-    <td><a href="#parameter-userId"><code>userId</code></a>, <a href="#parameter-subdomain"><code>subdomain</code></a></td>
+    <td><a href="#parameter-userId"><code>userId</code></a>, <a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__authenticatorId"><code>data__authenticatorId</code></a></td>
     <td></td>
     <td>Creates an auto-activated Temporary access code (TAC) authenticator enrollment</td>
 </tr>
