@@ -396,7 +396,8 @@ FROM okta.users.grants
 WHERE subdomain = '{{ subdomain }}' -- required
 AND expand = '{{ expand }}'
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 <TabItem value="list_user_grants">
@@ -422,7 +423,8 @@ WHERE subdomain = '{{ subdomain }}' -- required
 AND scopeId = '{{ scopeId }}'
 AND expand = '{{ expand }}'
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 <TabItem value="get_user_grant">
@@ -445,7 +447,8 @@ status,
 userId
 FROM okta.users.grants
 WHERE subdomain = '{{ subdomain }}' -- required
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -467,7 +470,8 @@ Revokes all grants for the specified user and client
 
 ```sql
 DELETE FROM okta.users.grants
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="revoke_user_grants">
@@ -476,7 +480,8 @@ Revokes all grants for a specified user
 
 ```sql
 DELETE FROM okta.users.grants
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="revoke_user_grant">
@@ -485,7 +490,8 @@ Revokes one grant for a specified user
 
 ```sql
 DELETE FROM okta.users.grants
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

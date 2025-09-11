@@ -229,7 +229,8 @@ isUsed,
 keyId,
 lastUpdated
 FROM okta.hook_keys.hook_keys
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_hook_key">
@@ -246,7 +247,8 @@ keyId,
 lastUpdated
 FROM okta.hook_keys.hook_keys
 WHERE subdomain = '{{ subdomain }}' -- required
-AND id = '{{ id }}';
+AND id = '{{ id }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -328,7 +330,8 @@ _embedded,
 created,
 isUsed,
 keyId,
-lastUpdated;
+lastUpdated
+;
 ```
 </TabItem>
 </Tabs>
@@ -348,7 +351,8 @@ Deletes a key by `id`. After being deleted, the key is unrecoverable.<br /><br /
 
 ```sql
 DELETE FROM okta.hook_keys.hook_keys
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

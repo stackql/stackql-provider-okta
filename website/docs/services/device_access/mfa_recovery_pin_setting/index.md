@@ -127,7 +127,8 @@ Retrieves the status of the Desktop MFA Recovery PIN feature. That is, whether o
 SELECT
 desktopMFARecoveryPinEnabled
 FROM okta.device_access.mfa_recovery_pin_setting
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -152,7 +153,8 @@ data__desktopMFARecoveryPinEnabled = {{ desktopMFARecoveryPinEnabled }}
 WHERE 
 subdomain = '{{ subdomain }}' --required
 RETURNING
-desktopMFARecoveryPinEnabled;
+desktopMFARecoveryPinEnabled
+;
 ```
 </TabItem>
 </Tabs>

@@ -144,7 +144,8 @@ expirationDate,
 grantId,
 type
 FROM okta.users.role_assignment_governance_grant
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

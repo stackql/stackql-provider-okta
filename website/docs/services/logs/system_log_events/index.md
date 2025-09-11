@@ -252,7 +252,8 @@ AND after = '{{ after }}'
 AND filter = '{{ filter }}'
 AND q = '{{ q }}'
 AND limit = '{{ limit }}'
-AND sortOrder = '{{ sortOrder }}';
+AND sortOrder = '{{ sortOrder }}'
+;
 ```
 </TabItem>
 </Tabs>

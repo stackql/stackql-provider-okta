@@ -293,7 +293,8 @@ status,
 system,
 type
 FROM okta.authorizationservers.rules
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_authorization_server_policy_rule">
@@ -314,7 +315,8 @@ status,
 system,
 type
 FROM okta.authorizationservers.rules
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -346,12 +348,12 @@ subdomain
 )
 SELECT 
 '{{ actions }}',
-'{{ conditions }}' --required,
-'{{ name }}' --required,
+'{{ conditions }}' /* required */,
+'{{ name }}' /* required */,
 {{ priority }},
 '{{ status }}',
 {{ system }},
-'{{ type }}' --required,
+'{{ type }}' /* required */,
 '{{ subdomain }}'
 RETURNING
 id,
@@ -451,7 +453,8 @@ lastUpdated,
 priority,
 status,
 system,
-type;
+type
+;
 ```
 </TabItem>
 </Tabs>
@@ -471,7 +474,8 @@ Deletes a Policy Rule defined in the specified Custom Authorization Server and P
 
 ```sql
 DELETE FROM okta.authorizationservers.rules
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -492,7 +496,8 @@ Activates an authorization server policy rule
 
 ```sql
 EXEC okta.authorizationservers.rules.activate_authorization_server_policy_rule 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_authorization_server_policy_rule">
@@ -501,7 +506,8 @@ Deactivates an authorization server policy rule
 
 ```sql
 EXEC okta.authorizationservers.rules.deactivate_authorization_server_policy_rule 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

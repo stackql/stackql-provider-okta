@@ -212,7 +212,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="insert" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
     <td></td>
-    <td>Creates a new identity provider (IdP) integration.<br /><br />#### SAML 2.0 IdP<br /><br />You must first add the IdP's signature certificate to the IdP key store before you can add a SAML 2.0 IdP with a `kid` credential reference. <br /><br />Don't use `fromURI` to automatically redirect a user to a particular app after successfully authenticating with a third-party IdP. Instead, use SAML deep links. Using `fromURI` isn't tested or supported. For more information about using deep links when signing users in using an SP-initiated flow, see [Understanding SP-Initiated Login flow](https://developer.okta.com/docs/concepts/saml/#understanding-sp-initiated-login-flow).<br /><br />Use SAML deep links to automatically redirect the user to an app after successfully authenticating with a third-party IdP. To use deep links, assemble these three parts into a URL:<br /><br />* SP ACS URL&lt;br&gt;<br />For example: `https://$&#123;yourOktaDomain&#125;/sso/saml2/:idpId`<br />* The app to which the user is automatically redirected after successfully authenticating with the IdP &lt;br&gt;<br />For example: `/app/:app-location/:appId/sso/saml`<br />* Optionally, if the app is an outbound SAML app, you can specify the `relayState` passed to it.&lt;br&gt;<br />For example: `?RelayState=:anyUrlEncodedValue`<br /><br />The deep link for the above three parts is:&lt;br&gt;<br />`https://$&#123;yourOktaDomain&#125;/sso/saml2/:idpId/app/:app-location/:appId/sso/saml?RelayState=:anyUrlEncodedValue`<br /><br />#### Smart Card X509 IdP<br /><br />You must first add the IdP's server certificate to the IdP key store before you can add a Smart Card `X509` IdP with a `kid` credential reference.<br />You need to upload the whole trust chain as a single key using the [Key Store API](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/IdentityProviderKeys/#tag/IdentityProviderKeys/operation/createIdentityProviderKey).<br />Depending on the information stored in the smart card, select the proper [template](https://developer.okta.com/docs/reference/okta-expression-language/#idp-user-profile) `idpuser.subjectAltNameEmail` or `idpuser.subjectAltNameUpn`.<br /><br />#### Identity verification vendors as identity providers<br /><br />Identity verification vendors (IDVs) work like IdPs, with a few key differences. IDVs verify your user's identities by requiring them to submit a proof of identity. There are many ways to verify user identities. For example, a proof of identity can be a selfie to determine liveliness or it can be requiring users to submit a photo of their driver's license and matching that information with a database.<br /><br />There are three IDVs that you can configure as IdPs in your org by creating an account with the vendor, and then creating an IdP integration. Control how the IDVs verify your users by using [Okta account management policy rules](https://developer.okta.com/docs/guides/okta-account-management-policy/main/).<br /><br />* [Persona](https://withpersona.com/)<br /><br />* [CLEAR Verified](https://www.clearme.com/)<br /><br />* [Incode](https://incode.com/)</td>
+    <td>Creates a new identity provider (IdP) integration.<br /><br />#### SAML 2.0 IdP<br /><br />You must first add the IdP's signature certificate to the IdP key store before you can add a SAML 2.0 IdP with a `kid` credential reference. <br /><br />Don't use `fromURI` to automatically redirect a user to a particular app after successfully authenticating with a third-party IdP. Instead, use SAML deep links. Using `fromURI` isn't tested or supported. For more information about using deep links when signing users in using an SP-initiated flow, see [Understanding SP-Initiated Login flow](https://developer.okta.com/docs/concepts/saml/#understanding-sp-initiated-login-flow).<br /><br />Use SAML deep links to automatically redirect the user to an app after successfully authenticating with a third-party IdP. To use deep links, assemble these three parts into a URL:<br /><br />* SP ACS URL<br /><br />For example: `https://$&#123;yourOktaDomain&#125;/sso/saml2/:idpId`<br />* The app to which the user is automatically redirected after successfully authenticating with the IdP <br /><br />For example: `/app/:app-location/:appId/sso/saml`<br />* Optionally, if the app is an outbound SAML app, you can specify the `relayState` passed to it.<br /><br />For example: `?RelayState=:anyUrlEncodedValue`<br /><br />The deep link for the above three parts is:<br /><br />`https://$&#123;yourOktaDomain&#125;/sso/saml2/:idpId/app/:app-location/:appId/sso/saml?RelayState=:anyUrlEncodedValue`<br /><br />#### Smart Card X509 IdP<br /><br />You must first add the IdP's server certificate to the IdP key store before you can add a Smart Card `X509` IdP with a `kid` credential reference.<br />You need to upload the whole trust chain as a single key using the [Key Store API](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/IdentityProviderKeys/#tag/IdentityProviderKeys/operation/createIdentityProviderKey).<br />Depending on the information stored in the smart card, select the proper [template](https://developer.okta.com/docs/reference/okta-expression-language/#idp-user-profile) `idpuser.subjectAltNameEmail` or `idpuser.subjectAltNameUpn`.<br /><br />#### Identity verification vendors as identity providers<br /><br />Identity verification vendors (IDVs) work like IdPs, with a few key differences. IDVs verify your user's identities by requiring them to submit a proof of identity. There are many ways to verify user identities. For example, a proof of identity can be a selfie to determine liveliness or it can be requiring users to submit a photo of their driver's license and matching that information with a database.<br /><br />There are three IDVs that you can configure as IdPs in your org by creating an account with the vendor, and then creating an IdP integration. Control how the IDVs verify your users by using [Okta account management policy rules](https://developer.okta.com/docs/guides/okta-account-management-policy/main/).<br /><br />* [Persona](https://withpersona.com/)<br /><br />* [CLEAR Verified](https://www.clearme.com/)<br /><br />* [Incode](https://incode.com/)</td>
 </tr>
 <tr>
     <td><a href="#replace_identity_provider"><CopyableCode code="replace_identity_provider" /></a></td>
@@ -317,7 +317,8 @@ WHERE subdomain = '{{ subdomain }}' -- required
 AND q = '{{ q }}'
 AND after = '{{ after }}'
 AND limit = '{{ limit }}'
-AND type = '{{ type }}';
+AND type = '{{ type }}'
+;
 ```
 </TabItem>
 <TabItem value="get_identity_provider">
@@ -338,7 +339,8 @@ protocol,
 status,
 type
 FROM okta.idps.identity_providers
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -355,7 +357,7 @@ WHERE subdomain = '{{ subdomain }}' -- required;
 >
 <TabItem value="create_identity_provider">
 
-Creates a new identity provider (IdP) integration.<br /><br />#### SAML 2.0 IdP<br /><br />You must first add the IdP's signature certificate to the IdP key store before you can add a SAML 2.0 IdP with a `kid` credential reference. <br /><br />Don't use `fromURI` to automatically redirect a user to a particular app after successfully authenticating with a third-party IdP. Instead, use SAML deep links. Using `fromURI` isn't tested or supported. For more information about using deep links when signing users in using an SP-initiated flow, see [Understanding SP-Initiated Login flow](https://developer.okta.com/docs/concepts/saml/#understanding-sp-initiated-login-flow).<br /><br />Use SAML deep links to automatically redirect the user to an app after successfully authenticating with a third-party IdP. To use deep links, assemble these three parts into a URL:<br /><br />* SP ACS URL&lt;br&gt;<br />For example: `https://$&#123;yourOktaDomain&#125;/sso/saml2/:idpId`<br />* The app to which the user is automatically redirected after successfully authenticating with the IdP &lt;br&gt;<br />For example: `/app/:app-location/:appId/sso/saml`<br />* Optionally, if the app is an outbound SAML app, you can specify the `relayState` passed to it.&lt;br&gt;<br />For example: `?RelayState=:anyUrlEncodedValue`<br /><br />The deep link for the above three parts is:&lt;br&gt;<br />`https://$&#123;yourOktaDomain&#125;/sso/saml2/:idpId/app/:app-location/:appId/sso/saml?RelayState=:anyUrlEncodedValue`<br /><br />#### Smart Card X509 IdP<br /><br />You must first add the IdP's server certificate to the IdP key store before you can add a Smart Card `X509` IdP with a `kid` credential reference.<br />You need to upload the whole trust chain as a single key using the [Key Store API](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/IdentityProviderKeys/#tag/IdentityProviderKeys/operation/createIdentityProviderKey).<br />Depending on the information stored in the smart card, select the proper [template](https://developer.okta.com/docs/reference/okta-expression-language/#idp-user-profile) `idpuser.subjectAltNameEmail` or `idpuser.subjectAltNameUpn`.<br /><br />#### Identity verification vendors as identity providers<br /><br />Identity verification vendors (IDVs) work like IdPs, with a few key differences. IDVs verify your user's identities by requiring them to submit a proof of identity. There are many ways to verify user identities. For example, a proof of identity can be a selfie to determine liveliness or it can be requiring users to submit a photo of their driver's license and matching that information with a database.<br /><br />There are three IDVs that you can configure as IdPs in your org by creating an account with the vendor, and then creating an IdP integration. Control how the IDVs verify your users by using [Okta account management policy rules](https://developer.okta.com/docs/guides/okta-account-management-policy/main/).<br /><br />* [Persona](https://withpersona.com/)<br /><br />* [CLEAR Verified](https://www.clearme.com/)<br /><br />* [Incode](https://incode.com/)
+Creates a new identity provider (IdP) integration.<br /><br />#### SAML 2.0 IdP<br /><br />You must first add the IdP's signature certificate to the IdP key store before you can add a SAML 2.0 IdP with a `kid` credential reference. <br /><br />Don't use `fromURI` to automatically redirect a user to a particular app after successfully authenticating with a third-party IdP. Instead, use SAML deep links. Using `fromURI` isn't tested or supported. For more information about using deep links when signing users in using an SP-initiated flow, see [Understanding SP-Initiated Login flow](https://developer.okta.com/docs/concepts/saml/#understanding-sp-initiated-login-flow).<br /><br />Use SAML deep links to automatically redirect the user to an app after successfully authenticating with a third-party IdP. To use deep links, assemble these three parts into a URL:<br /><br />* SP ACS URL<br /><br />For example: `https://$&#123;yourOktaDomain&#125;/sso/saml2/:idpId`<br />* The app to which the user is automatically redirected after successfully authenticating with the IdP <br /><br />For example: `/app/:app-location/:appId/sso/saml`<br />* Optionally, if the app is an outbound SAML app, you can specify the `relayState` passed to it.<br /><br />For example: `?RelayState=:anyUrlEncodedValue`<br /><br />The deep link for the above three parts is:<br /><br />`https://$&#123;yourOktaDomain&#125;/sso/saml2/:idpId/app/:app-location/:appId/sso/saml?RelayState=:anyUrlEncodedValue`<br /><br />#### Smart Card X509 IdP<br /><br />You must first add the IdP's server certificate to the IdP key store before you can add a Smart Card `X509` IdP with a `kid` credential reference.<br />You need to upload the whole trust chain as a single key using the [Key Store API](https://developer.okta.com/docs/apihttps://developer.okta.com/docs/api/openapi/okta-management/management/tag/IdentityProviderKeys/#tag/IdentityProviderKeys/operation/createIdentityProviderKey).<br />Depending on the information stored in the smart card, select the proper [template](https://developer.okta.com/docs/reference/okta-expression-language/#idp-user-profile) `idpuser.subjectAltNameEmail` or `idpuser.subjectAltNameUpn`.<br /><br />#### Identity verification vendors as identity providers<br /><br />Identity verification vendors (IDVs) work like IdPs, with a few key differences. IDVs verify your user's identities by requiring them to submit a proof of identity. There are many ways to verify user identities. For example, a proof of identity can be a selfie to determine liveliness or it can be requiring users to submit a photo of their driver's license and matching that information with a database.<br /><br />There are three IDVs that you can configure as IdPs in your org by creating an account with the vendor, and then creating an IdP integration. Control how the IDVs verify your users by using [Okta account management policy rules](https://developer.okta.com/docs/guides/okta-account-management-policy/main/).<br /><br />* [Persona](https://withpersona.com/)<br /><br />* [CLEAR Verified](https://www.clearme.com/)<br /><br />* [Incode](https://incode.com/)
 
 ```sql
 INSERT INTO okta.idps.identity_providers (
@@ -514,7 +516,8 @@ policy,
 properties,
 protocol,
 status,
-type;
+type
+;
 ```
 </TabItem>
 </Tabs>
@@ -534,7 +537,8 @@ Deletes an identity provider (IdP) integration by `idpId`<br />* All existing Id
 
 ```sql
 DELETE FROM okta.idps.identity_providers
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -555,7 +559,8 @@ Activates an inactive identity provider (IdP)
 
 ```sql
 EXEC okta.idps.identity_providers.activate_identity_provider 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_identity_provider">
@@ -564,7 +569,8 @@ Deactivates an active identity provider (IdP)
 
 ```sql
 EXEC okta.idps.identity_providers.deactivate_identity_provider 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

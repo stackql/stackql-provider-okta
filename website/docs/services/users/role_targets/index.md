@@ -156,7 +156,8 @@ FROM okta.users.role_targets
 WHERE subdomain = '{{ subdomain }}' -- required
 AND assignmentType = '{{ assignmentType }}'
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 </Tabs>

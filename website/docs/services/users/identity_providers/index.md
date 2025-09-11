@@ -180,7 +180,8 @@ protocol,
 status,
 type
 FROM okta.users.identity_providers
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

@@ -217,7 +217,8 @@ importType,
 lastUpdated,
 status
 FROM okta.identity_sources.sessions
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_identity_source_session">
@@ -233,7 +234,8 @@ importType,
 lastUpdated,
 status
 FROM okta.identity_sources.sessions
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -296,7 +298,8 @@ Deletes an identity source session for a given identity source ID and session Id
 
 ```sql
 DELETE FROM okta.identity_sources.sessions
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

@@ -207,7 +207,8 @@ SELECT
 _links,
 resources
 FROM okta.iam.role_resource_set_resources
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_resource_set_resource">
@@ -223,7 +224,8 @@ created,
 lastUpdated,
 orn
 FROM okta.iam.role_resource_set_resources
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -253,7 +255,8 @@ _links,
 created,
 description,
 label,
-lastUpdated;
+lastUpdated
+;
 ```
 </TabItem>
 </Tabs>
@@ -283,7 +286,8 @@ _links,
 conditions,
 created,
 lastUpdated,
-orn;
+orn
+;
 ```
 </TabItem>
 </Tabs>
@@ -303,7 +307,8 @@ Deletes a resource (identified by `resourceId`) from a resource set
 
 ```sql
 DELETE FROM okta.iam.role_resource_set_resources
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -328,7 +333,8 @@ EXEC okta.iam.role_resource_set_resources.add_resource_set_resource
 '{
 "conditions": "{{ conditions }}", 
 "resourceOrnOrUrl": "{{ resourceOrnOrUrl }}"
-}';
+}'
+;
 ```
 </TabItem>
 </Tabs>

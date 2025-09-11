@@ -120,7 +120,8 @@ Retrieves a JWKS for the default provisioning connection.  This can be used by t
 SELECT
 jwks
 FROM okta.apps.connection_jwks
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

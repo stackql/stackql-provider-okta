@@ -218,7 +218,8 @@ lastUpdated,
 status,
 type
 FROM okta.authenticators.authenticators
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_authenticator">
@@ -229,7 +230,8 @@ Retrieves an authenticator from your Okta organization by `authenticatorId`
 SELECT
 *
 FROM okta.authenticators.authenticators
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -327,7 +329,8 @@ data__name = '{{ name }}',
 data__status = '{{ status }}',
 data__type = '{{ type }}'
 WHERE 
-subdomain = '{{ subdomain }}' --required;
+subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -348,7 +351,8 @@ Activates an authenticator by `authenticatorId`
 
 ```sql
 EXEC okta.authenticators.authenticators.activate_authenticator 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_authenticator">
@@ -357,7 +361,8 @@ Deactivates an authenticator by `authenticatorId`
 
 ```sql
 EXEC okta.authenticators.authenticators.deactivate_authenticator 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

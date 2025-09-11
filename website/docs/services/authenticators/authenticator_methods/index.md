@@ -191,7 +191,8 @@ _links,
 status,
 type
 FROM okta.authenticators.authenticator_methods
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_authenticator_method">
@@ -204,7 +205,8 @@ _links,
 status,
 type
 FROM okta.authenticators.authenticator_methods
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -232,7 +234,8 @@ subdomain = '{{ subdomain }}' --required
 RETURNING
 _links,
 status,
-type;
+type
+;
 ```
 </TabItem>
 </Tabs>
@@ -253,7 +256,8 @@ Activates a method for an authenticator identified by `authenticatorId` and `met
 
 ```sql
 EXEC okta.authenticators.authenticator_methods.activate_authenticator_method 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_authenticator_method">
@@ -262,7 +266,8 @@ Deactivates a method for an authenticator identified by `authenticatorId` and `m
 
 ```sql
 EXEC okta.authenticators.authenticator_methods.deactivate_authenticator_method 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

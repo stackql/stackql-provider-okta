@@ -187,7 +187,8 @@ baseUrl,
 profile,
 status
 FROM okta.apps.connections
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -217,7 +218,8 @@ _links,
 authScheme,
 baseUrl,
 profile,
-status;
+status
+;
 ```
 </TabItem>
 </Tabs>
@@ -239,7 +241,8 @@ Activates the default provisioning connection for an app
 
 ```sql
 EXEC okta.apps.connections.activate_default_provisioning_connection_for_application 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_default_provisioning_connection_for_application">
@@ -248,7 +251,8 @@ Deactivates the default provisioning connection for an app
 
 ```sql
 EXEC okta.apps.connections.deactivate_default_provisioning_connection_for_application 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="verify_provisioning_connection_for_application">
@@ -259,7 +263,8 @@ Verifies the OAuth 2.0-based connection as part of the OAuth 2.0 consent flow. T
 EXEC okta.apps.connections.verify_provisioning_connection_for_application 
 @subdomain='{{ subdomain }}' --required, 
 @code='{{ code }}', 
-@state='{{ state }}';
+@state='{{ state }}'
+;
 ```
 </TabItem>
 </Tabs>

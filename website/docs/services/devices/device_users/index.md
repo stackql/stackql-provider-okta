@@ -138,7 +138,8 @@ managementStatus,
 screenLockType,
 user
 FROM okta.devices.device_users
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

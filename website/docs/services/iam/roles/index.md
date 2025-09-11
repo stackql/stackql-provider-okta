@@ -206,7 +206,8 @@ _links,
 roles
 FROM okta.iam.roles
 WHERE subdomain = '{{ subdomain }}' -- required
-AND after = '{{ after }}';
+AND after = '{{ after }}'
+;
 ```
 </TabItem>
 <TabItem value="get_role">
@@ -222,7 +223,8 @@ description,
 label,
 lastUpdated
 FROM okta.iam.roles
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -249,9 +251,9 @@ data__permissions,
 subdomain
 )
 SELECT 
-'{{ description }}' --required,
-'{{ label }}' --required,
-'{{ permissions }}' --required,
+'{{ description }}' /* required */,
+'{{ label }}' /* required */,
+'{{ permissions }}' /* required */,
 '{{ subdomain }}'
 RETURNING
 id,
@@ -319,7 +321,8 @@ _links,
 created,
 description,
 label,
-lastUpdated;
+lastUpdated
+;
 ```
 </TabItem>
 </Tabs>
@@ -339,7 +342,8 @@ Deletes a custom role by `roleIdOrLabel`
 
 ```sql
 DELETE FROM okta.iam.roles
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

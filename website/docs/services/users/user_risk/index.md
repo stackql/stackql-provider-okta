@@ -133,7 +133,8 @@ SELECT
 _links,
 riskLevel
 FROM okta.users.user_risk
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -160,7 +161,8 @@ subdomain = '{{ subdomain }}' --required
 RETURNING
 _links,
 reason,
-riskLevel;
+riskLevel
+;
 ```
 </TabItem>
 </Tabs>

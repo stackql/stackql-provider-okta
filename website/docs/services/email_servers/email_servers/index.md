@@ -176,7 +176,8 @@ Lists all the enrolled custom SMTP server configurations
 SELECT
 email-servers
 FROM okta.email_servers.email_servers
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_email_server">
@@ -187,7 +188,8 @@ Retrieves the specified custom SMTP server configuration
 SELECT
 email-servers
 FROM okta.email_servers.email_servers
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -217,12 +219,12 @@ data__password,
 subdomain
 )
 SELECT 
-'{{ alias }}' --required,
+'{{ alias }}' /* required */,
 {{ enabled }},
-'{{ host }}' --required,
-{{ port }} --required,
-'{{ username }}' --required,
-'{{ password }}' --required,
+'{{ host }}' /* required */,
+{{ port }} /* required */,
+'{{ username }}' /* required */,
+'{{ password }}' /* required */,
 '{{ subdomain }}'
 RETURNING
 id,
@@ -307,7 +309,8 @@ alias,
 enabled,
 host,
 port,
-username;
+username
+;
 ```
 </TabItem>
 </Tabs>
@@ -327,7 +330,8 @@ Deletes the specified custom SMTP server configuration
 
 ```sql
 DELETE FROM okta.email_servers.email_servers
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -352,7 +356,8 @@ EXEC okta.email_servers.email_servers.test_email_server
 '{
 "from": "{{ from }}", 
 "to": "{{ to }}"
-}';
+}'
+;
 ```
 </TabItem>
 </Tabs>

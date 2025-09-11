@@ -97,7 +97,8 @@ REPLACE okta.okta_personal_settings.blocked_email_domains
 SET 
 data__domains = '{{ domains }}'
 WHERE 
-subdomain = '{{ subdomain }}' --required;
+subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

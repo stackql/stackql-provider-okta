@@ -338,7 +338,8 @@ status,
 targetVersion
 FROM okta.agentpools.agent_pool_updates
 WHERE subdomain = '{{ subdomain }}' -- required
-AND scheduled = '{{ scheduled }}';
+AND scheduled = '{{ scheduled }}'
+;
 ```
 </TabItem>
 <TabItem value="get_agent_pools_update_instance">
@@ -360,7 +361,8 @@ sortOrder,
 status,
 targetVersion
 FROM okta.agentpools.agent_pool_updates
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -523,7 +525,8 @@ reason,
 schedule,
 sortOrder,
 status,
-targetVersion;
+targetVersion
+;
 ```
 </TabItem>
 </Tabs>
@@ -543,7 +546,8 @@ Deletes agent pool update
 
 ```sql
 DELETE FROM okta.agentpools.agent_pool_updates
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -568,7 +572,8 @@ Activates a scheduled agent pool update
 
 ```sql
 EXEC okta.agentpools.agent_pool_updates.activate_agent_pools_update 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_agent_pools_update">
@@ -577,7 +582,8 @@ Deactivates scheduled agent pool update
 
 ```sql
 EXEC okta.agentpools.agent_pool_updates.deactivate_agent_pools_update 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="pause_agent_pools_update">
@@ -586,7 +592,8 @@ Pauses a running or queued agent pool update
 
 ```sql
 EXEC okta.agentpools.agent_pool_updates.pause_agent_pools_update 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="resume_agent_pools_update">
@@ -595,7 +602,8 @@ Resumes a running or queued agent pool update
 
 ```sql
 EXEC okta.agentpools.agent_pool_updates.resume_agent_pools_update 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="retry_agent_pools_update">
@@ -604,7 +612,8 @@ Retries an agent pool update if the update is unsuccessful or communication with
 
 ```sql
 EXEC okta.agentpools.agent_pool_updates.retry_agent_pools_update 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="stop_agent_pools_update">
@@ -613,7 +622,8 @@ Stops an agent pool update
 
 ```sql
 EXEC okta.agentpools.agent_pool_updates.stop_agent_pools_update 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

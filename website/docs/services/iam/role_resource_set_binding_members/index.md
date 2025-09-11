@@ -189,7 +189,8 @@ _links,
 members
 FROM okta.iam.role_resource_set_binding_members
 WHERE subdomain = '{{ subdomain }}' -- required
-AND after = '{{ after }}';
+AND after = '{{ after }}'
+;
 ```
 </TabItem>
 <TabItem value="get_member_of_binding">
@@ -203,7 +204,8 @@ _links,
 created,
 lastUpdated
 FROM okta.iam.role_resource_set_binding_members
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -228,7 +230,8 @@ data__additions = '{{ additions }}'
 WHERE 
 subdomain = '{{ subdomain }}' --required
 RETURNING
-_links;
+_links
+;
 ```
 </TabItem>
 </Tabs>
@@ -248,7 +251,8 @@ Unassigns a member (identified by `memberId`) from a role resource set binding
 
 ```sql
 DELETE FROM okta.iam.role_resource_set_binding_members
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

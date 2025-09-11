@@ -219,7 +219,8 @@ lastUpdatedDate,
 providerType
 FROM okta.push_providers.push_providers
 WHERE subdomain = '{{ subdomain }}' -- required
-AND type = '{{ type }}';
+AND type = '{{ type }}'
+;
 ```
 </TabItem>
 <TabItem value="get_push_provider">
@@ -234,7 +235,8 @@ _links,
 lastUpdatedDate,
 providerType
 FROM okta.push_providers.push_providers
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -318,7 +320,8 @@ id,
 name,
 _links,
 lastUpdatedDate,
-providerType;
+providerType
+;
 ```
 </TabItem>
 </Tabs>
@@ -338,7 +341,8 @@ Deletes a push provider by `pushProviderId`. If the push provider is currently b
 
 ```sql
 DELETE FROM okta.push_providers.push_providers
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

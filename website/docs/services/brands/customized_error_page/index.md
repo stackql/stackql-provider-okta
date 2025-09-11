@@ -142,7 +142,8 @@ SELECT
 contentSecurityPolicySetting,
 pageContent
 FROM okta.brands.customized_error_page
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -169,7 +170,8 @@ WHERE
 subdomain = '{{ subdomain }}' --required
 RETURNING
 contentSecurityPolicySetting,
-pageContent;
+pageContent
+;
 ```
 </TabItem>
 </Tabs>
@@ -189,7 +191,8 @@ Deletes the customized error page. As a result, the default error page appears i
 
 ```sql
 DELETE FROM okta.brands.customized_error_page
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

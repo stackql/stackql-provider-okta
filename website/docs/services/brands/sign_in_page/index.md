@@ -135,7 +135,8 @@ SELECT
 _embedded,
 _links
 FROM okta.brands.sign_in_page
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -155,7 +156,8 @@ Deletes the customized sign-in page. As a result, the default sign-in page appea
 
 ```sql
 DELETE FROM okta.brands.sign_in_page
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

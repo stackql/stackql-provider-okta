@@ -251,7 +251,8 @@ required,
 title,
 type
 FROM okta.meta.log_stream_schemas
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_log_stream_schema">
@@ -271,7 +272,8 @@ required,
 title,
 type
 FROM okta.meta.log_stream_schemas
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

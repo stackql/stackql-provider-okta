@@ -127,7 +127,8 @@ Retrieves the status of the Desktop MFA Enforce Number Matching Challenge push n
 SELECT
 desktopMFAEnforceNumberMatchingChallengeEnabled
 FROM okta.device_access.mfa_challenge_org_setting
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -152,7 +153,8 @@ data__desktopMFAEnforceNumberMatchingChallengeEnabled = {{ desktopMFAEnforceNumb
 WHERE 
 subdomain = '{{ subdomain }}' --required
 RETURNING
-desktopMFAEnforceNumberMatchingChallengeEnabled;
+desktopMFAEnforceNumberMatchingChallengeEnabled
+;
 ```
 </TabItem>
 </Tabs>

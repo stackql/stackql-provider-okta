@@ -252,7 +252,8 @@ WHERE subdomain = '{{ subdomain }}' -- required
 AND q = '{{ q }}'
 AND after = '{{ after }}'
 AND limit = '{{ limit }}'
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 <TabItem value="get_identity_provider_application_user">
@@ -269,7 +270,8 @@ externalId,
 lastUpdated,
 profile
 FROM okta.idps.idp_users
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -289,7 +291,8 @@ Unlinks the Okta user and the identity provider (IdP) user. The next time the us
 
 ```sql
 DELETE FROM okta.idps.idp_users
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -313,7 +316,8 @@ EXEC okta.idps.idp_users.link_user_to_identity_provider
 @@json=
 '{
 "externalId": "{{ externalId }}"
-}';
+}'
+;
 ```
 </TabItem>
 </Tabs>

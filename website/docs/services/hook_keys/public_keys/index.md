@@ -150,7 +150,8 @@ kty,
 n,
 use
 FROM okta.hook_keys.public_keys
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

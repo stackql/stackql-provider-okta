@@ -236,7 +236,8 @@ WHERE subdomain = '{{ subdomain }}' -- required
 AND trusted = '{{ trusted }}'
 AND q = '{{ q }}'
 AND limit = '{{ limit }}'
-AND after = '{{ after }}';
+AND after = '{{ after }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -314,7 +315,8 @@ Deletes an associated Authorization Server
 
 ```sql
 DELETE FROM okta.authorizationservers.associated_servers
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

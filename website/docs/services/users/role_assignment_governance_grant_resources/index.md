@@ -126,7 +126,8 @@ SELECT
 _links,
 resources
 FROM okta.users.role_assignment_governance_grant_resources
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

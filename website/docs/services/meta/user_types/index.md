@@ -275,7 +275,8 @@ displayName,
 lastUpdated,
 lastUpdatedBy
 FROM okta.meta.user_types
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_user_type">
@@ -295,7 +296,8 @@ displayName,
 lastUpdated,
 lastUpdatedBy
 FROM okta.meta.user_types
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -323,8 +325,8 @@ subdomain
 )
 SELECT 
 '{{ description }}',
-'{{ displayName }}' --required,
-'{{ name }}' --required,
+'{{ displayName }}' /* required */,
+'{{ name }}' /* required */,
 '{{ subdomain }}'
 RETURNING
 id,
@@ -398,7 +400,8 @@ default,
 description,
 displayName,
 lastUpdated,
-lastUpdatedBy;
+lastUpdatedBy
+;
 ```
 </TabItem>
 </Tabs>
@@ -437,7 +440,8 @@ default,
 description,
 displayName,
 lastUpdated,
-lastUpdatedBy;
+lastUpdatedBy
+;
 ```
 </TabItem>
 </Tabs>
@@ -457,7 +461,8 @@ Deletes a user type permanently.<br />&gt; **Note**: You can't delete the defaul
 
 ```sql
 DELETE FROM okta.meta.user_types
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

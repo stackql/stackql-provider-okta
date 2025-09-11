@@ -252,7 +252,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="insert" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__profile"><code>data__profile</code></a></td>
     <td><a href="#parameter-activate"><code>activate</code></a>, <a href="#parameter-provider"><code>provider</code></a>, <a href="#parameter-nextLogin"><code>nextLogin</code></a></td>
-    <td>Creates a new user in your Okta org with or without credentials.&lt;br&gt;<br />&gt; **Legal Disclaimer**<br />&gt;<br />&gt; After a user is added to the Okta directory, they receive an activation email. As part of signing up for this service,<br />&gt; you agreed not to use Okta's service/product to spam and/or send unsolicited messages.<br />&gt; Please refrain from adding unrelated accounts to the directory as Okta is not responsible for, and disclaims any and all<br />&gt; liability associated with, the activation email's content. You, and you alone, bear responsibility for the emails sent to any recipients.<br /><br />All responses return the created user. Activation of a user is an asynchronous operation. The system performs group reconciliation during activation and assigns the user to all apps via direct or indirect relationships (group memberships).<br />* The user's `transitioningToStatus` property is `ACTIVE` during activation to indicate that the user hasn't completed the asynchronous operation.<br />* The user's `status` is `ACTIVE` when the activation process is complete.<br /><br />The user is emailed a one-time activation token if activated without a password.<br /><br />&gt; **Note:** If the user is assigned to an app that is configured for provisioning, the activation process triggers downstream provisioning to the app.  It is possible for a user to sign in before these apps have been successfully provisioned for the user.<br /><br />&gt; **Important:** Do not generate or send a one-time activation token when activating users with an assigned password. Users should sign in with their assigned password.<br /><br />For more information about the various scenarios of creating a user listed in the examples, see the [User creation scenarios](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/User/#user-creation-scenarios) section.</td>
+    <td>Creates a new user in your Okta org with or without credentials.<br /><br />&gt; **Legal Disclaimer**<br />&gt;<br />&gt; After a user is added to the Okta directory, they receive an activation email. As part of signing up for this service,<br />&gt; you agreed not to use Okta's service/product to spam and/or send unsolicited messages.<br />&gt; Please refrain from adding unrelated accounts to the directory as Okta is not responsible for, and disclaims any and all<br />&gt; liability associated with, the activation email's content. You, and you alone, bear responsibility for the emails sent to any recipients.<br /><br />All responses return the created user. Activation of a user is an asynchronous operation. The system performs group reconciliation during activation and assigns the user to all apps via direct or indirect relationships (group memberships).<br />* The user's `transitioningToStatus` property is `ACTIVE` during activation to indicate that the user hasn't completed the asynchronous operation.<br />* The user's `status` is `ACTIVE` when the activation process is complete.<br /><br />The user is emailed a one-time activation token if activated without a password.<br /><br />&gt; **Note:** If the user is assigned to an app that is configured for provisioning, the activation process triggers downstream provisioning to the app.  It is possible for a user to sign in before these apps have been successfully provisioned for the user.<br /><br />&gt; **Important:** Do not generate or send a one-time activation token when activating users with an assigned password. Users should sign in with their assigned password.<br /><br />For more information about the various scenarios of creating a user listed in the examples, see the [User creation scenarios](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/User/#user-creation-scenarios) section.</td>
 </tr>
 <tr>
     <td><a href="#update_user"><CopyableCode code="update_user" /></a></td>
@@ -301,14 +301,14 @@ The following methods are available for this resource:
     <td><CopyableCode code="exec" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
     <td></td>
-    <td>Expires the password. This operation transitions the user status to `PASSWORD_EXPIRED` so that the user must change their password the next time that they sign in.<br />&lt;br&gt;<br />If you have integrated Okta with your on-premises Active Directory (AD), then setting a user's password as expired in Okta also expires the password in AD.<br />When the user tries to sign in to Okta, delegated authentication finds the password-expired status in AD,<br />and the user is presented with the password-expired page where they can change their password.<br /><br />&gt; **Note:** The Okta account management policy doesn't support the `/users/&#123;id&#125;/lifecycle/expire_password` endpoint. See [Configure an Okta account management policy](https://developer.okta.com/docs/guides/okta-account-management-policy/main/).</td>
+    <td>Expires the password. This operation transitions the user status to `PASSWORD_EXPIRED` so that the user must change their password the next time that they sign in.<br /><br /><br />If you have integrated Okta with your on-premises Active Directory (AD), then setting a user's password as expired in Okta also expires the password in AD.<br />When the user tries to sign in to Okta, delegated authentication finds the password-expired status in AD,<br />and the user is presented with the password-expired page where they can change their password.<br /><br />&gt; **Note:** The Okta account management policy doesn't support the `/users/&#123;id&#125;/lifecycle/expire_password` endpoint. See [Configure an Okta account management policy](https://developer.okta.com/docs/guides/okta-account-management-policy/main/).</td>
 </tr>
 <tr>
     <td><a href="#expire_password_with_temp_password"><CopyableCode code="expire_password_with_temp_password" /></a></td>
     <td><CopyableCode code="exec" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
     <td><a href="#parameter-revokeSessions"><code>revokeSessions</code></a></td>
-    <td>Expires the password and resets the user's password to a temporary password. This operation transitions the user status to `PASSWORD_EXPIRED` so that the user must change their password the next time that they sign in.<br />The user's password is reset to a temporary password that's returned, and then the user's password is expired.<br />If `revokeSessions` is included in the request with a value of `true`, the user's current outstanding sessions are revoked and require re-authentication.<br />&lt;br&gt;<br />If you have integrated Okta with your on-premises Active Directory (AD), then setting a user's password as expired in Okta also expires the password in AD.<br />When the user tries to sign in to Okta, delegated authentication finds the password-expired status in AD,<br />and the user is presented with the password-expired page where they can change their password.</td>
+    <td>Expires the password and resets the user's password to a temporary password. This operation transitions the user status to `PASSWORD_EXPIRED` so that the user must change their password the next time that they sign in.<br />The user's password is reset to a temporary password that's returned, and then the user's password is expired.<br />If `revokeSessions` is included in the request with a value of `true`, the user's current outstanding sessions are revoked and require re-authentication.<br /><br /><br />If you have integrated Okta with your on-premises Active Directory (AD), then setting a user's password as expired in Okta also expires the password in AD.<br />When the user tries to sign in to Okta, delegated authentication finds the password-expired status in AD,<br />and the user is presented with the password-expired page where they can change their password.</td>
 </tr>
 <tr>
     <td><a href="#reactivate_user"><CopyableCode code="reactivate_user" /></a></td>
@@ -551,7 +551,8 @@ AND after = '{{ after }}'
 AND limit = '{{ limit }}'
 AND sortBy = '{{ sortBy }}'
 AND sortOrder = '{{ sortOrder }}'
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 <TabItem value="get_user">
@@ -578,7 +579,8 @@ type
 FROM okta.users.users
 WHERE subdomain = '{{ subdomain }}' -- required
 AND Content-Type = '{{ Content-Type }}'
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -595,7 +597,7 @@ AND expand = '{{ expand }}';
 >
 <TabItem value="create_user">
 
-Creates a new user in your Okta org with or without credentials.&lt;br&gt;<br />&gt; **Legal Disclaimer**<br />&gt;<br />&gt; After a user is added to the Okta directory, they receive an activation email. As part of signing up for this service,<br />&gt; you agreed not to use Okta's service/product to spam and/or send unsolicited messages.<br />&gt; Please refrain from adding unrelated accounts to the directory as Okta is not responsible for, and disclaims any and all<br />&gt; liability associated with, the activation email's content. You, and you alone, bear responsibility for the emails sent to any recipients.<br /><br />All responses return the created user. Activation of a user is an asynchronous operation. The system performs group reconciliation during activation and assigns the user to all apps via direct or indirect relationships (group memberships).<br />* The user's `transitioningToStatus` property is `ACTIVE` during activation to indicate that the user hasn't completed the asynchronous operation.<br />* The user's `status` is `ACTIVE` when the activation process is complete.<br /><br />The user is emailed a one-time activation token if activated without a password.<br /><br />&gt; **Note:** If the user is assigned to an app that is configured for provisioning, the activation process triggers downstream provisioning to the app.  It is possible for a user to sign in before these apps have been successfully provisioned for the user.<br /><br />&gt; **Important:** Do not generate or send a one-time activation token when activating users with an assigned password. Users should sign in with their assigned password.<br /><br />For more information about the various scenarios of creating a user listed in the examples, see the [User creation scenarios](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/User/#user-creation-scenarios) section.
+Creates a new user in your Okta org with or without credentials.<br /><br />&gt; **Legal Disclaimer**<br />&gt;<br />&gt; After a user is added to the Okta directory, they receive an activation email. As part of signing up for this service,<br />&gt; you agreed not to use Okta's service/product to spam and/or send unsolicited messages.<br />&gt; Please refrain from adding unrelated accounts to the directory as Okta is not responsible for, and disclaims any and all<br />&gt; liability associated with, the activation email's content. You, and you alone, bear responsibility for the emails sent to any recipients.<br /><br />All responses return the created user. Activation of a user is an asynchronous operation. The system performs group reconciliation during activation and assigns the user to all apps via direct or indirect relationships (group memberships).<br />* The user's `transitioningToStatus` property is `ACTIVE` during activation to indicate that the user hasn't completed the asynchronous operation.<br />* The user's `status` is `ACTIVE` when the activation process is complete.<br /><br />The user is emailed a one-time activation token if activated without a password.<br /><br />&gt; **Note:** If the user is assigned to an app that is configured for provisioning, the activation process triggers downstream provisioning to the app.  It is possible for a user to sign in before these apps have been successfully provisioned for the user.<br /><br />&gt; **Important:** Do not generate or send a one-time activation token when activating users with an assigned password. Users should sign in with their assigned password.<br /><br />For more information about the various scenarios of creating a user listed in the examples, see the [User creation scenarios](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/User/#user-creation-scenarios) section.
 
 ```sql
 INSERT INTO okta.users.users (
@@ -612,7 +614,7 @@ nextLogin
 SELECT 
 '{{ credentials }}',
 '{{ groupIds }}',
-'{{ profile }}' --required,
+'{{ profile }}' /* required */,
 '{{ realmId }}',
 '{{ type }}',
 '{{ subdomain }}',
@@ -734,7 +736,8 @@ realmId,
 status,
 statusChanged,
 transitioningToStatus,
-type;
+type
+;
 ```
 </TabItem>
 </Tabs>
@@ -777,7 +780,8 @@ realmId,
 status,
 statusChanged,
 transitioningToStatus,
-type;
+type
+;
 ```
 </TabItem>
 </Tabs>
@@ -799,7 +803,8 @@ Deletes a user permanently. This operation can only be performed on users that h
 DELETE FROM okta.users.users
 WHERE subdomain = '{{ subdomain }}' --required
 AND sendEmail = '{{ sendEmail }}'
-AND Prefer = '{{ Prefer }}';
+AND Prefer = '{{ Prefer }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -838,7 +843,8 @@ EXEC okta.users.users.end_user_sessions
 @@json=
 '{
 "keepCurrent": {{ keepCurrent }}
-}';
+}'
+;
 ```
 </TabItem>
 <TabItem value="activate_user">
@@ -848,7 +854,8 @@ Activates a user.<br /><br />Perform this operation only on users with a `STAGED
 ```sql
 EXEC okta.users.users.activate_user 
 @subdomain='{{ subdomain }}' --required, 
-@sendEmail={{ sendEmail }};
+@sendEmail={{ sendEmail }}
+;
 ```
 </TabItem>
 <TabItem value="deactivate_user">
@@ -859,26 +866,29 @@ Deactivates a user.<br /><br />Perform this operation only on users that do not 
 EXEC okta.users.users.deactivate_user 
 @subdomain='{{ subdomain }}' --required, 
 @sendEmail={{ sendEmail }}, 
-@Prefer='{{ Prefer }}';
+@Prefer='{{ Prefer }}'
+;
 ```
 </TabItem>
 <TabItem value="expire_password">
 
-Expires the password. This operation transitions the user status to `PASSWORD_EXPIRED` so that the user must change their password the next time that they sign in.<br />&lt;br&gt;<br />If you have integrated Okta with your on-premises Active Directory (AD), then setting a user's password as expired in Okta also expires the password in AD.<br />When the user tries to sign in to Okta, delegated authentication finds the password-expired status in AD,<br />and the user is presented with the password-expired page where they can change their password.<br /><br />&gt; **Note:** The Okta account management policy doesn't support the `/users/&#123;id&#125;/lifecycle/expire_password` endpoint. See [Configure an Okta account management policy](https://developer.okta.com/docs/guides/okta-account-management-policy/main/).
+Expires the password. This operation transitions the user status to `PASSWORD_EXPIRED` so that the user must change their password the next time that they sign in.<br /><br /><br />If you have integrated Okta with your on-premises Active Directory (AD), then setting a user's password as expired in Okta also expires the password in AD.<br />When the user tries to sign in to Okta, delegated authentication finds the password-expired status in AD,<br />and the user is presented with the password-expired page where they can change their password.<br /><br />&gt; **Note:** The Okta account management policy doesn't support the `/users/&#123;id&#125;/lifecycle/expire_password` endpoint. See [Configure an Okta account management policy](https://developer.okta.com/docs/guides/okta-account-management-policy/main/).
 
 ```sql
 EXEC okta.users.users.expire_password 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="expire_password_with_temp_password">
 
-Expires the password and resets the user's password to a temporary password. This operation transitions the user status to `PASSWORD_EXPIRED` so that the user must change their password the next time that they sign in.<br />The user's password is reset to a temporary password that's returned, and then the user's password is expired.<br />If `revokeSessions` is included in the request with a value of `true`, the user's current outstanding sessions are revoked and require re-authentication.<br />&lt;br&gt;<br />If you have integrated Okta with your on-premises Active Directory (AD), then setting a user's password as expired in Okta also expires the password in AD.<br />When the user tries to sign in to Okta, delegated authentication finds the password-expired status in AD,<br />and the user is presented with the password-expired page where they can change their password.
+Expires the password and resets the user's password to a temporary password. This operation transitions the user status to `PASSWORD_EXPIRED` so that the user must change their password the next time that they sign in.<br />The user's password is reset to a temporary password that's returned, and then the user's password is expired.<br />If `revokeSessions` is included in the request with a value of `true`, the user's current outstanding sessions are revoked and require re-authentication.<br /><br /><br />If you have integrated Okta with your on-premises Active Directory (AD), then setting a user's password as expired in Okta also expires the password in AD.<br />When the user tries to sign in to Okta, delegated authentication finds the password-expired status in AD,<br />and the user is presented with the password-expired page where they can change their password.
 
 ```sql
 EXEC okta.users.users.expire_password_with_temp_password 
 @subdomain='{{ subdomain }}' --required, 
-@revokeSessions={{ revokeSessions }};
+@revokeSessions={{ revokeSessions }}
+;
 ```
 </TabItem>
 <TabItem value="reactivate_user">
@@ -888,7 +898,8 @@ Reactivates a user.<br /><br />Perform this operation only on users with a `PROV
 ```sql
 EXEC okta.users.users.reactivate_user 
 @subdomain='{{ subdomain }}' --required, 
-@sendEmail={{ sendEmail }};
+@sendEmail={{ sendEmail }}
+;
 ```
 </TabItem>
 <TabItem value="reset_factors">
@@ -897,7 +908,8 @@ Resets all factors for the specified user. All MFA factor enrollments return to 
 
 ```sql
 EXEC okta.users.users.reset_factors 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="reset_password">
@@ -908,7 +920,8 @@ Resets a password. Generates a one-time token (OTT) that you can use to reset a 
 EXEC okta.users.users.reset_password 
 @sendEmail='{{ sendEmail }}' --required, 
 @subdomain='{{ subdomain }}' --required, 
-@revokeSessions={{ revokeSessions }};
+@revokeSessions={{ revokeSessions }}
+;
 ```
 </TabItem>
 <TabItem value="suspend_user">
@@ -917,7 +930,8 @@ Suspends a user. Perform this operation only on users with an `ACTIVE` status. T
 
 ```sql
 EXEC okta.users.users.suspend_user 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="unlock_user">
@@ -926,7 +940,8 @@ Unlocks a user with a `LOCKED_OUT` status or unlocks a user with an `ACTIVE` sta
 
 ```sql
 EXEC okta.users.users.unlock_user 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="unsuspend_user">
@@ -935,7 +950,8 @@ Unsuspends a user and returns them to the `ACTIVE` state. This operation can onl
 
 ```sql
 EXEC okta.users.users.unsuspend_user 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="change_password">
@@ -951,7 +967,8 @@ EXEC okta.users.users.change_password
 "newPassword": "{{ newPassword }}", 
 "oldPassword": "{{ oldPassword }}", 
 "revokeSessions": {{ revokeSessions }}
-}';
+}'
+;
 ```
 </TabItem>
 <TabItem value="change_recovery_question">
@@ -965,7 +982,8 @@ EXEC okta.users.users.change_recovery_question
 '{
 "password": "{{ password }}", 
 "recovery_question": "{{ recovery_question }}"
-}';
+}'
+;
 ```
 </TabItem>
 <TabItem value="forgot_password">
@@ -975,7 +993,8 @@ Starts the forgot password flow.<br /><br />Generates a one-time token (OTT) tha
 ```sql
 EXEC okta.users.users.forgot_password 
 @subdomain='{{ subdomain }}' --required, 
-@sendEmail={{ sendEmail }};
+@sendEmail={{ sendEmail }}
+;
 ```
 </TabItem>
 <TabItem value="forgot_password_set_new_password">
@@ -990,7 +1009,8 @@ EXEC okta.users.users.forgot_password_set_new_password
 '{
 "password": "{{ password }}", 
 "recovery_question": "{{ recovery_question }}"
-}';
+}'
+;
 ```
 </TabItem>
 <TabItem value="revoke_user_sessions">
@@ -1001,7 +1021,8 @@ Revokes all active identity provider sessions of the user. This forces the user 
 EXEC okta.users.users.revoke_user_sessions 
 @subdomain='{{ subdomain }}' --required, 
 @oauthTokens={{ oauthTokens }}, 
-@forgetDevices={{ forgetDevices }};
+@forgetDevices={{ forgetDevices }}
+;
 ```
 </TabItem>
 </Tabs>

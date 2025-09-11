@@ -299,7 +299,8 @@ status,
 userId
 FROM okta.sessions.sessions
 WHERE subdomain = '{{ subdomain }}' -- required
-AND Cookie = '{{ Cookie }}';
+AND Cookie = '{{ Cookie }}'
+;
 ```
 </TabItem>
 <TabItem value="get_session">
@@ -320,7 +321,8 @@ login,
 status,
 userId
 FROM okta.sessions.sessions
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -397,7 +399,8 @@ Closes the Session for the user who is currently signed in. Use this method in a
 ```sql
 DELETE FROM okta.sessions.sessions
 WHERE subdomain = '{{ subdomain }}' --required
-AND Cookie = '{{ Cookie }}';
+AND Cookie = '{{ Cookie }}'
+;
 ```
 </TabItem>
 <TabItem value="revoke_session">
@@ -406,7 +409,8 @@ Revokes the specified Session
 
 ```sql
 DELETE FROM okta.sessions.sessions
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -428,7 +432,8 @@ Refreshes the Session for the current user<br /><br />&gt; **Note:** This operat
 ```sql
 EXEC okta.sessions.sessions.refresh_current_session 
 @subdomain='{{ subdomain }}' --required, 
-@Cookie='{{ Cookie }}';
+@Cookie='{{ Cookie }}'
+;
 ```
 </TabItem>
 <TabItem value="refresh_session">
@@ -437,7 +442,8 @@ Refreshes an existing Session using the `id` for that Session. A successful resp
 
 ```sql
 EXEC okta.sessions.sessions.refresh_session 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

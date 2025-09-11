@@ -276,7 +276,8 @@ status,
 system,
 type
 FROM okta.policies.policy_rules
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_policy_rule">
@@ -295,7 +296,8 @@ status,
 system,
 type
 FROM okta.policies.policy_rules
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -421,7 +423,8 @@ lastUpdated,
 priority,
 status,
 system,
-type;
+type
+;
 ```
 </TabItem>
 </Tabs>
@@ -441,7 +444,8 @@ Deletes a policy rule identified by `policyId` and `ruleId`
 
 ```sql
 DELETE FROM okta.policies.policy_rules
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -462,7 +466,8 @@ Activates a policy rule identified by `policyId` and `ruleId`
 
 ```sql
 EXEC okta.policies.policy_rules.activate_policy_rule 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_policy_rule">
@@ -471,7 +476,8 @@ Deactivates a policy rule identified by `policyId` and `ruleId`
 
 ```sql
 EXEC okta.policies.policy_rules.deactivate_policy_rule 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

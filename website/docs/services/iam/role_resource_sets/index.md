@@ -206,7 +206,8 @@ _links,
 resource-sets
 FROM okta.iam.role_resource_sets
 WHERE subdomain = '{{ subdomain }}' -- required
-AND after = '{{ after }}';
+AND after = '{{ after }}'
+;
 ```
 </TabItem>
 <TabItem value="get_resource_set">
@@ -222,7 +223,8 @@ description,
 label,
 lastUpdated
 FROM okta.iam.role_resource_sets
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -249,9 +251,9 @@ data__resources,
 subdomain
 )
 SELECT 
-'{{ description }}' --required,
-'{{ label }}' --required,
-'{{ resources }}' --required,
+'{{ description }}' /* required */,
+'{{ label }}' /* required */,
+'{{ resources }}' /* required */,
 '{{ subdomain }}'
 RETURNING
 id,
@@ -317,7 +319,8 @@ _links,
 created,
 description,
 label,
-lastUpdated;
+lastUpdated
+;
 ```
 </TabItem>
 </Tabs>
@@ -337,7 +340,8 @@ Deletes a resource set by `resourceSetIdOrLabel`
 
 ```sql
 DELETE FROM okta.iam.role_resource_sets
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

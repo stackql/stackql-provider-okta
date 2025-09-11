@@ -216,7 +216,8 @@ visibility
 FROM okta.groups.assigned_apps
 WHERE subdomain = '{{ subdomain }}' -- required
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 </Tabs>

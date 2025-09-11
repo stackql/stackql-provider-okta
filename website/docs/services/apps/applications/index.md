@@ -415,7 +415,8 @@ AND useOptimization = '{{ useOptimization }}'
 AND limit = '{{ limit }}'
 AND filter = '{{ filter }}'
 AND expand = '{{ expand }}'
-AND includeNonDeleted = '{{ includeNonDeleted }}';
+AND includeNonDeleted = '{{ includeNonDeleted }}'
+;
 ```
 </TabItem>
 <TabItem value="get_application">
@@ -441,7 +442,8 @@ universalLogout,
 visibility
 FROM okta.apps.applications
 WHERE subdomain = '{{ subdomain }}' -- required
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -474,10 +476,10 @@ OktaAccessGateway-Agent
 )
 SELECT 
 '{{ accessibility }}',
-'{{ label }}' --required,
+'{{ label }}' /* required */,
 '{{ licensing }}',
 '{{ profile }}',
-'{{ signOnMode }}' --required,
+'{{ signOnMode }}' /* required */,
 '{{ visibility }}',
 '{{ subdomain }}',
 '{{ activate }}',
@@ -610,7 +612,8 @@ profile,
 signOnMode,
 status,
 universalLogout,
-visibility;
+visibility
+;
 ```
 </TabItem>
 </Tabs>
@@ -630,7 +633,8 @@ Deletes an inactive application
 
 ```sql
 DELETE FROM okta.apps.applications
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -654,7 +658,8 @@ Activates an inactive application
 
 ```sql
 EXEC okta.apps.applications.activate_application 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_application">
@@ -663,7 +668,8 @@ Deactivates an active application<br /><br />&gt; **Note:** Deactivating an app 
 
 ```sql
 EXEC okta.apps.applications.deactivate_application 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="upload_application_logo">
@@ -676,7 +682,8 @@ EXEC okta.apps.applications.upload_application_logo
 @@json=
 '{
 "file": "{{ file }}"
-}';
+}'
+;
 ```
 </TabItem>
 <TabItem value="assign_application_policy">
@@ -685,7 +692,8 @@ Assigns an app to an [authentication policy](https://developer.okta.com/docs/api
 
 ```sql
 EXEC okta.apps.applications.assign_application_policy 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="preview_samlmetadata_for_application">
@@ -695,7 +703,8 @@ Previews the SSO SAML metadata for an application
 ```sql
 EXEC okta.apps.applications.preview_samlmetadata_for_application 
 @kid='{{ kid }}' --required, 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

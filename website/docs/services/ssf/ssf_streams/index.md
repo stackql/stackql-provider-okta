@@ -156,7 +156,8 @@ SELECT
 *
 FROM okta.ssf.ssf_streams
 WHERE subdomain = '{{ subdomain }}' -- required
-AND stream_id = '{{ stream_id }}';
+AND stream_id = '{{ stream_id }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -183,8 +184,8 @@ data__format,
 subdomain
 )
 SELECT 
-'{{ delivery }}' --required,
-'{{ events_requested }}' --required,
+'{{ delivery }}' /* required */,
+'{{ events_requested }}' /* required */,
 '{{ format }}',
 '{{ subdomain }}'
 RETURNING
@@ -267,7 +268,8 @@ events_requested,
 events_supported,
 format,
 iss,
-min_verification_interval;
+min_verification_interval
+;
 ```
 </TabItem>
 </Tabs>
@@ -310,7 +312,8 @@ events_requested,
 events_supported,
 format,
 iss,
-min_verification_interval;
+min_verification_interval
+;
 ```
 </TabItem>
 </Tabs>
@@ -331,7 +334,8 @@ Deletes the specified SSF Stream.<br /><br />If the `stream_id` is not provided 
 ```sql
 DELETE FROM okta.ssf.ssf_streams
 WHERE subdomain = '{{ subdomain }}' --required
-AND stream_id = '{{ stream_id }}';
+AND stream_id = '{{ stream_id }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -356,7 +360,8 @@ EXEC okta.ssf.ssf_streams.verify_ssf_stream
 '{
 "state": "{{ state }}", 
 "stream_id": "{{ stream_id }}"
-}';
+}'
+;
 ```
 </TabItem>
 </Tabs>

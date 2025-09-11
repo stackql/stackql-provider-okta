@@ -184,7 +184,8 @@ SELECT
 *
 FROM okta.users.role_assignment_users
 WHERE subdomain = '{{ subdomain }}' -- required
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 <TabItem value="get_user_assigned_role">
@@ -195,7 +196,8 @@ Retrieves a role assigned to a user (identified by `userId`). The `roleAssignmen
 SELECT
 *
 FROM okta.users.role_assignment_users
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -256,7 +258,8 @@ Unassigns a role assignment (identified by `roleAssignmentId`) from a user (iden
 
 ```sql
 DELETE FROM okta.users.role_assignment_users
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -278,7 +281,8 @@ Assigns all apps as target to an `APP_ADMIN` role
 
 ```sql
 EXEC okta.users.role_assignment_users.assign_all_apps_as_target_to_role_for_user 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="assign_app_target_to_admin_role_for_user">
@@ -287,7 +291,8 @@ Assigns an OIN app target for an `APP_ADMIN` role assignment to an admin user. W
 
 ```sql
 EXEC okta.users.role_assignment_users.assign_app_target_to_admin_role_for_user 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="assign_app_instance_target_to_app_admin_role_for_user">
@@ -296,7 +301,8 @@ Assigns an app instance target to an `APP_ADMIN` role assignment to an admin use
 
 ```sql
 EXEC okta.users.role_assignment_users.assign_app_instance_target_to_app_admin_role_for_user 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

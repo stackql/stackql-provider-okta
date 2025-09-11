@@ -127,7 +127,8 @@ Retrieves the org setting to automatically assign the Okta Admin Console when an
 SELECT
 autoAssignAdminAppSetting
 FROM okta.org.auto_assign_admin_app_setting
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -152,7 +153,8 @@ data__autoAssignAdminAppSetting = {{ autoAssignAdminAppSetting }}
 WHERE 
 subdomain = '{{ subdomain }}' --required
 RETURNING
-autoAssignAdminAppSetting;
+autoAssignAdminAppSetting
+;
 ```
 </TabItem>
 </Tabs>

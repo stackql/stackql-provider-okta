@@ -184,7 +184,8 @@ lastUpdated,
 secret_hash,
 status
 FROM okta.integrations.instance_secrets
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -248,7 +249,8 @@ Deletes an API Service Integration instance Secret by `secretId`. You can only d
 
 ```sql
 DELETE FROM okta.integrations.instance_secrets
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -269,7 +271,8 @@ Activates an API Service Integration instance Secret by `secretId`
 
 ```sql
 EXEC okta.integrations.instance_secrets.activate_api_service_integration_instance_secret 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_api_service_integration_instance_secret">
@@ -278,7 +281,8 @@ Deactivates an API Service Integration instance Secret by `secretId`
 
 ```sql
 EXEC okta.integrations.instance_secrets.deactivate_api_service_integration_instance_secret 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

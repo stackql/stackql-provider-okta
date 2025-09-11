@@ -174,7 +174,8 @@ use,
 x5c,
 x5t#S256
 FROM okta.idps.active_idp_signing_keys
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

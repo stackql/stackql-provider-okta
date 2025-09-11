@@ -237,7 +237,8 @@ lastVerified,
 profile,
 status
 FROM okta.org.yubikey_otp_tokens
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_yubikey_otp_token_by_id">
@@ -256,7 +257,8 @@ profile,
 status
 FROM okta.org.yubikey_otp_tokens
 WHERE tokenId = '{{ tokenId }}' -- required
-AND subdomain = '{{ subdomain }}' -- required;
+AND subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -283,7 +285,8 @@ EXEC okta.org.yubikey_otp_tokens.upload_yubikey_otp_token_seed
 "publicId": "{{ publicId }}", 
 "privateId": "{{ privateId }}", 
 "aesKey": "{{ aesKey }}"
-}';
+}'
+;
 ```
 </TabItem>
 </Tabs>

@@ -242,7 +242,8 @@ lastUpdated,
 secret_hash,
 status
 FROM okta.apps.secrets
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_oauth2_client_secret">
@@ -259,7 +260,8 @@ lastUpdated,
 secret_hash,
 status
 FROM okta.apps.secrets
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -338,7 +340,8 @@ Deletes an OAuth 2.0 Client Secret by `secretId`. You can only delete an inactiv
 
 ```sql
 DELETE FROM okta.apps.secrets
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -359,7 +362,8 @@ Activates an OAuth 2.0 Client Secret by `secretId`
 
 ```sql
 EXEC okta.apps.secrets.activate_oauth2_client_secret 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_oauth2_client_secret">
@@ -368,7 +372,8 @@ Deactivates an OAuth 2.0 Client Secret by `secretId`. You can't deactivate a sec
 
 ```sql
 EXEC okta.apps.secrets.deactivate_oauth2_client_secret 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

@@ -127,7 +127,8 @@ Retrieves the Authenticator Settings for an org
 SELECT
 verifyKnowledgeSecondWhen2faRequired
 FROM okta.attack_protection.authenticator_settings
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -152,7 +153,8 @@ data__verifyKnowledgeSecondWhen2faRequired = {{ verifyKnowledgeSecondWhen2faRequ
 WHERE 
 subdomain = '{{ subdomain }}' --required
 RETURNING
-verifyKnowledgeSecondWhen2faRequired;
+verifyKnowledgeSecondWhen2faRequired
+;
 ```
 </TabItem>
 </Tabs>

@@ -226,7 +226,8 @@ stage,
 status,
 type
 FROM okta.features.features
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_feature">
@@ -243,7 +244,8 @@ stage,
 status,
 type
 FROM okta.features.features
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -264,7 +266,8 @@ Updates a feature's lifecycle status. Use this endpoint to enable or disable a f
 ```sql
 EXEC okta.features.features.update_feature_lifecycle 
 @subdomain='{{ subdomain }}' --required, 
-@mode='{{ mode }}';
+@mode='{{ mode }}'
+;
 ```
 </TabItem>
 </Tabs>

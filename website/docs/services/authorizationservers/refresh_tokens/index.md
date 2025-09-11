@@ -290,7 +290,8 @@ FROM okta.authorizationservers.refresh_tokens
 WHERE subdomain = '{{ subdomain }}' -- required
 AND expand = '{{ expand }}'
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 <TabItem value="get_refresh_token_for_authorization_server_and_client">
@@ -312,7 +313,8 @@ status,
 userId
 FROM okta.authorizationservers.refresh_tokens
 WHERE subdomain = '{{ subdomain }}' -- required
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -333,7 +335,8 @@ Revokes all refresh tokens for a Client
 
 ```sql
 DELETE FROM okta.authorizationservers.refresh_tokens
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="revoke_refresh_token_for_authorization_server_and_client">
@@ -342,7 +345,8 @@ Revokes a refresh token for a Client
 
 ```sql
 DELETE FROM okta.authorizationservers.refresh_tokens
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

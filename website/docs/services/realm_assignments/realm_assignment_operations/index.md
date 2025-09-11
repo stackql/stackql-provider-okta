@@ -192,7 +192,8 @@ type
 FROM okta.realm_assignments.realm_assignment_operations
 WHERE subdomain = '{{ subdomain }}' -- required
 AND limit = '{{ limit }}'
-AND after = '{{ after }}';
+AND after = '{{ after }}'
+;
 ```
 </TabItem>
 </Tabs>

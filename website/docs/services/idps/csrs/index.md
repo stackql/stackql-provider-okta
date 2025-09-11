@@ -213,7 +213,8 @@ created,
 csr,
 kty
 FROM okta.idps.csrs
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_csr_for_identity_provider">
@@ -228,7 +229,8 @@ created,
 csr,
 kty
 FROM okta.idps.csrs
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -298,7 +300,8 @@ Revokes a certificate signing request (CSR) and deletes the key pair from the id
 
 ```sql
 DELETE FROM okta.idps.csrs
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -318,7 +321,8 @@ Publishes the certificate signing request (CSR) with a signed X.509 certificate 
 
 ```sql
 EXEC okta.idps.csrs.publish_csr_for_identity_provider 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

@@ -135,7 +135,8 @@ SELECT
 _links,
 representation
 FROM okta.brands.brand_well_known_uris
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -162,7 +163,8 @@ subdomain = '{{ subdomain }}' --required
 AND data__representation = '{{ representation }}' --required
 RETURNING
 _links,
-representation;
+representation
+;
 ```
 </TabItem>
 </Tabs>

@@ -156,7 +156,8 @@ stage,
 status,
 type
 FROM okta.features.feature_dependents
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

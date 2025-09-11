@@ -238,7 +238,8 @@ settings,
 status,
 type
 FROM okta.security_events_providers.ssf_receivers
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_security_events_provider_instance">
@@ -254,7 +255,8 @@ settings,
 status,
 type
 FROM okta.security_events_providers.ssf_receivers
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -281,9 +283,9 @@ data__type,
 subdomain
 )
 SELECT 
-'{{ name }}' --required,
-'{{ settings }}' --required,
-'{{ type }}' --required,
+'{{ name }}' /* required */,
+'{{ settings }}' /* required */,
+'{{ type }}' /* required */,
 '{{ subdomain }}'
 RETURNING
 id,
@@ -353,7 +355,8 @@ name,
 _links,
 settings,
 status,
-type;
+type
+;
 ```
 </TabItem>
 </Tabs>
@@ -373,7 +376,8 @@ Deletes a Security Events Provider instance specified by `id`
 
 ```sql
 DELETE FROM okta.security_events_providers.ssf_receivers
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -394,7 +398,8 @@ Activates a Security Events Provider instance by setting its status to `ACTIVE`.
 
 ```sql
 EXEC okta.security_events_providers.ssf_receivers.activate_security_events_provider_instance 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_security_events_provider_instance">
@@ -403,7 +408,8 @@ Deactivates a Security Events Provider instance by setting its status to `INACTI
 
 ```sql
 EXEC okta.security_events_providers.ssf_receivers.deactivate_security_events_provider_instance 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

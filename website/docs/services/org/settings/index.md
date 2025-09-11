@@ -236,7 +236,8 @@ subdomain,
 supportPhoneNumber,
 website
 FROM okta.org.settings
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -288,7 +289,8 @@ state,
 status,
 subdomain,
 supportPhoneNumber,
-website;
+website
+;
 ```
 </TabItem>
 </Tabs>
@@ -340,7 +342,8 @@ state,
 status,
 subdomain,
 supportPhoneNumber,
-website;
+website
+;
 ```
 </TabItem>
 </Tabs>

@@ -168,7 +168,8 @@ objectClass,
 profile,
 type
 FROM okta.users.user_groups
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

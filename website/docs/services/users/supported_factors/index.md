@@ -156,7 +156,8 @@ provider,
 status,
 vendorName
 FROM okta.users.supported_factors
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

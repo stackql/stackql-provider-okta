@@ -202,7 +202,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="insert" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a></td>
     <td></td>
-    <td>Adds a new JSON Web Key to the custom authorization server`s JSON web keys.<br />&gt; **Note:** This API doesn't allow you to add a key if the existing key doesn't have a `kid`. Use the [Replace an Authorization Server](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/AuthorizationServer/#tag/AuthorizationServer/operation/replaceAuthorizationServer) operation to update the JWKS or [Delete a Custom Authorization Server Public JSON Web Key](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/OAuth2ResourceServerCredentialsKeys/#tag/OAuth2ResourceServerCredentialsKeys/operation/deleteOAuth2ResourceServerJsonWebKey) and re-add the key with a `kid`.<br />&gt; **Note:** This API doesn't allow you to add a key with an ACTIVE status. You need to add an INACTIVE key first, and then ACTIVATE the key.</td>
+    <td>Adds a new JSON Web Key to the custom authorization server`s JSON web keys.<br />> **Note:** This API doesn't allow you to add a key if the existing key doesn't have a `kid`. Use the [Replace an Authorization Server](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/AuthorizationServer/#tag/AuthorizationServer/operation/replaceAuthorizationServer) operation to update the JWKS or [Delete a Custom Authorization Server Public JSON Web Key](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/OAuth2ResourceServerCredentialsKeys/#tag/OAuth2ResourceServerCredentialsKeys/operation/deleteOAuth2ResourceServerJsonWebKey) and re-add the key with a `kid`.<br />&gt; **Note:** This API doesn't allow you to add a key with an ACTIVE status. You need to add an INACTIVE key first, and then ACTIVATE the key.</td>
 </tr>
 <tr>
     <td><a href="#delete_oauth2_resource_server_json_web_key"><CopyableCode code="delete_oauth2_resource_server_json_web_key" /></a></td>
@@ -275,7 +275,8 @@ n,
 status,
 use
 FROM okta.authorizationservers.oauth2_resource_server_jwks
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_oauth2_resource_server_json_web_key">
@@ -295,7 +296,8 @@ n,
 status,
 use
 FROM okta.authorizationservers.oauth2_resource_server_jwks
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -312,7 +314,7 @@ WHERE subdomain = '{{ subdomain }}' -- required;
 >
 <TabItem value="add_oauth2_resource_server_json_web_key">
 
-Adds a new JSON Web Key to the custom authorization server`s JSON web keys.<br />&gt; **Note:** This API doesn't allow you to add a key if the existing key doesn't have a `kid`. Use the [Replace an Authorization Server](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/AuthorizationServer/#tag/AuthorizationServer/operation/replaceAuthorizationServer) operation to update the JWKS or [Delete a Custom Authorization Server Public JSON Web Key](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/OAuth2ResourceServerCredentialsKeys/#tag/OAuth2ResourceServerCredentialsKeys/operation/deleteOAuth2ResourceServerJsonWebKey) and re-add the key with a `kid`.<br />&gt; **Note:** This API doesn't allow you to add a key with an ACTIVE status. You need to add an INACTIVE key first, and then ACTIVATE the key.
+Adds a new JSON Web Key to the custom authorization server`s JSON web keys.<br />> **Note:** This API doesn't allow you to add a key if the existing key doesn't have a `kid`. Use the [Replace an Authorization Server](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/AuthorizationServer/#tag/AuthorizationServer/operation/replaceAuthorizationServer) operation to update the JWKS or [Delete a Custom Authorization Server Public JSON Web Key](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/OAuth2ResourceServerCredentialsKeys/#tag/OAuth2ResourceServerCredentialsKeys/operation/deleteOAuth2ResourceServerJsonWebKey) and re-add the key with a `kid`.<br />&gt; **Note:** This API doesn't allow you to add a key with an ACTIVE status. You need to add an INACTIVE key first, and then ACTIVATE the key.
 
 ```sql
 INSERT INTO okta.authorizationservers.oauth2_resource_server_jwks (
@@ -405,7 +407,8 @@ Deletes a custom authorization server public JSON web key by key `id`. You can o
 
 ```sql
 DELETE FROM okta.authorizationservers.oauth2_resource_server_jwks
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -426,7 +429,8 @@ Activates a custom authorization server public JSON web key by key `id`.<br />&g
 
 ```sql
 EXEC okta.authorizationservers.oauth2_resource_server_jwks.activate_oauth2_resource_server_json_web_key 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_oauth2_resource_server_json_web_key">
@@ -435,7 +439,8 @@ Deactivates a custom authorization server public JSON web key by key `id`.<br />
 
 ```sql
 EXEC okta.authorizationservers.oauth2_resource_server_jwks.deactivate_oauth2_resource_server_json_web_key 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

@@ -213,7 +213,8 @@ created,
 csr,
 kty
 FROM okta.apps.csrs
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_csr_for_application">
@@ -228,7 +229,8 @@ created,
 csr,
 kty
 FROM okta.apps.csrs
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -248,7 +250,8 @@ Revokes a Certificate Signing Request and deletes the key pair from the app
 
 ```sql
 DELETE FROM okta.apps.csrs
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -274,7 +277,8 @@ EXEC okta.apps.csrs.generate_csr_for_application
 '{
 "subject": "{{ subject }}", 
 "subjectAltNames": "{{ subjectAltNames }}"
-}';
+}'
+;
 ```
 </TabItem>
 <TabItem value="publish_csr_from_application">
@@ -283,7 +287,8 @@ Publishes a Certificate Signing Request (CSR) for the app with a signed X.509 ce
 
 ```sql
 EXEC okta.apps.csrs.publish_csr_from_application 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

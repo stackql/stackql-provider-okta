@@ -194,7 +194,8 @@ type
 FROM okta.groups.group_targets
 WHERE subdomain = '{{ subdomain }}' -- required
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -217,7 +218,8 @@ REPLACE okta.groups.group_targets
 SET 
 -- No updatable properties
 WHERE 
-subdomain = '{{ subdomain }}' --required;
+subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -237,7 +239,8 @@ Unassigns a group target from a [`USER_ADMIN`](https://developer.okta.com/docs/a
 
 ```sql
 DELETE FROM okta.groups.group_targets
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

@@ -204,7 +204,8 @@ FROM okta.brands.email_templates
 WHERE subdomain = '{{ subdomain }}' -- required
 AND after = '{{ after }}'
 AND limit = '{{ limit }}'
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 <TabItem value="get_email_template">
@@ -218,7 +219,8 @@ _embedded,
 _links
 FROM okta.brands.email_templates
 WHERE subdomain = '{{ subdomain }}' -- required
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -239,7 +241,8 @@ Sends a test email to the current user's primary and secondary email addresses. 
 ```sql
 EXEC okta.brands.email_templates.send_test_email 
 @subdomain='{{ subdomain }}' --required, 
-@language='{{ language }}';
+@language='{{ language }}'
+;
 ```
 </TabItem>
 </Tabs>

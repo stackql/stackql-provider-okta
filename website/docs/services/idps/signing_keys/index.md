@@ -271,7 +271,8 @@ use,
 x5c,
 x5t#S256
 FROM okta.idps.signing_keys
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_identity_provider_signing_key">
@@ -291,7 +292,8 @@ use,
 x5c,
 x5t#S256
 FROM okta.idps.signing_keys
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -364,7 +366,8 @@ Clones an X.509 certificate for an identity provider (IdP) signing key credentia
 ```sql
 EXEC okta.idps.signing_keys.clone_identity_provider_key 
 @targetIdpId='{{ targetIdpId }}' --required, 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

@@ -235,7 +235,8 @@ clientId,
 created,
 lastUpdated
 FROM okta.risk.risk_providers
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_risk_provider">
@@ -252,7 +253,8 @@ clientId,
 created,
 lastUpdated
 FROM okta.risk.risk_providers
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -279,9 +281,9 @@ data__name,
 subdomain
 )
 SELECT 
-'{{ action }}' --required,
-'{{ clientId }}' --required,
-'{{ name }}' --required,
+'{{ action }}' /* required */,
+'{{ clientId }}' /* required */,
+'{{ name }}' /* required */,
 '{{ subdomain }}'
 RETURNING
 id,
@@ -355,7 +357,8 @@ _links,
 action,
 clientId,
 created,
-lastUpdated;
+lastUpdated
+;
 ```
 </TabItem>
 </Tabs>
@@ -375,7 +378,8 @@ Deletes a risk provider object by its ID
 
 ```sql
 DELETE FROM okta.risk.risk_providers
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

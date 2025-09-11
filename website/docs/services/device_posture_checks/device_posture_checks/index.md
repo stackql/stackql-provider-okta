@@ -312,7 +312,8 @@ remediationSettings,
 type,
 variableName
 FROM okta.device_posture_checks.device_posture_checks
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_device_posture_check">
@@ -336,7 +337,8 @@ remediationSettings,
 type,
 variableName
 FROM okta.device_posture_checks.device_posture_checks
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -485,7 +487,8 @@ platform,
 query,
 remediationSettings,
 type,
-variableName;
+variableName
+;
 ```
 </TabItem>
 </Tabs>
@@ -505,7 +508,8 @@ Deletes a device posture check by `postureCheckId`. You can't delete the device 
 
 ```sql
 DELETE FROM okta.device_posture_checks.device_posture_checks
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

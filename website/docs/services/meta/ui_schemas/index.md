@@ -213,7 +213,8 @@ created,
 lastUpdated,
 uiSchema
 FROM okta.meta.ui_schemas
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_uischema">
@@ -228,7 +229,8 @@ created,
 lastUpdated,
 uiSchema
 FROM okta.meta.ui_schemas
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -306,7 +308,8 @@ id,
 _links,
 created,
 lastUpdated,
-uiSchema;
+uiSchema
+;
 ```
 </TabItem>
 </Tabs>
@@ -326,7 +329,8 @@ Deletes a UI Schema by `id`
 
 ```sql
 DELETE FROM okta.meta.ui_schemas
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

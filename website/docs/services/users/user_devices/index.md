@@ -132,7 +132,8 @@ created,
 device,
 deviceUserId
 FROM okta.users.user_devices
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

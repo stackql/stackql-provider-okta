@@ -249,7 +249,8 @@ lastUpdated,
 status,
 type
 FROM okta.behaviors.behavior_detection_rules
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_behavior_detection_rule">
@@ -266,7 +267,8 @@ lastUpdated,
 status,
 type
 FROM okta.behaviors.behavior_detection_rules
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -293,9 +295,9 @@ data__type,
 subdomain
 )
 SELECT 
-'{{ name }}' --required,
+'{{ name }}' /* required */,
 '{{ status }}',
-'{{ type }}' --required,
+'{{ type }}' /* required */,
 '{{ subdomain }}'
 RETURNING
 id,
@@ -362,7 +364,8 @@ _link,
 created,
 lastUpdated,
 status,
-type;
+type
+;
 ```
 </TabItem>
 </Tabs>
@@ -382,7 +385,8 @@ Deletes a Behavior Detection Rule by `behaviorId`
 
 ```sql
 DELETE FROM okta.behaviors.behavior_detection_rules
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -403,7 +407,8 @@ Activates a behavior detection rule
 
 ```sql
 EXEC okta.behaviors.behavior_detection_rules.activate_behavior_detection_rule 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_behavior_detection_rule">
@@ -412,7 +417,8 @@ Deactivates a behavior detection rule
 
 ```sql
 EXEC okta.behaviors.behavior_detection_rules.deactivate_behavior_detection_rule 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

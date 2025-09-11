@@ -94,7 +94,8 @@ Sends multiple IP risk events to Okta.<br />This request is used by a third-part
 
 ```sql
 EXEC okta.risk.risk_events.send_risk_events 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

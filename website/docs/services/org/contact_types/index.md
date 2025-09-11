@@ -120,7 +120,8 @@ Lists all org contact types for your Okta org
 SELECT
 contactType
 FROM okta.org.contact_types
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

@@ -199,7 +199,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="replace" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__name"><code>data__name</code></a>, <a href="#parameter-data__type"><code>data__type</code></a></td>
     <td></td>
-    <td>Replaces a Network Zone by `zoneId`. The replaced Network Zone type must be the same as the existing type.<br />You can replace the usage (`POLICY`, `BLOCKLIST`) of a Network Zone by updating the `usage` attribute.<br /><br />**IP exempt zone**&lt;br&gt;<br />If you have the IP exempt zone feature enabled, you can allow traffic from specific gateway IPs irrespective of Okta ThreatInsight configurations, blocked network zones, or IP change events within Identity Threat Protection with Okta AI.&lt;br&gt;<br />&lt;br&gt;<br />When you enable this feature, Okta creates a zone called `DefaultExemptIpZone`. Gateway IPs that you add to this zone always have access to Okta resources. See [IP exempt zone](https://help.okta.com/okta_help.htm?type=oie&id=csh-about-ip-exempt-zone).<br /><br />&gt; **Note:** You can't add trusted proxy IPs to this zone, delete the zone, or create additional exempt IP zones.</td>
+    <td>Replaces a Network Zone by `zoneId`. The replaced Network Zone type must be the same as the existing type.<br />You can replace the usage (`POLICY`, `BLOCKLIST`) of a Network Zone by updating the `usage` attribute.<br /><br />**IP exempt zone**<br /><br />If you have the IP exempt zone feature enabled, you can allow traffic from specific gateway IPs irrespective of Okta ThreatInsight configurations, blocked network zones, or IP change events within Identity Threat Protection with Okta AI.<br /><br /><br /><br />When you enable this feature, Okta creates a zone called `DefaultExemptIpZone`. Gateway IPs that you add to this zone always have access to Okta resources. See [IP exempt zone](https://help.okta.com/okta_help.htm?type=oie&id=csh-about-ip-exempt-zone).<br /><br />&gt; **Note:** You can't add trusted proxy IPs to this zone, delete the zone, or create additional exempt IP zones.</td>
 </tr>
 <tr>
     <td><a href="#delete_network_zone"><CopyableCode code="delete_network_zone" /></a></td>
@@ -289,7 +289,8 @@ FROM okta.zones.network_zones
 WHERE subdomain = '{{ subdomain }}' -- required
 AND after = '{{ after }}'
 AND limit = '{{ limit }}'
-AND filter = '{{ filter }}';
+AND filter = '{{ filter }}'
+;
 ```
 </TabItem>
 <TabItem value="get_network_zone">
@@ -308,7 +309,8 @@ system,
 type,
 usage
 FROM okta.zones.network_zones
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -336,9 +338,9 @@ data__usage,
 subdomain
 )
 SELECT 
-'{{ name }}' --required,
+'{{ name }}' /* required */,
 '{{ status }}',
-'{{ type }}' --required,
+'{{ type }}' /* required */,
 '{{ usage }}',
 '{{ subdomain }}'
 RETURNING
@@ -401,7 +403,7 @@ usage
 >
 <TabItem value="replace_network_zone">
 
-Replaces a Network Zone by `zoneId`. The replaced Network Zone type must be the same as the existing type.<br />You can replace the usage (`POLICY`, `BLOCKLIST`) of a Network Zone by updating the `usage` attribute.<br /><br />**IP exempt zone**&lt;br&gt;<br />If you have the IP exempt zone feature enabled, you can allow traffic from specific gateway IPs irrespective of Okta ThreatInsight configurations, blocked network zones, or IP change events within Identity Threat Protection with Okta AI.&lt;br&gt;<br />&lt;br&gt;<br />When you enable this feature, Okta creates a zone called `DefaultExemptIpZone`. Gateway IPs that you add to this zone always have access to Okta resources. See [IP exempt zone](https://help.okta.com/okta_help.htm?type=oie&id=csh-about-ip-exempt-zone).<br /><br />&gt; **Note:** You can't add trusted proxy IPs to this zone, delete the zone, or create additional exempt IP zones.
+Replaces a Network Zone by `zoneId`. The replaced Network Zone type must be the same as the existing type.<br />You can replace the usage (`POLICY`, `BLOCKLIST`) of a Network Zone by updating the `usage` attribute.<br /><br />**IP exempt zone**<br /><br />If you have the IP exempt zone feature enabled, you can allow traffic from specific gateway IPs irrespective of Okta ThreatInsight configurations, blocked network zones, or IP change events within Identity Threat Protection with Okta AI.<br /><br /><br /><br />When you enable this feature, Okta creates a zone called `DefaultExemptIpZone`. Gateway IPs that you add to this zone always have access to Okta resources. See [IP exempt zone](https://help.okta.com/okta_help.htm?type=oie&id=csh-about-ip-exempt-zone).<br /><br />&gt; **Note:** You can't add trusted proxy IPs to this zone, delete the zone, or create additional exempt IP zones.
 
 ```sql
 REPLACE okta.zones.network_zones
@@ -423,7 +425,8 @@ lastUpdated,
 status,
 system,
 type,
-usage;
+usage
+;
 ```
 </TabItem>
 </Tabs>
@@ -443,7 +446,8 @@ Deletes a Network Zone by `zoneId`<br />&gt; **Notes:**<br />&gt; * You can't de
 
 ```sql
 DELETE FROM okta.zones.network_zones
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -464,7 +468,8 @@ Activates a Network Zone by `zoneId`
 
 ```sql
 EXEC okta.zones.network_zones.activate_network_zone 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_network_zone">
@@ -473,7 +478,8 @@ Deactivates a Network Zone by `zoneId`
 
 ```sql
 EXEC okta.zones.network_zones.deactivate_network_zone 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

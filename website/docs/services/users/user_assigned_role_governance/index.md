@@ -126,7 +126,8 @@ SELECT
 _links,
 grants
 FROM okta.users.user_assigned_role_governance
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

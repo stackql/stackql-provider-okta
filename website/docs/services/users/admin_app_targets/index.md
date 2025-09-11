@@ -212,7 +212,8 @@ website
 FROM okta.users.admin_app_targets
 WHERE subdomain = '{{ subdomain }}' -- required
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -233,7 +234,8 @@ Unassigns an OIN app target from an `APP_ADMIN` role assignment to an admin user
 
 ```sql
 DELETE FROM okta.users.admin_app_targets
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="unassign_app_instance_target_from_admin_role_for_user">
@@ -242,7 +244,8 @@ Unassigns an app instance target from an `APP_ADMIN` role assignment to an admin
 
 ```sql
 DELETE FROM okta.users.admin_app_targets
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

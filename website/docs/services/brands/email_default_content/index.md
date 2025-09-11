@@ -140,7 +140,8 @@ body,
 subject
 FROM okta.brands.email_default_content
 WHERE subdomain = '{{ subdomain }}' -- required
-AND language = '{{ language }}';
+AND language = '{{ language }}'
+;
 ```
 </TabItem>
 </Tabs>

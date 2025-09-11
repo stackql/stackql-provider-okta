@@ -292,7 +292,8 @@ WHERE subdomain = '{{ subdomain }}' -- required
 AND q = '{{ q }}'
 AND filter = '{{ filter }}'
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 <TabItem value="get_oauth2_scope">
@@ -312,7 +313,8 @@ metadataPublish,
 optional,
 system
 FROM okta.authorizationservers.scopes
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -349,7 +351,7 @@ SELECT
 '{{ description }}',
 '{{ displayName }}',
 '{{ metadataPublish }}',
-'{{ name }}' --required,
+'{{ name }}' /* required */,
 {{ optional }},
 {{ system }},
 '{{ subdomain }}'
@@ -464,7 +466,8 @@ description,
 displayName,
 metadataPublish,
 optional,
-system;
+system
+;
 ```
 </TabItem>
 </Tabs>
@@ -484,7 +487,8 @@ Deletes a custom token scope
 
 ```sql
 DELETE FROM okta.authorizationservers.scopes
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

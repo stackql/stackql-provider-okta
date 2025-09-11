@@ -82,7 +82,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="domains" /></td>
     <td><code>array</code></td>
-    <td>Array of allowed domains. No user in this realm can be created or updated unless they have a username and email from one of these domains.  The following characters aren't allowed in the domain name: `!$%^&()=*+,:;&lt;&gt;'[]|/?\`</td>
+    <td>Array of allowed domains. No user in this realm can be created or updated unless they have a username and email from one of these domains.  The following characters aren't allowed in the domain name: `!$%^&()=*+,:;<>'[]|/?\`</td>
 </tr>
 <tr>
     <td><CopyableCode code="isDefault" /></td>
@@ -151,7 +151,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="domains" /></td>
     <td><code>array</code></td>
-    <td>Array of allowed domains. No user in this realm can be created or updated unless they have a username and email from one of these domains.  The following characters aren't allowed in the domain name: `!$%^&()=*+,:;&lt;&gt;'[]|/?\`</td>
+    <td>Array of allowed domains. No user in this realm can be created or updated unless they have a username and email from one of these domains.  The following characters aren't allowed in the domain name: `!$%^&()=*+,:;<>'[]|/?\`</td>
 </tr>
 <tr>
     <td><CopyableCode code="isDefault" /></td>
@@ -312,7 +312,8 @@ status
 FROM okta.realm_assignments.realm_assignments
 WHERE subdomain = '{{ subdomain }}' -- required
 AND limit = '{{ limit }}'
-AND after = '{{ after }}';
+AND after = '{{ after }}'
+;
 ```
 </TabItem>
 <TabItem value="get_realm_assignment">
@@ -333,7 +334,8 @@ lastUpdated,
 priority,
 status
 FROM okta.realm_assignments.realm_assignments
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -448,7 +450,8 @@ domains,
 isDefault,
 lastUpdated,
 priority,
-status;
+status
+;
 ```
 </TabItem>
 </Tabs>
@@ -468,7 +471,8 @@ Deletes a realm assignment
 
 ```sql
 DELETE FROM okta.realm_assignments.realm_assignments
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -494,7 +498,8 @@ EXEC okta.realm_assignments.realm_assignments.execute_realm_assignment
 @@json=
 '{
 "assignmentId": "{{ assignmentId }}"
-}';
+}'
+;
 ```
 </TabItem>
 <TabItem value="activate_realm_assignment">
@@ -503,7 +508,8 @@ Activates a realm assignment
 
 ```sql
 EXEC okta.realm_assignments.realm_assignments.activate_realm_assignment 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_realm_assignment">
@@ -512,7 +518,8 @@ Deactivates a realm assignment
 
 ```sql
 EXEC okta.realm_assignments.realm_assignments.deactivate_realm_assignment 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

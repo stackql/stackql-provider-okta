@@ -300,7 +300,8 @@ provider,
 status,
 vendorName
 FROM okta.users.factors
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_factor">
@@ -311,7 +312,8 @@ Retrieves an existing factor for the specified user
 SELECT
 *
 FROM okta.users.factors
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_factor_transaction_status">
@@ -322,7 +324,8 @@ Retrieves the status of a `push` factor verification transaction<br /><br /> &gt
 SELECT
 factorResult
 FROM okta.users.factors
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -437,7 +440,8 @@ Unenrolls an existing factor for the specified user. You can't unenroll a factor
 ```sql
 DELETE FROM okta.users.factors
 WHERE subdomain = '{{ subdomain }}' --required
-AND removeRecoveryEnrollment = '{{ removeRecoveryEnrollment }}';
+AND removeRecoveryEnrollment = '{{ removeRecoveryEnrollment }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -459,7 +463,8 @@ Activates a factor. Some factors (`call`, `email`, `push`, `sms`, `token:softwar
 
 ```sql
 EXEC okta.users.factors.activate_factor 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="resend_enroll_factor">
@@ -473,7 +478,8 @@ EXEC okta.users.factors.resend_enroll_factor
 @@json=
 '{
 "factorType": "{{ factorType }}"
-}';
+}'
+;
 ```
 </TabItem>
 <TabItem value="verify_factor">
@@ -487,7 +493,8 @@ EXEC okta.users.factors.verify_factor
 @tokenLifetimeSeconds='{{ tokenLifetimeSeconds }}', 
 @X-Forwarded-For='{{ X-Forwarded-For }}', 
 @User-Agent='{{ User-Agent }}', 
-@Accept-Language='{{ Accept-Language }}';
+@Accept-Language='{{ Accept-Language }}'
+;
 ```
 </TabItem>
 </Tabs>

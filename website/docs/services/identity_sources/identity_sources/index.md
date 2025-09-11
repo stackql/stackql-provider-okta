@@ -115,7 +115,8 @@ EXEC okta.identity_sources.identity_sources.upload_identity_source_data_for_dele
 '{
 "entityType": "{{ entityType }}", 
 "profiles": "{{ profiles }}"
-}';
+}'
+;
 ```
 </TabItem>
 <TabItem value="upload_identity_source_data_for_upsert">
@@ -129,7 +130,8 @@ EXEC okta.identity_sources.identity_sources.upload_identity_source_data_for_upse
 '{
 "entityType": "{{ entityType }}", 
 "profiles": "{{ profiles }}"
-}';
+}'
+;
 ```
 </TabItem>
 <TabItem value="start_import_from_identity_source">
@@ -138,7 +140,8 @@ Starts the import from the identity source described by the uploaded bulk operat
 
 ```sql
 EXEC okta.identity_sources.identity_sources.start_import_from_identity_source 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

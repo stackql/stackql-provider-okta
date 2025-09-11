@@ -144,7 +144,8 @@ _links,
 client_uri,
 logo_uri
 FROM okta.authorizationservers.clients
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

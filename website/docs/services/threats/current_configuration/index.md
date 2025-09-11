@@ -151,7 +151,8 @@ created,
 excludeZones,
 lastUpdated
 FROM okta.threats.current_configuration
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -182,7 +183,8 @@ _links,
 action,
 created,
 excludeZones,
-lastUpdated;
+lastUpdated
+;
 ```
 </TabItem>
 </Tabs>

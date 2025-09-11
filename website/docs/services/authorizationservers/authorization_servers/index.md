@@ -344,7 +344,8 @@ FROM okta.authorizationservers.authorization_servers
 WHERE subdomain = '{{ subdomain }}' -- required
 AND q = '{{ q }}'
 AND limit = '{{ limit }}'
-AND after = '{{ after }}';
+AND after = '{{ after }}'
+;
 ```
 </TabItem>
 <TabItem value="get_authorization_server">
@@ -368,7 +369,8 @@ jwks_uri,
 lastUpdated,
 status
 FROM okta.authorizationservers.authorization_servers
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -542,7 +544,8 @@ issuerMode,
 jwks,
 jwks_uri,
 lastUpdated,
-status;
+status
+;
 ```
 </TabItem>
 </Tabs>
@@ -562,7 +565,8 @@ Deletes an authorization server
 
 ```sql
 DELETE FROM okta.authorizationservers.authorization_servers
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -583,7 +587,8 @@ Activates an authorization server
 
 ```sql
 EXEC okta.authorizationservers.authorization_servers.activate_authorization_server 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_authorization_server">
@@ -592,7 +597,8 @@ Deactivates an authorization server
 
 ```sql
 EXEC okta.authorizationservers.authorization_servers.deactivate_authorization_server 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

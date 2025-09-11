@@ -147,7 +147,8 @@ SELECT
 _links,
 showEndUserFooter
 FROM okta.org.preferences
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -173,7 +174,8 @@ EXEC okta.org.preferences.upload_org_logo
 @@json=
 '{
 "file": "{{ file }}"
-}';
+}'
+;
 ```
 </TabItem>
 <TabItem value="set_org_hide_okta_uifooter">
@@ -182,7 +184,8 @@ Sets the preference to hide the Okta End-User Dashboard footer for all end users
 
 ```sql
 EXEC okta.org.preferences.set_org_hide_okta_uifooter 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="set_org_show_okta_uifooter">
@@ -191,7 +194,8 @@ Sets the preference to show the Okta UI footer for all end users of your org
 
 ```sql
 EXEC okta.org.preferences.set_org_show_okta_uifooter 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

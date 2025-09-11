@@ -194,7 +194,8 @@ type
 FROM okta.oauth2.group_target_roles
 WHERE subdomain = '{{ subdomain }}' -- required
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -217,7 +218,8 @@ REPLACE okta.oauth2.group_target_roles
 SET 
 -- No updatable properties
 WHERE 
-subdomain = '{{ subdomain }}' --required;
+subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -237,7 +239,8 @@ Unassigns a Group target from a `USER_ADMIN`, `HELP_DESK_ADMIN`, or `GROUP_MEMBE
 
 ```sql
 DELETE FROM okta.oauth2.group_target_roles
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

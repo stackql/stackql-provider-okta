@@ -312,7 +312,8 @@ WHERE subdomain = '{{ subdomain }}' -- required
 AND after = '{{ after }}'
 AND limit = '{{ limit }}'
 AND search = '{{ search }}'
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 <TabItem value="get_device">
@@ -332,7 +333,8 @@ resourceId,
 resourceType,
 status
 FROM okta.devices.devices
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -352,7 +354,8 @@ Deletes (permanently) a device by `deviceId` if it has a status of `DEACTIVATED`
 
 ```sql
 DELETE FROM okta.devices.devices
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -375,7 +378,8 @@ Activates a device by setting its status to `ACTIVE` by `deviceId`.<br />Activat
 
 ```sql
 EXEC okta.devices.devices.activate_device 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_device">
@@ -384,7 +388,8 @@ Deactivates a device by setting its status to `DEACTIVATED` by `deviceId`.<br />
 
 ```sql
 EXEC okta.devices.devices.deactivate_device 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="suspend_device">
@@ -393,7 +398,8 @@ Suspends a device by setting its status to `SUSPENDED`.<br />Use suspended devic
 
 ```sql
 EXEC okta.devices.devices.suspend_device 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="unsuspend_device">
@@ -402,7 +408,8 @@ Unsuspends a device by returning its `status` to `ACTIVE`.<br />&gt;**Note:** On
 
 ```sql
 EXEC okta.devices.devices.unsuspend_device 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

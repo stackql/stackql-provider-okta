@@ -128,7 +128,8 @@ SELECT
 contentSecurityPolicySetting,
 pageContent
 FROM okta.brands.default_error_page
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

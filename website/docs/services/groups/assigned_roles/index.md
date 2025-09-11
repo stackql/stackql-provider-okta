@@ -163,7 +163,8 @@ SELECT
 *
 FROM okta.groups.assigned_roles
 WHERE subdomain = '{{ subdomain }}' -- required
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 <TabItem value="get_group_assigned_role">
@@ -174,7 +175,8 @@ Retrieves a role assigned to a group (identified by the `groupId`). The `roleAss
 SELECT
 *
 FROM okta.groups.assigned_roles
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -235,7 +237,8 @@ Unassigns a role assignment (identified by `roleAssignmentId`) from a group (ide
 
 ```sql
 DELETE FROM okta.groups.assigned_roles
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

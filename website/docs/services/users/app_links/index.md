@@ -174,7 +174,8 @@ linkUrl,
 logoUrl,
 sortOrder
 FROM okta.users.app_links
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

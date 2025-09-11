@@ -231,7 +231,8 @@ secretKey,
 siteKey,
 type
 FROM okta.captchas.captcha_instances
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_captcha_instance">
@@ -247,7 +248,8 @@ secretKey,
 siteKey,
 type
 FROM okta.captchas.captcha_instances
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -352,7 +354,8 @@ name,
 _links,
 secretKey,
 siteKey,
-type;
+type
+;
 ```
 </TabItem>
 </Tabs>
@@ -385,7 +388,8 @@ name,
 _links,
 secretKey,
 siteKey,
-type;
+type
+;
 ```
 </TabItem>
 </Tabs>
@@ -405,7 +409,8 @@ Deletes a specified CAPTCHA instance<br />&gt; **Note:** If your CAPTCHA instanc
 
 ```sql
 DELETE FROM okta.captchas.captcha_instances
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

@@ -195,7 +195,8 @@ channels,
 notificationType,
 status
 FROM okta.roles.subscriptions
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_subscriptions_notification_type_role">
@@ -209,7 +210,8 @@ channels,
 notificationType,
 status
 FROM okta.roles.subscriptions
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -230,7 +232,8 @@ Subscribes a Role to a specified notification type. Changes to Role subscription
 
 ```sql
 EXEC okta.roles.subscriptions.subscribe_by_notification_type_role 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="unsubscribe_by_notification_type_role">
@@ -239,7 +242,8 @@ Unsubscribes a Role from a specified notification type. Changes to Role subscrip
 
 ```sql
 EXEC okta.roles.subscriptions.unsubscribe_by_notification_type_role 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

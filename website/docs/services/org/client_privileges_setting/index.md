@@ -127,7 +127,8 @@ Retrieves the org setting to assign the [Super Admin role](https://help.okta.com
 SELECT
 clientPrivilegesSetting
 FROM okta.org.client_privileges_setting
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -152,7 +153,8 @@ data__clientPrivilegesSetting = {{ clientPrivilegesSetting }}
 WHERE 
 subdomain = '{{ subdomain }}' --required
 RETURNING
-clientPrivilegesSetting;
+clientPrivilegesSetting
+;
 ```
 </TabItem>
 </Tabs>

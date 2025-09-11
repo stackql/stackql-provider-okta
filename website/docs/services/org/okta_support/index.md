@@ -144,7 +144,8 @@ Revokes Okta Support access to your org<br /><br />&gt; **Note:** This resource 
 
 ```sql
 DELETE FROM okta.org.okta_support
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -164,7 +165,8 @@ Extends the length of time that Okta Support can access your org by 24 hours. Th
 
 ```sql
 EXEC okta.org.okta_support.extend_okta_support 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

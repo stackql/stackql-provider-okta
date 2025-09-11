@@ -271,7 +271,8 @@ use,
 x5c,
 x5t#S256
 FROM okta.apps.keys
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_application_key">
@@ -291,7 +292,8 @@ use,
 x5c,
 x5t#S256
 FROM okta.apps.keys
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -364,7 +366,8 @@ Clones an X.509 certificate for an Application Key Credential from a source app 
 ```sql
 EXEC okta.apps.keys.clone_application_key 
 @targetAid='{{ targetAid }}' --required, 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

@@ -128,7 +128,8 @@ SELECT
 _embedded,
 _links
 FROM okta.brands.error_page
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

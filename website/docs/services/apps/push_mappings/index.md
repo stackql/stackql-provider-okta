@@ -303,7 +303,8 @@ AND after = '{{ after }}'
 AND limit = '{{ limit }}'
 AND lastUpdated = '{{ lastUpdated }}'
 AND sourceGroupId = '{{ sourceGroupId }}'
-AND status = '{{ status }}';
+AND status = '{{ status }}'
+;
 ```
 </TabItem>
 <TabItem value="get_group_push_mapping">
@@ -323,7 +324,8 @@ sourceGroupId,
 status,
 targetGroupId
 FROM okta.apps.push_mappings
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -353,7 +355,7 @@ subdomain
 )
 SELECT 
 '{{ appConfig }}',
-'{{ sourceGroupId }}' --required,
+'{{ sourceGroupId }}' /* required */,
 '{{ status }}',
 '{{ targetGroupId }}',
 '{{ targetGroupName }}',
@@ -442,7 +444,8 @@ lastPush,
 lastUpdated,
 sourceGroupId,
 status,
-targetGroupId;
+targetGroupId
+;
 ```
 </TabItem>
 </Tabs>
@@ -463,7 +466,8 @@ Deletes a specific group push mapping. The group push mapping must be in an `INA
 ```sql
 DELETE FROM okta.apps.push_mappings
 WHERE deleteTargetGroup = '{{ deleteTargetGroup }}' --required
-AND subdomain = '{{ subdomain }}' --required;
+AND subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

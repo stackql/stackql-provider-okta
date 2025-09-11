@@ -210,7 +210,8 @@ provider,
 status,
 vendorName
 FROM okta.webauthn_registration.enrollments
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -230,7 +231,8 @@ Deletes a specific WebAuthn preregistration factor for a user
 
 ```sql
 DELETE FROM okta.webauthn_registration.enrollments
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -264,7 +266,8 @@ EXEC okta.webauthn_registration.enrollments.activate_preregistration_enrollment
 "userId": "{{ userId }}", 
 "version": "{{ version }}", 
 "yubicoSigningJwks": "{{ yubicoSigningJwks }}"
-}';
+}'
+;
 ```
 </TabItem>
 <TabItem value="enroll_preregistration_enrollment">
@@ -280,7 +283,8 @@ EXEC okta.webauthn_registration.enrollments.enroll_preregistration_enrollment
 "fulfillmentProvider": "{{ fulfillmentProvider }}", 
 "userId": "{{ userId }}", 
 "yubicoTransportKeyJWK": "{{ yubicoTransportKeyJWK }}"
-}';
+}'
+;
 ```
 </TabItem>
 <TabItem value="generate_fulfillment_request">
@@ -295,7 +299,8 @@ EXEC okta.webauthn_registration.enrollments.generate_fulfillment_request
 "fulfillmentData": "{{ fulfillmentData }}", 
 "fulfillmentProvider": "{{ fulfillmentProvider }}", 
 "userId": "{{ userId }}"
-}';
+}'
+;
 ```
 </TabItem>
 <TabItem value="send_pin">
@@ -310,7 +315,8 @@ EXEC okta.webauthn_registration.enrollments.send_pin
 "authenticatorEnrollmentId": "{{ authenticatorEnrollmentId }}", 
 "fulfillmentProvider": "{{ fulfillmentProvider }}", 
 "userId": "{{ userId }}"
-}';
+}'
+;
 ```
 </TabItem>
 <TabItem value="assign_fulfillment_error_web_authn_preregistration_factor">
@@ -319,7 +325,8 @@ Assigns the fulfillment error status to a WebAuthn preregistration factor for a 
 
 ```sql
 EXEC okta.webauthn_registration.enrollments.assign_fulfillment_error_web_authn_preregistration_factor 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

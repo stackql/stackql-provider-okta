@@ -164,7 +164,8 @@ domain,
 publicCertificate,
 validationStatus
 FROM okta.brands.domains
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

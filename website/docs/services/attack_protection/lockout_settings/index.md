@@ -127,7 +127,8 @@ Retrieves the User Lockout Settings for an org
 SELECT
 preventBruteForceLockoutFromUnknownDevices
 FROM okta.attack_protection.lockout_settings
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -152,7 +153,8 @@ data__preventBruteForceLockoutFromUnknownDevices = {{ preventBruteForceLockoutFr
 WHERE 
 subdomain = '{{ subdomain }}' --required
 RETURNING
-preventBruteForceLockoutFromUnknownDevices;
+preventBruteForceLockoutFromUnknownDevices
+;
 ```
 </TabItem>
 </Tabs>

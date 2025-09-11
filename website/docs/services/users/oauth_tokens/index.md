@@ -290,7 +290,8 @@ FROM okta.users.oauth_tokens
 WHERE subdomain = '{{ subdomain }}' -- required
 AND expand = '{{ expand }}'
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 <TabItem value="get_refresh_token_for_user_and_client">
@@ -312,7 +313,8 @@ status,
 userId
 FROM okta.users.oauth_tokens
 WHERE subdomain = '{{ subdomain }}' -- required
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -333,7 +335,8 @@ Revokes all refresh tokens issued for the specified user and client
 
 ```sql
 DELETE FROM okta.users.oauth_tokens
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="revoke_token_for_user_and_client">
@@ -342,7 +345,8 @@ Revokes the specified refresh and access tokens
 
 ```sql
 DELETE FROM okta.users.oauth_tokens
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
