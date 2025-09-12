@@ -230,7 +230,8 @@ type
 FROM okta.groups.users
 WHERE subdomain = '{{ subdomain }}' -- required
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -253,7 +254,8 @@ REPLACE okta.groups.users
 SET 
 -- No updatable properties
 WHERE 
-subdomain = '{{ subdomain }}' --required;
+subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -273,7 +275,8 @@ Unassigns a user from a group with the `OKTA_GROUP` type.<br />&gt; **Note:** Yo
 
 ```sql
 DELETE FROM okta.groups.users
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

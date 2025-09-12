@@ -279,7 +279,8 @@ FROM okta.principal_rate_limits.principal_rate_limit_entities
 WHERE filter = '{{ filter }}' -- required
 AND subdomain = '{{ subdomain }}' -- required
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 <TabItem value="get_principal_rate_limit_entity">
@@ -299,7 +300,8 @@ orgId,
 principalId,
 principalType
 FROM okta.principal_rate_limits.principal_rate_limit_entities
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -329,8 +331,8 @@ subdomain
 SELECT 
 {{ defaultConcurrencyPercentage }},
 {{ defaultPercentage }},
-'{{ principalId }}' --required,
-'{{ principalType }}' --required,
+'{{ principalId }}' /* required */,
+'{{ principalType }}' /* required */,
 '{{ subdomain }}'
 RETURNING
 id,
@@ -414,7 +416,8 @@ lastUpdate,
 lastUpdatedBy,
 orgId,
 principalId,
-principalType;
+principalType
+;
 ```
 </TabItem>
 </Tabs>

@@ -184,7 +184,8 @@ _links,
 associated,
 primary
 FROM okta.meta.linked_object_definitions
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_linked_object_definition">
@@ -197,7 +198,8 @@ _links,
 associated,
 primary
 FROM okta.meta.linked_object_definitions
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -272,7 +274,8 @@ Deletes the Linked Object definition specified by either the `primary` or `assoc
 
 ```sql
 DELETE FROM okta.meta.linked_object_definitions
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

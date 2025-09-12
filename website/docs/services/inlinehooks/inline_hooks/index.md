@@ -291,7 +291,8 @@ type,
 version
 FROM okta.inlinehooks.inline_hooks
 WHERE subdomain = '{{ subdomain }}' -- required
-AND type = '{{ type }}';
+AND type = '{{ type }}'
+;
 ```
 </TabItem>
 <TabItem value="get_inline_hook">
@@ -310,7 +311,8 @@ status,
 type,
 version
 FROM okta.inlinehooks.inline_hooks
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -417,7 +419,8 @@ created,
 lastUpdated,
 status,
 type,
-version;
+version
+;
 ```
 </TabItem>
 </Tabs>
@@ -452,7 +455,8 @@ created,
 lastUpdated,
 status,
 type,
-version;
+version
+;
 ```
 </TabItem>
 </Tabs>
@@ -472,7 +476,8 @@ Deletes an inline hook by `inlineHookId`. After it's deleted, the inline hook is
 
 ```sql
 DELETE FROM okta.inlinehooks.inline_hooks
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -494,7 +499,8 @@ Executes the inline hook that matches the provided `inlineHookId` by using the r
 
 ```sql
 EXEC okta.inlinehooks.inline_hooks.execute_inline_hook 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="activate_inline_hook">
@@ -503,7 +509,8 @@ Activates the inline hook by `inlineHookId`
 
 ```sql
 EXEC okta.inlinehooks.inline_hooks.activate_inline_hook 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_inline_hook">
@@ -512,7 +519,8 @@ Deactivates the inline hook by `inlineHookId`
 
 ```sql
 EXEC okta.inlinehooks.inline_hooks.deactivate_inline_hook 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

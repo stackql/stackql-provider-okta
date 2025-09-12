@@ -226,7 +226,8 @@ website
 FROM okta.oauth2.app_target_roles
 WHERE subdomain = '{{ subdomain }}' -- required
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -249,7 +250,8 @@ REPLACE okta.oauth2.app_target_roles
 SET 
 -- No updatable properties
 WHERE 
-subdomain = '{{ subdomain }}' --required;
+subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -270,7 +272,8 @@ Unassigns an OIN app target for a role assignment to a client app<br /><br />&gt
 
 ```sql
 DELETE FROM okta.oauth2.app_target_roles
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="remove_app_target_instance_role_for_client">
@@ -279,7 +282,8 @@ Unassigns an app instance target from a role assignment to a client app<br /><br
 
 ```sql
 DELETE FROM okta.oauth2.app_target_roles
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -299,7 +303,8 @@ Assigns an app instance target to an `APP_ADMIN` role assignment to a client. Wh
 
 ```sql
 EXEC okta.oauth2.app_target_roles.assign_app_target_instance_role_for_client 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

@@ -142,7 +142,8 @@ SELECT
 contentSecurityPolicySetting,
 pageContent
 FROM okta.brands.preview_error_page
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -169,7 +170,8 @@ WHERE
 subdomain = '{{ subdomain }}' --required
 RETURNING
 contentSecurityPolicySetting,
-pageContent;
+pageContent
+;
 ```
 </TabItem>
 </Tabs>
@@ -189,7 +191,8 @@ Deletes the preview error page. The preview error page contains unpublished chan
 
 ```sql
 DELETE FROM okta.brands.preview_error_page
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

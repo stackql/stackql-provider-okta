@@ -117,7 +117,8 @@ Lists all sign-in widget versions supported by the current org
 SELECT
 *
 FROM okta.brands.sign_in_widget_versions
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

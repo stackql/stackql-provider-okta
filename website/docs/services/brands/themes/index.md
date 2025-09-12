@@ -344,7 +344,8 @@ secondaryColorContrastHex,
 secondaryColorHex,
 signInPageTouchPointVariant
 FROM okta.brands.themes
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_brand_theme">
@@ -368,7 +369,8 @@ secondaryColorContrastHex,
 secondaryColorHex,
 signInPageTouchPointVariant
 FROM okta.brands.themes
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -420,7 +422,8 @@ primaryColorContrastHex,
 primaryColorHex,
 secondaryColorContrastHex,
 secondaryColorHex,
-signInPageTouchPointVariant;
+signInPageTouchPointVariant
+;
 ```
 </TabItem>
 </Tabs>
@@ -449,7 +452,8 @@ EXEC okta.brands.themes.upload_brand_theme_background_image
 @@json=
 '{
 "file": "{{ file }}"
-}';
+}'
+;
 ```
 </TabItem>
 <TabItem value="delete_brand_theme_background_image">
@@ -458,7 +462,8 @@ Deletes a theme background image
 
 ```sql
 EXEC okta.brands.themes.delete_brand_theme_background_image 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="upload_brand_theme_favicon">
@@ -471,7 +476,8 @@ EXEC okta.brands.themes.upload_brand_theme_favicon
 @@json=
 '{
 "file": "{{ file }}"
-}';
+}'
+;
 ```
 </TabItem>
 <TabItem value="delete_brand_theme_favicon">
@@ -480,7 +486,8 @@ Deletes a theme favicon. The theme will use the default Okta favicon.
 
 ```sql
 EXEC okta.brands.themes.delete_brand_theme_favicon 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="upload_brand_theme_logo">
@@ -493,7 +500,8 @@ EXEC okta.brands.themes.upload_brand_theme_logo
 @@json=
 '{
 "file": "{{ file }}"
-}';
+}'
+;
 ```
 </TabItem>
 <TabItem value="delete_brand_theme_logo">
@@ -502,7 +510,8 @@ Deletes a Theme logo. The theme will use the default Okta logo.
 
 ```sql
 EXEC okta.brands.themes.delete_brand_theme_logo 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

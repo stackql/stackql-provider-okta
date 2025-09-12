@@ -152,7 +152,8 @@ Lists all roles assigned to a client app identified by `clientId`
 SELECT
 *
 FROM okta.oauth2.client_roles
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="retrieve_client_role">
@@ -163,7 +164,8 @@ Retrieves a role assignment (identified by `roleAssignmentId`) for a client app 
 SELECT
 *
 FROM okta.oauth2.client_roles
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -219,7 +221,8 @@ Unassigns a role assignment (identified by `roleAssignmentId`) from a client app
 
 ```sql
 DELETE FROM okta.oauth2.client_roles
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

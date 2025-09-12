@@ -198,7 +198,8 @@ remediationSettings,
 type,
 variableName
 FROM okta.device_posture_checks.default_device_posture_checks
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

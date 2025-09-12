@@ -236,7 +236,8 @@ status
 FROM okta.apps.cross_app_access_connections
 WHERE subdomain = '{{ subdomain }}' -- required
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 <TabItem value="get_cross_app_access_connection">
@@ -252,7 +253,8 @@ requestingAppInstanceId,
 resourceAppInstanceId,
 status
 FROM okta.apps.cross_app_access_connections
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -348,7 +350,8 @@ created,
 lastUpdated,
 requestingAppInstanceId,
 resourceAppInstanceId,
-status;
+status
+;
 ```
 </TabItem>
 </Tabs>
@@ -368,7 +371,8 @@ Deletes a Cross App Access connection with the specified ID<br />
 
 ```sql
 DELETE FROM okta.apps.cross_app_access_connections
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

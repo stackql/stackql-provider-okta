@@ -180,7 +180,8 @@ FROM okta.agentpools.agent_pools
 WHERE subdomain = '{{ subdomain }}' -- required
 AND limitPerPoolType = '{{ limitPerPoolType }}'
 AND poolType = '{{ poolType }}'
-AND after = '{{ after }}';
+AND after = '{{ after }}'
+;
 ```
 </TabItem>
 </Tabs>

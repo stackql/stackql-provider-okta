@@ -92,7 +92,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="tokenWindow" /></td>
     <td><code>string</code></td>
-    <td>A time duration specified as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). (pattern: ^P(?:$)(\d+Y)?(\d+M)?(\d+W)?(\d+D)?(T(?:\d)(\d+H)?(\d+M)?(\d+S)?)?$)</td>
+    <td>A time duration specified as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). (pattern: <code>^P(?:$)(\d+Y)?(\d+M)?(\d+W)?(\d+D)?(T(?:\d)(\d+H)?(\d+M)?(\d+S)?)?$</code>)</td>
 </tr>
 <tr>
     <td><CopyableCode code="userId" /></td>
@@ -156,7 +156,7 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="tokenWindow" /></td>
     <td><code>string</code></td>
-    <td>A time duration specified as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). (pattern: ^P(?:$)(\d+Y)?(\d+M)?(\d+W)?(\d+D)?(T(?:\d)(\d+H)?(\d+M)?(\d+S)?)?$)</td>
+    <td>A time duration specified as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). (pattern: <code>^P(?:$)(\d+Y)?(\d+M)?(\d+W)?(\d+D)?(T(?:\d)(\d+H)?(\d+M)?(\d+S)?)?$</code>)</td>
 </tr>
 <tr>
     <td><CopyableCode code="userId" /></td>
@@ -268,7 +268,8 @@ network,
 tokenWindow,
 userId
 FROM okta.api_tokens.api_tokens
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_api_token">
@@ -288,7 +289,8 @@ network,
 tokenWindow,
 userId
 FROM okta.api_tokens.api_tokens
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -324,7 +326,8 @@ expiresAt,
 lastUpdated,
 network,
 tokenWindow,
-userId;
+userId
+;
 ```
 </TabItem>
 </Tabs>
@@ -345,7 +348,8 @@ Revokes the API token provided in the Authorization header
 
 ```sql
 DELETE FROM okta.api_tokens.api_tokens
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="revoke_api_token">
@@ -354,7 +358,8 @@ Revokes an API token by `apiTokenId`
 
 ```sql
 DELETE FROM okta.api_tokens.api_tokens
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

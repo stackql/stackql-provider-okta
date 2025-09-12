@@ -212,7 +212,8 @@ bundles
 FROM okta.iam.governance_bundles
 WHERE subdomain = '{{ subdomain }}' -- required
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 <TabItem value="get_governance_bundle">
@@ -228,7 +229,8 @@ description,
 orn,
 status
 FROM okta.iam.governance_bundles
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -315,7 +317,8 @@ name,
 _links,
 description,
 orn,
-status;
+status
+;
 ```
 </TabItem>
 </Tabs>
@@ -335,7 +338,8 @@ Deletes a Governance Bundle from RAMP
 
 ```sql
 DELETE FROM okta.iam.governance_bundles
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

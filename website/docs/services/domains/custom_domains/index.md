@@ -218,7 +218,8 @@ Lists all verified custom domains for the org
 SELECT
 domains
 FROM okta.domains.custom_domains
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_custom_domain">
@@ -236,7 +237,8 @@ domain,
 publicCertificate,
 validationStatus
 FROM okta.domains.custom_domains
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -262,8 +264,8 @@ data__domain,
 subdomain
 )
 SELECT 
-'{{ certificateSourceType }}' --required,
-'{{ domain }}' --required,
+'{{ certificateSourceType }}' /* required */,
+'{{ domain }}' /* required */,
 '{{ subdomain }}'
 RETURNING
 id,
@@ -329,7 +331,8 @@ certificateSourceType,
 dnsRecords,
 domain,
 publicCertificate,
-validationStatus;
+validationStatus
+;
 ```
 </TabItem>
 </Tabs>
@@ -349,7 +352,8 @@ Deletes a custom domain by `domainId`
 
 ```sql
 DELETE FROM okta.domains.custom_domains
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -377,7 +381,8 @@ EXEC okta.domains.custom_domains.upsert_certificate
 "certificateChain": "{{ certificateChain }}", 
 "privateKey": "{{ privateKey }}", 
 "type": "{{ type }}"
-}';
+}'
+;
 ```
 </TabItem>
 <TabItem value="verify_domain">
@@ -386,7 +391,8 @@ Verifies the custom domain and validity of DNS records by `domainId`. Furthermor
 
 ```sql
 EXEC okta.domains.custom_domains.verify_domain 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

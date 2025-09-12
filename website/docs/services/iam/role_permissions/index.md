@@ -189,7 +189,8 @@ Lists all permissions for a custom role by `roleIdOrLabel`
 SELECT
 permissions
 FROM okta.iam.role_permissions
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_role_permission">
@@ -204,7 +205,8 @@ created,
 label,
 lastUpdated
 FROM okta.iam.role_permissions
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -276,7 +278,8 @@ _links,
 conditions,
 created,
 label,
-lastUpdated;
+lastUpdated
+;
 ```
 </TabItem>
 </Tabs>
@@ -296,7 +299,8 @@ Deletes a permission (identified by `permissionType`) from a custom role
 
 ```sql
 DELETE FROM okta.iam.role_permissions
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

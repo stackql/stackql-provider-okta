@@ -132,7 +132,8 @@ stream_id,
 status
 FROM okta.ssf.ssf_stream_status
 WHERE stream_id = '{{ stream_id }}' -- required
-AND subdomain = '{{ subdomain }}' -- required;
+AND subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

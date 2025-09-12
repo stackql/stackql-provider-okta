@@ -98,7 +98,8 @@ EXEC okta.org.email_customizations.bulk_remove_email_address_bounces
 @@json=
 '{
 "emailAddresses": "{{ emailAddresses }}"
-}';
+}'
+;
 ```
 </TabItem>
 </Tabs>

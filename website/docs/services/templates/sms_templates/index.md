@@ -248,7 +248,8 @@ translations,
 type
 FROM okta.templates.sms_templates
 WHERE subdomain = '{{ subdomain }}' -- required
-AND templateType = '{{ templateType }}';
+AND templateType = '{{ templateType }}'
+;
 ```
 </TabItem>
 <TabItem value="get_sms_template">
@@ -265,7 +266,8 @@ template,
 translations,
 type
 FROM okta.templates.sms_templates
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -373,7 +375,8 @@ created,
 lastUpdated,
 template,
 translations,
-type;
+type
+;
 ```
 </TabItem>
 </Tabs>
@@ -407,7 +410,8 @@ created,
 lastUpdated,
 template,
 translations,
-type;
+type
+;
 ```
 </TabItem>
 </Tabs>
@@ -427,7 +431,8 @@ Deletes an SMS template
 
 ```sql
 DELETE FROM okta.templates.sms_templates
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

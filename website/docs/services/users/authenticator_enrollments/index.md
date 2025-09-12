@@ -217,7 +217,8 @@ profile,
 status,
 type
 FROM okta.users.authenticator_enrollments
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_authenticator_enrollment">
@@ -228,7 +229,8 @@ Retrieves a user's authenticator enrollment by `enrollmentId`
 SELECT
 *
 FROM okta.users.authenticator_enrollments
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -256,8 +258,8 @@ userId,
 subdomain
 )
 SELECT 
-'{{ authenticatorId }}' --required,
-'{{ profile }}' --required,
+'{{ authenticatorId }}' /* required */,
+'{{ profile }}' /* required */,
 '{{ userId }}',
 '{{ subdomain }}'
 ;
@@ -275,7 +277,7 @@ userId,
 subdomain
 )
 SELECT 
-'{{ authenticatorId }}' --required,
+'{{ authenticatorId }}' /* required */,
 '{{ profile }}',
 '{{ userId }}',
 '{{ subdomain }}'
@@ -323,7 +325,8 @@ Deletes an existing enrollment for the specified user. The user can enroll the a
 
 ```sql
 DELETE FROM okta.users.authenticator_enrollments
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

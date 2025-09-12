@@ -140,7 +140,8 @@ SELECT
 _links,
 optInStatus
 FROM okta.iam.opt_in_status
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -161,7 +162,8 @@ Opts in the Admin Console to RAMP
 
 ```sql
 EXEC okta.iam.opt_in_status.opt_in 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="opt_out">
@@ -170,7 +172,8 @@ Opts out the Admin Console from RAMP
 
 ```sql
 EXEC okta.iam.opt_in_status.opt_out 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

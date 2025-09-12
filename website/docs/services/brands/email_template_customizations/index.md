@@ -269,7 +269,8 @@ subject
 FROM okta.brands.email_template_customizations
 WHERE subdomain = '{{ subdomain }}' -- required
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 <TabItem value="get_email_customization">
@@ -287,7 +288,8 @@ language,
 lastUpdated,
 subject
 FROM okta.brands.email_template_customizations
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -315,8 +317,8 @@ data__language,
 subdomain
 )
 SELECT 
-'{{ body }}' --required,
-'{{ subject }}' --required,
+'{{ body }}' /* required */,
+'{{ subject }}' /* required */,
 {{ isDefault }},
 '{{ language }}',
 '{{ subdomain }}'
@@ -411,7 +413,8 @@ created,
 isDefault,
 language,
 lastUpdated,
-subject;
+subject
+;
 ```
 </TabItem>
 </Tabs>
@@ -432,7 +435,8 @@ Deletes all customizations for an email template<br /><br />&lt;x-lifecycle clas
 
 ```sql
 DELETE FROM okta.brands.email_template_customizations
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="delete_email_customization">
@@ -441,7 +445,8 @@ Deletes an Email Customization by its unique identifier<br /><br />&lt;x-lifecyc
 
 ```sql
 DELETE FROM okta.brands.email_template_customizations
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

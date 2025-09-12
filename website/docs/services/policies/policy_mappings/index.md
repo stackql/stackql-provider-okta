@@ -173,7 +173,8 @@ SELECT
 id,
 _links
 FROM okta.policies.policy_mappings
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_policy_mapping">
@@ -185,7 +186,8 @@ SELECT
 id,
 _links
 FROM okta.policies.policy_mappings
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -205,7 +207,8 @@ Deletes the resource mapping for a policy identified by `policyId` and `mappingI
 
 ```sql
 DELETE FROM okta.policies.policy_mappings
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -230,7 +233,8 @@ EXEC okta.policies.policy_mappings.map_resource_to_policy
 '{
 "resourceId": "{{ resourceId }}", 
 "resourceType": "{{ resourceType }}"
-}';
+}'
+;
 ```
 </TabItem>
 </Tabs>

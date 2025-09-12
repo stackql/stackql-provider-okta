@@ -189,7 +189,8 @@ properties,
 title,
 type
 FROM okta.meta.group_schemas
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -227,7 +228,8 @@ description,
 lastUpdated,
 properties,
 title,
-type;
+type
+;
 ```
 </TabItem>
 </Tabs>

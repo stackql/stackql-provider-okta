@@ -306,7 +306,8 @@ WHERE subdomain = '{{ subdomain }}' -- required
 AND q = '{{ q }}'
 AND filter = '{{ filter }}'
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 <TabItem value="get_trusted_origin">
@@ -326,7 +327,8 @@ origin,
 scopes,
 status
 FROM okta.trustedorigins.trusted_origins
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -433,7 +435,8 @@ lastUpdated,
 lastUpdatedBy,
 origin,
 scopes,
-status;
+status
+;
 ```
 </TabItem>
 </Tabs>
@@ -453,7 +456,8 @@ Deletes a trusted origin
 
 ```sql
 DELETE FROM okta.trustedorigins.trusted_origins
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -474,7 +478,8 @@ Activates a trusted origin. Sets the `status` to `ACTIVE`.
 
 ```sql
 EXEC okta.trustedorigins.trusted_origins.activate_trusted_origin 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_trusted_origin">
@@ -483,7 +488,8 @@ Deactivates a trusted origin. Sets the `status` to `INACTIVE`.
 
 ```sql
 EXEC okta.trustedorigins.trusted_origins.deactivate_trusted_origin 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

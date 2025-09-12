@@ -98,7 +98,8 @@ SET
 data__enableEnduserEntryPoints = {{ enableEnduserEntryPoints }},
 data__enableExportApps = {{ enableExportApps }}
 WHERE 
-subdomain = '{{ subdomain }}' --required;
+subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

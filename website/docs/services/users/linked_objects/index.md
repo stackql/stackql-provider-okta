@@ -134,7 +134,8 @@ Lists either the `self` link for the primary user or all associated users in the
 SELECT
 _links
 FROM okta.users.linked_objects
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -157,7 +158,8 @@ REPLACE okta.users.linked_objects
 SET 
 -- No updatable properties
 WHERE 
-subdomain = '{{ subdomain }}' --required;
+subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -177,7 +179,8 @@ Deletes any existing relationship between the `associated` and `primary` user. F
 
 ```sql
 DELETE FROM okta.users.linked_objects
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

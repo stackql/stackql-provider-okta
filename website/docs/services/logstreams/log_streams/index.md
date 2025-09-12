@@ -267,7 +267,8 @@ FROM okta.logstreams.log_streams
 WHERE subdomain = '{{ subdomain }}' -- required
 AND after = '{{ after }}'
 AND limit = '{{ limit }}'
-AND filter = '{{ filter }}';
+AND filter = '{{ filter }}'
+;
 ```
 </TabItem>
 <TabItem value="get_log_stream">
@@ -284,7 +285,8 @@ lastUpdated,
 status,
 type
 FROM okta.logstreams.log_streams
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -310,8 +312,8 @@ data__type,
 subdomain
 )
 SELECT 
-'{{ name }}' --required,
-'{{ type }}' --required,
+'{{ name }}' /* required */,
+'{{ type }}' /* required */,
 '{{ subdomain }}'
 RETURNING
 id,
@@ -383,7 +385,8 @@ _links,
 created,
 lastUpdated,
 status,
-type;
+type
+;
 ```
 </TabItem>
 </Tabs>
@@ -403,7 +406,8 @@ Deletes a log stream object from your org by ID
 
 ```sql
 DELETE FROM okta.logstreams.log_streams
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -424,7 +428,8 @@ Activates a log stream by `logStreamId`
 
 ```sql
 EXEC okta.logstreams.log_streams.activate_log_stream 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_log_stream">
@@ -433,7 +438,8 @@ Deactivates a log stream by `logStreamId`
 
 ```sql
 EXEC okta.logstreams.log_streams.deactivate_log_stream 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

@@ -98,7 +98,8 @@ SET
 data__id = '{{ id }}',
 data__parameters = '{{ parameters }}'
 WHERE 
-subdomain = '{{ subdomain }}' --required;
+subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

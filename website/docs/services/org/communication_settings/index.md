@@ -140,7 +140,8 @@ SELECT
 _links,
 optOutEmailUsers
 FROM okta.org.communication_settings
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -161,7 +162,8 @@ Opts in all users of this org to Okta communication emails
 
 ```sql
 EXEC okta.org.communication_settings.opt_in_users_to_okta_communication_emails 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="opt_out_users_from_okta_communication_emails">
@@ -170,7 +172,8 @@ Opts out all users of this org from Okta communication emails
 
 ```sql
 EXEC okta.org.communication_settings.opt_out_users_from_okta_communication_emails 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

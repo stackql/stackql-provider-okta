@@ -152,7 +152,8 @@ accountId,
 grantedBy,
 grantedDate
 FROM okta.org.support_aerial_consent
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -177,7 +178,7 @@ data__accountId,
 subdomain
 )
 SELECT 
-'{{ accountId }}' --required,
+'{{ accountId }}' /* required */,
 '{{ subdomain }}'
 RETURNING
 _links,
@@ -220,7 +221,8 @@ Revokes access of an Okta Aerial account to your Org. The revoke operation will 
 
 ```sql
 DELETE FROM okta.org.support_aerial_consent
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

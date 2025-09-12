@@ -163,7 +163,8 @@ SELECT
 _embedded,
 _links
 FROM okta.brands.well_known_uris
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_root_brand_well_known_uri">
@@ -175,7 +176,8 @@ SELECT
 _links,
 representation
 FROM okta.brands.well_known_uris
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

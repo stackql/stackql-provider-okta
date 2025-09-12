@@ -289,7 +289,8 @@ status,
 userId
 FROM okta.apps.grants
 WHERE subdomain = '{{ subdomain }}' -- required
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 <TabItem value="get_scope_consent_grant">
@@ -312,7 +313,8 @@ status,
 userId
 FROM okta.apps.grants
 WHERE subdomain = '{{ subdomain }}' -- required
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -338,8 +340,8 @@ data__scopeId,
 subdomain
 )
 SELECT 
-'{{ issuer }}' --required,
-'{{ scopeId }}' --required,
+'{{ issuer }}' /* required */,
+'{{ scopeId }}' /* required */,
 '{{ subdomain }}'
 RETURNING
 id,
@@ -395,7 +397,8 @@ Revokes permission for the app to grant the given scope
 
 ```sql
 DELETE FROM okta.apps.grants
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

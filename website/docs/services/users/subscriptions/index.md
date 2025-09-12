@@ -206,7 +206,8 @@ notificationType,
 status
 FROM okta.users.subscriptions
 WHERE userId = '{{ userId }}' -- required
-AND subdomain = '{{ subdomain }}' -- required;
+AND subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_subscriptions_notification_type_user">
@@ -222,7 +223,8 @@ status
 FROM okta.users.subscriptions
 WHERE userId = '{{ userId }}' -- required
 AND notificationType = '{{ notificationType }}' -- required
-AND subdomain = '{{ subdomain }}' -- required;
+AND subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -245,7 +247,8 @@ Subscribes the current user to a specified notification type. Returns an `Access
 EXEC okta.users.subscriptions.subscribe_by_notification_type_user 
 @userId='{{ userId }}' --required, 
 @notificationType='{{ notificationType }}' --required, 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="unsubscribe_by_notification_type_user">
@@ -256,7 +259,8 @@ Unsubscribes the current user from a specified notification type. Returns an `Ac
 EXEC okta.users.subscriptions.unsubscribe_by_notification_type_user 
 @userId='{{ userId }}' --required, 
 @notificationType='{{ notificationType }}' --required, 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

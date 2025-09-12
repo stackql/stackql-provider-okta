@@ -305,7 +305,8 @@ AND after = '{{ after }}'
 AND limit = '{{ limit }}'
 AND expand = '{{ expand }}'
 AND sortBy = '{{ sortBy }}'
-AND sortOrder = '{{ sortOrder }}';
+AND sortOrder = '{{ sortOrder }}'
+;
 ```
 </TabItem>
 <TabItem value="get_group">
@@ -324,7 +325,8 @@ objectClass,
 profile,
 type
 FROM okta.groups.groups
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -413,7 +415,8 @@ lastMembershipUpdated,
 lastUpdated,
 objectClass,
 profile,
-type;
+type
+;
 ```
 </TabItem>
 </Tabs>
@@ -433,7 +436,8 @@ Deletes a group of the `OKTA_GROUP` or `APP_GROUP` type from your org.<br />&gt;
 
 ```sql
 DELETE FROM okta.groups.groups
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

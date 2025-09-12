@@ -127,7 +127,8 @@ Retrieves the currently configured Rate Limit Admin Notification Settings
 SELECT
 notificationsEnabled
 FROM okta.rate_limit_settings.admin_notifications
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -153,7 +154,8 @@ WHERE
 subdomain = '{{ subdomain }}' --required
 AND data__notificationsEnabled = {{ notificationsEnabled }} --required
 RETURNING
-notificationsEnabled;
+notificationsEnabled
+;
 ```
 </TabItem>
 </Tabs>

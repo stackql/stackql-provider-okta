@@ -135,7 +135,8 @@ SELECT
 _links,
 recipients
 FROM okta.brands.email_settings
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -161,7 +162,8 @@ WHERE
 subdomain = '{{ subdomain }}' --required
 AND data__recipients = '{{ recipients }}' --required
 RETURNING
-recipients;
+recipients
+;
 ```
 </TabItem>
 </Tabs>

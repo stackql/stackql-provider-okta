@@ -135,7 +135,8 @@ SELECT
 type,
 url
 FROM okta.brands.sign_out_page_settings
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -163,7 +164,8 @@ subdomain = '{{ subdomain }}' --required
 AND data__type = '{{ type }}' --required
 RETURNING
 type,
-url;
+url
+;
 ```
 </TabItem>
 </Tabs>

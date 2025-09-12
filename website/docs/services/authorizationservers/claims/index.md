@@ -279,7 +279,8 @@ system,
 value,
 valueType
 FROM okta.authorizationservers.claims
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_oauth2_claim">
@@ -300,7 +301,8 @@ system,
 value,
 valueType
 FROM okta.authorizationservers.claims
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -459,7 +461,8 @@ group_filter_type,
 status,
 system,
 value,
-valueType;
+valueType
+;
 ```
 </TabItem>
 </Tabs>
@@ -479,7 +482,8 @@ Deletes a custom token Claim specified by the `claimId`
 
 ```sql
 DELETE FROM okta.authorizationservers.claims
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

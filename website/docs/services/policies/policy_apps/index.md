@@ -204,7 +204,8 @@ status,
 universalLogout,
 visibility
 FROM okta.policies.policy_apps
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

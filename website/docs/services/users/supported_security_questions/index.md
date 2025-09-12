@@ -132,7 +132,8 @@ answer,
 question,
 questionText
 FROM okta.users.supported_security_questions
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

@@ -104,7 +104,8 @@ REPLACE okta.groups.app_instance_targets
 SET 
 -- No updatable properties
 WHERE 
-subdomain = '{{ subdomain }}' --required;
+subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -124,7 +125,8 @@ Unassigns an app instance target from an `APP_ADMIN` role assignment to a group<
 
 ```sql
 DELETE FROM okta.groups.app_instance_targets
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

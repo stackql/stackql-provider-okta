@@ -193,7 +193,8 @@ FROM okta.groups.owners
 WHERE subdomain = '{{ subdomain }}' -- required
 AND search = '{{ search }}'
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -277,7 +278,8 @@ Deletes a group owner from a specific group
 
 ```sql
 DELETE FROM okta.groups.owners
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

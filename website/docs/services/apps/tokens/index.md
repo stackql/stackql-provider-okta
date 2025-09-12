@@ -290,7 +290,8 @@ FROM okta.apps.tokens
 WHERE subdomain = '{{ subdomain }}' -- required
 AND expand = '{{ expand }}'
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 <TabItem value="get_oauth2_token_for_application">
@@ -312,7 +313,8 @@ status,
 userId
 FROM okta.apps.tokens
 WHERE subdomain = '{{ subdomain }}' -- required
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -333,7 +335,8 @@ Revokes all OAuth 2.0 refresh tokens for the specified app. Any access tokens is
 
 ```sql
 DELETE FROM okta.apps.tokens
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="revoke_oauth2_token_for_application">
@@ -342,7 +345,8 @@ Revokes the specified token for the specified app
 
 ```sql
 DELETE FROM okta.apps.tokens
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

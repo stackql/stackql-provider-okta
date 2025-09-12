@@ -52,12 +52,12 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="id" /></td>
     <td><code>string (regex)</code></td>
-    <td>The UUID of the app service account (pattern: (?i)^[0-9a-f]&#123;8&#125;-[0-9a-f]&#123;4&#125;-[1-5][0-9a-f]&#123;3&#125;-[89ab][0-9a-f]&#123;3&#125;-[0-9a-f]&#123;12&#125;$, example: a747a818-a4c4-4446-8a87-704216495a08)</td>
+    <td>The UUID of the app service account (pattern: <code>(?i)^[0-9a-f]&#123;8&#125;-[0-9a-f]&#123;4&#125;-[1-5][0-9a-f]&#123;3&#125;-[89ab][0-9a-f]&#123;3&#125;-[0-9a-f]&#123;12&#125;$</code>, example: a747a818-a4c4-4446-8a87-704216495a08)</td>
 </tr>
 <tr>
     <td><CopyableCode code="name" /></td>
     <td><code>string (regex)</code></td>
-    <td>The user-defined name for the app service account (pattern: ^[\w\-_. ]+$, example: salesforce Prod-5 account)</td>
+    <td>The user-defined name for the app service account (pattern: <code>^[\w\-_. ]+$</code>, example: salesforce Prod-5 account)</td>
 </tr>
 <tr>
     <td><CopyableCode code="containerGlobalName" /></td>
@@ -136,12 +136,12 @@ The following fields are returned by `SELECT` queries:
 <tr>
     <td><CopyableCode code="id" /></td>
     <td><code>string (regex)</code></td>
-    <td>The UUID of the app service account (pattern: (?i)^[0-9a-f]&#123;8&#125;-[0-9a-f]&#123;4&#125;-[1-5][0-9a-f]&#123;3&#125;-[89ab][0-9a-f]&#123;3&#125;-[0-9a-f]&#123;12&#125;$, example: a747a818-a4c4-4446-8a87-704216495a08)</td>
+    <td>The UUID of the app service account (pattern: <code>(?i)^[0-9a-f]&#123;8&#125;-[0-9a-f]&#123;4&#125;-[1-5][0-9a-f]&#123;3&#125;-[89ab][0-9a-f]&#123;3&#125;-[0-9a-f]&#123;12&#125;$</code>, example: a747a818-a4c4-4446-8a87-704216495a08)</td>
 </tr>
 <tr>
     <td><CopyableCode code="name" /></td>
     <td><code>string (regex)</code></td>
-    <td>The user-defined name for the app service account (pattern: ^[\w\-_. ]+$, example: salesforce Prod-5 account)</td>
+    <td>The user-defined name for the app service account (pattern: <code>^[\w\-_. ]+$</code>, example: salesforce Prod-5 account)</td>
 </tr>
 <tr>
     <td><CopyableCode code="containerGlobalName" /></td>
@@ -330,7 +330,8 @@ FROM okta.privileged_access.service_accounts
 WHERE subdomain = '{{ subdomain }}' -- required
 AND limit = '{{ limit }}'
 AND after = '{{ after }}'
-AND match = '{{ match }}';
+AND match = '{{ match }}'
+;
 ```
 </TabItem>
 <TabItem value="get_app_service_account">
@@ -354,7 +355,8 @@ status,
 statusDetail,
 username
 FROM okta.privileged_access.service_accounts
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -385,13 +387,13 @@ data__username,
 subdomain
 )
 SELECT 
-'{{ containerOrn }}' --required,
+'{{ containerOrn }}' /* required */,
 '{{ description }}',
-'{{ name }}' --required,
+'{{ name }}' /* required */,
 '{{ ownerGroupIds }}',
 '{{ ownerUserIds }}',
 '{{ password }}',
-'{{ username }}' --required,
+'{{ username }}' /* required */,
 '{{ subdomain }}'
 RETURNING
 id,
@@ -497,7 +499,8 @@ ownerUserIds,
 password,
 status,
 statusDetail,
-username;
+username
+;
 ```
 </TabItem>
 </Tabs>
@@ -517,7 +520,8 @@ Deletes an app service account specified by ID
 
 ```sql
 DELETE FROM okta.privileged_access.service_accounts
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

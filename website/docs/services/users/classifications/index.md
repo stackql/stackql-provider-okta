@@ -133,7 +133,8 @@ SELECT
 lastUpdated,
 type
 FROM okta.users.classifications
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -159,7 +160,8 @@ WHERE
 subdomain = '{{ subdomain }}' --required
 RETURNING
 lastUpdated,
-type;
+type
+;
 ```
 </TabItem>
 </Tabs>

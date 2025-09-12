@@ -127,7 +127,8 @@ Retrieves the third-party admin setting. See [Configure third-party administrato
 SELECT
 thirdPartyAdmin
 FROM okta.org.third_party_admin_setting
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -152,7 +153,8 @@ data__thirdPartyAdmin = {{ thirdPartyAdmin }}
 WHERE 
 subdomain = '{{ subdomain }}' --required
 RETURNING
-thirdPartyAdmin;
+thirdPartyAdmin
+;
 ```
 </TabItem>
 </Tabs>

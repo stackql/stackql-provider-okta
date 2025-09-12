@@ -279,7 +279,8 @@ lastUpdate,
 lastUpdatedBy,
 platform
 FROM okta.device_assurances.device_assurance_policies
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_device_assurance_policy">
@@ -300,7 +301,8 @@ lastUpdate,
 lastUpdatedBy,
 platform
 FROM okta.device_assurances.device_assurance_policies
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -421,7 +423,8 @@ displayRemediationMode,
 gracePeriod,
 lastUpdate,
 lastUpdatedBy,
-platform;
+platform
+;
 ```
 </TabItem>
 </Tabs>
@@ -441,7 +444,8 @@ Deletes a device assurance policy by `deviceAssuranceId`. If the device assuranc
 
 ```sql
 DELETE FROM okta.device_assurances.device_assurance_policies
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

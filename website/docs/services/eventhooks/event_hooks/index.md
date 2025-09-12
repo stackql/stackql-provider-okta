@@ -300,7 +300,8 @@ lastUpdated,
 status,
 verificationStatus
 FROM okta.eventhooks.event_hooks
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_event_hook">
@@ -321,7 +322,8 @@ lastUpdated,
 status,
 verificationStatus
 FROM okta.eventhooks.event_hooks
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -349,10 +351,10 @@ data__name,
 subdomain
 )
 SELECT 
-'{{ channel }}' --required,
+'{{ channel }}' /* required */,
 '{{ description }}',
-'{{ events }}' --required,
-'{{ name }}' --required,
+'{{ events }}' /* required */,
+'{{ name }}' /* required */,
 '{{ subdomain }}'
 RETURNING
 id,
@@ -432,7 +434,8 @@ description,
 events,
 lastUpdated,
 status,
-verificationStatus;
+verificationStatus
+;
 ```
 </TabItem>
 </Tabs>
@@ -452,7 +455,8 @@ Deletes the event hook that matches the provided `id`. After deletion, the event
 
 ```sql
 DELETE FROM okta.eventhooks.event_hooks
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -474,7 +478,8 @@ Activates the event hook that matches the provided `id`
 
 ```sql
 EXEC okta.eventhooks.event_hooks.activate_event_hook 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_event_hook">
@@ -483,7 +488,8 @@ Deactivates the event hook that matches the provided `id`
 
 ```sql
 EXEC okta.eventhooks.event_hooks.deactivate_event_hook 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="verify_event_hook">
@@ -492,7 +498,8 @@ Verifies that the event hook matches the provided `eventHookId`. To verify owner
 
 ```sql
 EXEC okta.eventhooks.event_hooks.verify_event_hook 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

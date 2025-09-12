@@ -179,7 +179,8 @@ _links,
 roles
 FROM okta.iam.role_resource_set_bindings
 WHERE subdomain = '{{ subdomain }}' -- required
-AND after = '{{ after }}';
+AND after = '{{ after }}'
+;
 ```
 </TabItem>
 <TabItem value="get_binding">
@@ -191,7 +192,8 @@ SELECT
 id,
 _links
 FROM okta.iam.role_resource_set_bindings
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -263,7 +265,8 @@ Deletes a binding of a role (identified by `roleIdOrLabel`) and a resource set (
 
 ```sql
 DELETE FROM okta.iam.role_resource_set_bindings
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

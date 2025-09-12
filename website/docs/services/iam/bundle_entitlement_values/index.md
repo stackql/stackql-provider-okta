@@ -138,7 +138,8 @@ entitlementValues
 FROM okta.iam.bundle_entitlement_values
 WHERE subdomain = '{{ subdomain }}' -- required
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 </Tabs>

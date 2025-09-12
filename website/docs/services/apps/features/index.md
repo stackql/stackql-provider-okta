@@ -188,7 +188,8 @@ _links,
 description,
 status
 FROM okta.apps.features
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_feature_for_application">
@@ -202,7 +203,8 @@ _links,
 description,
 status
 FROM okta.apps.features
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -230,7 +232,8 @@ RETURNING
 name,
 _links,
 description,
-status;
+status
+;
 ```
 </TabItem>
 </Tabs>

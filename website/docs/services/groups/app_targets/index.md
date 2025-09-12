@@ -212,7 +212,8 @@ website
 FROM okta.groups.app_targets
 WHERE subdomain = '{{ subdomain }}' -- required
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -235,7 +236,8 @@ REPLACE okta.groups.app_targets
 SET 
 -- No updatable properties
 WHERE 
-subdomain = '{{ subdomain }}' --required;
+subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -255,7 +257,8 @@ Unassigns an OIN app target from an `APP_ADMIN` role assignment to a group<br />
 
 ```sql
 DELETE FROM okta.groups.app_targets
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

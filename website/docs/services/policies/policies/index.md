@@ -360,7 +360,8 @@ AND expand = '{{ expand }}'
 AND sortBy = '{{ sortBy }}'
 AND limit = '{{ limit }}'
 AND resourceId = '{{ resourceId }}'
-AND after = '{{ after }}';
+AND after = '{{ after }}'
+;
 ```
 </TabItem>
 <TabItem value="get_policy">
@@ -382,7 +383,8 @@ system,
 type
 FROM okta.policies.policies
 WHERE subdomain = '{{ subdomain }}' -- required
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -414,11 +416,11 @@ activate
 )
 SELECT 
 '{{ description }}',
-'{{ name }}' --required,
+'{{ name }}' /* required */,
 {{ priority }},
 '{{ status }}',
 {{ system }},
-'{{ type }}' --required,
+'{{ type }}' /* required */,
 '{{ subdomain }}',
 '{{ activate }}'
 RETURNING
@@ -526,7 +528,8 @@ lastUpdated,
 priority,
 status,
 system,
-type;
+type
+;
 ```
 </TabItem>
 </Tabs>
@@ -546,7 +549,8 @@ Deletes a policy
 
 ```sql
 DELETE FROM okta.policies.policies
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -569,7 +573,8 @@ Creates a policy or policy rule simulation. The access simulation evaluates poli
 
 ```sql
 EXEC okta.policies.policies.create_policy_simulation 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="clone_policy">
@@ -578,7 +583,8 @@ Clones an existing policy
 
 ```sql
 EXEC okta.policies.policies.clone_policy 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="activate_policy">
@@ -587,7 +593,8 @@ Activates a policy
 
 ```sql
 EXEC okta.policies.policies.activate_policy 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_policy">
@@ -596,7 +603,8 @@ Deactivates a policy
 
 ```sql
 EXEC okta.policies.policies.deactivate_policy 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

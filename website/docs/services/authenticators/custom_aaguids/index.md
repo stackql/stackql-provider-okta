@@ -220,7 +220,8 @@ aaguid,
 attestationRootCertificates,
 authenticatorCharacteristics
 FROM okta.authenticators.custom_aaguids
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_custom_aaguid">
@@ -235,7 +236,8 @@ aaguid,
 attestationRootCertificates,
 authenticatorCharacteristics
 FROM okta.authenticators.custom_aaguids
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -329,7 +331,8 @@ name,
 _links,
 aaguid,
 attestationRootCertificates,
-authenticatorCharacteristics;
+authenticatorCharacteristics
+;
 ```
 </TabItem>
 </Tabs>
@@ -360,7 +363,8 @@ name,
 _links,
 aaguid,
 attestationRootCertificates,
-authenticatorCharacteristics;
+authenticatorCharacteristics
+;
 ```
 </TabItem>
 </Tabs>
@@ -380,7 +384,8 @@ Deletes a custom AAGUID<br /><br />You can only delete custom AAGUIDs that an ad
 
 ```sql
 DELETE FROM okta.authenticators.custom_aaguids
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

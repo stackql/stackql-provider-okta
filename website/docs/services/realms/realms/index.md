@@ -254,7 +254,8 @@ AND limit = '{{ limit }}'
 AND after = '{{ after }}'
 AND search = '{{ search }}'
 AND sortBy = '{{ sortBy }}'
-AND sortOrder = '{{ sortOrder }}';
+AND sortOrder = '{{ sortOrder }}'
+;
 ```
 </TabItem>
 <TabItem value="get_realm">
@@ -270,7 +271,8 @@ isDefault,
 lastUpdated,
 profile
 FROM okta.realms.realms
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -347,7 +349,8 @@ _links,
 created,
 isDefault,
 lastUpdated,
-profile;
+profile
+;
 ```
 </TabItem>
 </Tabs>
@@ -367,7 +370,8 @@ Deletes a realm permanently. This operation can only be performed after disassoc
 
 ```sql
 DELETE FROM okta.realms.realms
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

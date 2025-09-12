@@ -228,7 +228,8 @@ metadata,
 platform,
 status
 FROM okta.device_integrations.device_integrations
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_device_integration">
@@ -245,7 +246,8 @@ metadata,
 platform,
 status
 FROM okta.device_integrations.device_integrations
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -266,7 +268,8 @@ Activates a device integration and populates the related configurations by `devi
 
 ```sql
 EXEC okta.device_integrations.device_integrations.activate_device_integration 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_device_integration">
@@ -275,7 +278,8 @@ Deactivates a device integration by `deviceIntegrationId`
 
 ```sql
 EXEC okta.device_integrations.device_integrations.deactivate_device_integration 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

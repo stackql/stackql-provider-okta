@@ -248,7 +248,8 @@ WHERE subdomain = '{{ subdomain }}' -- required
 AND q = '{{ q }}'
 AND after = '{{ after }}'
 AND limit = '{{ limit }}'
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 <TabItem value="get_application_group_assignment">
@@ -265,7 +266,8 @@ priority,
 profile
 FROM okta.apps.group_assignments
 WHERE subdomain = '{{ subdomain }}' -- required
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -295,7 +297,8 @@ _embedded,
 _links,
 lastUpdated,
 priority,
-profile;
+profile
+;
 ```
 </TabItem>
 </Tabs>
@@ -326,7 +329,8 @@ _embedded,
 _links,
 lastUpdated,
 priority,
-profile;
+profile
+;
 ```
 </TabItem>
 </Tabs>
@@ -346,7 +350,8 @@ Unassigns a Group from an app
 
 ```sql
 DELETE FROM okta.apps.group_assignments
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

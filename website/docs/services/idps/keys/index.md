@@ -280,7 +280,8 @@ x5t#S256
 FROM okta.idps.keys
 WHERE subdomain = '{{ subdomain }}' -- required
 AND after = '{{ after }}'
-AND limit = '{{ limit }}';
+AND limit = '{{ limit }}'
+;
 ```
 </TabItem>
 <TabItem value="get_identity_provider_key">
@@ -300,7 +301,8 @@ use,
 x5c,
 x5t#S256
 FROM okta.idps.keys
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -325,7 +327,7 @@ data__x5c,
 subdomain
 )
 SELECT 
-'{{ x5c }}' --required,
+'{{ x5c }}' /* required */,
 '{{ subdomain }}'
 RETURNING
 created,
@@ -394,7 +396,8 @@ lastUpdated,
 n,
 use,
 x5c,
-x5t#S256;
+x5t#S256
+;
 ```
 </TabItem>
 </Tabs>
@@ -414,7 +417,8 @@ Deletes a specific identity provider (IdP) key credential by `kid` if it isn't c
 
 ```sql
 DELETE FROM okta.idps.keys
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

@@ -289,7 +289,8 @@ WHERE subdomain = '{{ subdomain }}' -- required
 AND limit = '{{ limit }}'
 AND after = '{{ after }}'
 AND search = '{{ search }}'
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 <TabItem value="get_group_rule">
@@ -308,7 +309,8 @@ status,
 type
 FROM okta.groups.rules
 WHERE subdomain = '{{ subdomain }}' -- required
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -415,7 +417,8 @@ conditions,
 created,
 lastUpdated,
 status,
-type;
+type
+;
 ```
 </TabItem>
 </Tabs>
@@ -436,7 +439,8 @@ Deletes a specific group rule by `groupRuleId`
 ```sql
 DELETE FROM okta.groups.rules
 WHERE subdomain = '{{ subdomain }}' --required
-AND removeUsers = '{{ removeUsers }}';
+AND removeUsers = '{{ removeUsers }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -457,7 +461,8 @@ Activates a specific group rule by ID from your org
 
 ```sql
 EXEC okta.groups.rules.activate_group_rule 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_group_rule">
@@ -466,7 +471,8 @@ Deactivates a specific group rule by ID from your org
 
 ```sql
 EXEC okta.groups.rules.deactivate_group_rule 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

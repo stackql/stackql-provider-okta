@@ -293,7 +293,8 @@ status,
 system,
 type
 FROM okta.authorizationservers.policies
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_authorization_server_policy">
@@ -314,7 +315,8 @@ status,
 system,
 type
 FROM okta.authorizationservers.policies
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -459,7 +461,8 @@ lastUpdated,
 priority,
 status,
 system,
-type;
+type
+;
 ```
 </TabItem>
 </Tabs>
@@ -479,7 +482,8 @@ Deletes a policy
 
 ```sql
 DELETE FROM okta.authorizationservers.policies
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -500,7 +504,8 @@ Activates an authorization server policy
 
 ```sql
 EXEC okta.authorizationservers.policies.activate_authorization_server_policy 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 <TabItem value="deactivate_authorization_server_policy">
@@ -509,7 +514,8 @@ Deactivates an authorization server policy
 
 ```sql
 EXEC okta.authorizationservers.policies.deactivate_authorization_server_policy 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

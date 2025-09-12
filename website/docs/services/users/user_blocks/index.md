@@ -126,7 +126,8 @@ SELECT
 appliesTo,
 type
 FROM okta.users.user_blocks
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

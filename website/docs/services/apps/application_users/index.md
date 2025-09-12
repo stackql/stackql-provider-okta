@@ -242,7 +242,7 @@ The following methods are available for this resource:
     <td><CopyableCode code="insert" /></td>
     <td><a href="#parameter-subdomain"><code>subdomain</code></a>, <a href="#parameter-data__id"><code>data__id</code></a></td>
     <td></td>
-    <td>Assigns a user to an app for:<br /><br />  * SSO only&lt;br&gt;<br />    Assignments to SSO apps typically don't include a user profile.<br />    However, if your SSO app requires a profile but doesn't have provisioning enabled, you can add profile attributes in the request body.<br /><br />  * SSO and provisioning&lt;br&gt;<br />    Assignments to SSO and provisioning apps typically include credentials and an app-specific profile.<br />    Profile mappings defined for the app are applied first before applying any profile properties that are specified in the request body.<br />    &gt; **Notes:**<br />    &gt; * When Universal Directory is enabled, you can only specify profile properties that aren't defined in profile mappings.<br />    &gt; * Omit mapped properties during assignment to minimize assignment errors.</td>
+    <td>Assigns a user to an app for:<br /><br />  * SSO only<br /><br />    Assignments to SSO apps typically don't include a user profile.<br />    However, if your SSO app requires a profile but doesn't have provisioning enabled, you can add profile attributes in the request body.<br /><br />  * SSO and provisioning<br /><br />    Assignments to SSO and provisioning apps typically include credentials and an app-specific profile.<br />    Profile mappings defined for the app are applied first before applying any profile properties that are specified in the request body.<br />    &gt; **Notes:**<br />    &gt; * When Universal Directory is enabled, you can only specify profile properties that aren't defined in profile mappings.<br />    &gt; * Omit mapped properties during assignment to minimize assignment errors.</td>
 </tr>
 <tr>
     <td><a href="#update_application_user"><CopyableCode code="update_application_user" /></a></td>
@@ -341,7 +341,8 @@ WHERE subdomain = '{{ subdomain }}' -- required
 AND after = '{{ after }}'
 AND limit = '{{ limit }}'
 AND q = '{{ q }}'
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 <TabItem value="get_application_user">
@@ -366,7 +367,8 @@ statusChanged,
 syncState
 FROM okta.apps.application_users
 WHERE subdomain = '{{ subdomain }}' -- required
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -383,7 +385,7 @@ AND expand = '{{ expand }}';
 >
 <TabItem value="assign_user_to_application">
 
-Assigns a user to an app for:<br /><br />  * SSO only&lt;br&gt;<br />    Assignments to SSO apps typically don't include a user profile.<br />    However, if your SSO app requires a profile but doesn't have provisioning enabled, you can add profile attributes in the request body.<br /><br />  * SSO and provisioning&lt;br&gt;<br />    Assignments to SSO and provisioning apps typically include credentials and an app-specific profile.<br />    Profile mappings defined for the app are applied first before applying any profile properties that are specified in the request body.<br />    &gt; **Notes:**<br />    &gt; * When Universal Directory is enabled, you can only specify profile properties that aren't defined in profile mappings.<br />    &gt; * Omit mapped properties during assignment to minimize assignment errors.
+Assigns a user to an app for:<br /><br />  * SSO only<br /><br />    Assignments to SSO apps typically don't include a user profile.<br />    However, if your SSO app requires a profile but doesn't have provisioning enabled, you can add profile attributes in the request body.<br /><br />  * SSO and provisioning<br /><br />    Assignments to SSO and provisioning apps typically include credentials and an app-specific profile.<br />    Profile mappings defined for the app are applied first before applying any profile properties that are specified in the request body.<br />    &gt; **Notes:**<br />    &gt; * When Universal Directory is enabled, you can only specify profile properties that aren't defined in profile mappings.<br />    &gt; * Omit mapped properties during assignment to minimize assignment errors.
 
 ```sql
 INSERT INTO okta.apps.application_users (
@@ -395,7 +397,7 @@ subdomain
 )
 SELECT 
 '{{ credentials }}',
-'{{ id }}' --required,
+'{{ id }}' /* required */,
 '{{ profile }}',
 '{{ scope }}',
 '{{ subdomain }}'
@@ -488,7 +490,8 @@ profile,
 scope,
 status,
 statusChanged,
-syncState;
+syncState
+;
 ```
 </TabItem>
 </Tabs>
@@ -509,7 +512,8 @@ Unassigns a user from an app<br /><br />For directories like Active Directory an
 ```sql
 DELETE FROM okta.apps.application_users
 WHERE subdomain = '{{ subdomain }}' --required
-AND sendEmail = '{{ sendEmail }}';
+AND sendEmail = '{{ sendEmail }}'
+;
 ```
 </TabItem>
 </Tabs>

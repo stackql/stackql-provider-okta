@@ -192,7 +192,8 @@ WHERE subdomain = '{{ subdomain }}' -- required
 AND after = '{{ after }}'
 AND limit = '{{ limit }}'
 AND sourceId = '{{ sourceId }}'
-AND targetId = '{{ targetId }}';
+AND targetId = '{{ targetId }}'
+;
 ```
 </TabItem>
 <TabItem value="get_profile_mapping">
@@ -203,7 +204,8 @@ Retrieves a single profile mapping referenced by its ID
 SELECT
 *
 FROM okta.mappings.profile_mappings
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -227,7 +229,8 @@ SET
 data__properties = '{{ properties }}'
 WHERE 
 subdomain = '{{ subdomain }}' --required
-AND data__properties = '{{ properties }}' --required;
+AND data__properties = '{{ properties }}' --required
+;
 ```
 </TabItem>
 </Tabs>

@@ -138,7 +138,8 @@ caseNumber,
 expiration,
 support
 FROM okta.org.support_settings
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

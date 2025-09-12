@@ -127,7 +127,8 @@ Retrieves the currently configured threshold for warning notifications when the 
 SELECT
 warningThreshold
 FROM okta.rate_limit_settings.warning_thresholds
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -153,7 +154,8 @@ WHERE
 subdomain = '{{ subdomain }}' --required
 AND data__warningThreshold = '{{ warningThreshold }}' --required
 RETURNING
-warningThreshold;
+warningThreshold
+;
 ```
 </TabItem>
 </Tabs>

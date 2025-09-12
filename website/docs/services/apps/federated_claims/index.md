@@ -198,7 +198,8 @@ created,
 expression,
 lastUpdated
 FROM okta.apps.federated_claims
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_federated_claim">
@@ -210,7 +211,8 @@ SELECT
 name,
 expression
 FROM okta.apps.federated_claims
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -296,7 +298,8 @@ id,
 name,
 created,
 expression,
-lastUpdated;
+lastUpdated
+;
 ```
 </TabItem>
 </Tabs>
@@ -316,7 +319,8 @@ Deletes a federated claim by `claimId`
 
 ```sql
 DELETE FROM okta.apps.federated_claims
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

@@ -127,7 +127,8 @@ Lists all Okta Support cases that the requesting principal has permission to vie
 SELECT
 supportCases
 FROM okta.org.support_cases
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -156,7 +157,8 @@ RETURNING
 caseNumber,
 impersonation,
 selfAssigned,
-subject;
+subject
+;
 ```
 </TabItem>
 </Tabs>

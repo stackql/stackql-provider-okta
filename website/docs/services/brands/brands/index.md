@@ -285,7 +285,8 @@ WHERE subdomain = '{{ subdomain }}' -- required
 AND expand = '{{ expand }}'
 AND after = '{{ after }}'
 AND limit = '{{ limit }}'
-AND q = '{{ q }}';
+AND q = '{{ q }}'
+;
 ```
 </TabItem>
 <TabItem value="get_brand">
@@ -305,7 +306,8 @@ locale,
 removePoweredByOkta
 FROM okta.brands.brands
 WHERE subdomain = '{{ subdomain }}' -- required
-AND expand = '{{ expand }}';
+AND expand = '{{ expand }}'
+;
 ```
 </TabItem>
 </Tabs>
@@ -330,7 +332,7 @@ data__name,
 subdomain
 )
 SELECT 
-'{{ name }}' --required,
+'{{ name }}' /* required */,
 '{{ subdomain }}'
 RETURNING
 id,
@@ -398,7 +400,8 @@ defaultApp,
 emailDomainId,
 isDefault,
 locale,
-removePoweredByOkta;
+removePoweredByOkta
+;
 ```
 </TabItem>
 </Tabs>
@@ -418,7 +421,8 @@ Deletes a brand by `brandId`
 
 ```sql
 DELETE FROM okta.brands.brands
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

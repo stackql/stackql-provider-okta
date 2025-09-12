@@ -134,7 +134,8 @@ _links,
 body,
 subject
 FROM okta.brands.customization_preview
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

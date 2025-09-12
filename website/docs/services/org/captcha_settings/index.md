@@ -146,7 +146,8 @@ _links,
 captchaId,
 enabledPages
 FROM okta.org.captcha_settings
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -174,7 +175,8 @@ subdomain = '{{ subdomain }}' --required
 RETURNING
 _links,
 captchaId,
-enabledPages;
+enabledPages
+;
 ```
 </TabItem>
 </Tabs>
@@ -194,7 +196,8 @@ Deletes the CAPTCHA settings object for your organization
 
 ```sql
 DELETE FROM okta.org.captcha_settings
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

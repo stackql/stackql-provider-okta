@@ -133,7 +133,8 @@ SELECT
 sessionIdleTimeoutMinutes,
 sessionMaxLifetimeMinutes
 FROM okta.first_party_app_settings.first_party_app_settings
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -160,7 +161,8 @@ WHERE
 subdomain = '{{ subdomain }}' --required
 RETURNING
 sessionIdleTimeoutMinutes,
-sessionMaxLifetimeMinutes;
+sessionMaxLifetimeMinutes
+;
 ```
 </TabItem>
 </Tabs>

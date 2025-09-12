@@ -256,7 +256,8 @@ properties,
 type
 FROM okta.integrations.instances
 WHERE subdomain = '{{ subdomain }}' -- required
-AND after = '{{ after }}';
+AND after = '{{ after }}'
+;
 ```
 </TabItem>
 <TabItem value="get_api_service_integration_instance">
@@ -275,7 +276,8 @@ grantedScopes,
 properties,
 type
 FROM okta.integrations.instances
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -302,9 +304,9 @@ data__type,
 subdomain
 )
 SELECT 
-'{{ grantedScopes }}' --required,
+'{{ grantedScopes }}' /* required */,
 '{{ properties }}',
-'{{ type }}' --required,
+'{{ type }}' /* required */,
 '{{ subdomain }}'
 RETURNING
 id,
@@ -363,7 +365,8 @@ Deletes an API Service Integration instance by `id`. This operation also revokes
 
 ```sql
 DELETE FROM okta.integrations.instances
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

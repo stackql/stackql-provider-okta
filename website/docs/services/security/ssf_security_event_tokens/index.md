@@ -94,7 +94,8 @@ Publishes a Security Event Token (SET) sent by a Security Events Provider. After
 
 ```sql
 EXEC okta.security.ssf_security_event_tokens.publish_security_event_tokens 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

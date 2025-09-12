@@ -150,7 +150,8 @@ token,
 tokenAuthScheme,
 tokenType
 FROM okta.idps.social_auth_tokens
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

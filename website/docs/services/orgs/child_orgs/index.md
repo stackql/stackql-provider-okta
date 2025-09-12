@@ -103,10 +103,10 @@ data__website,
 subdomain
 )
 SELECT 
-'{{ admin }}' --required,
-'{{ edition }}' --required,
-'{{ name }}' --required,
-'{{ subdomain }}' --required,
+'{{ admin }}' /* required */,
+'{{ edition }}' /* required */,
+'{{ name }}' /* required */,
+'{{ subdomain }}' /* required */,
 '{{ website }}',
 '{{ subdomain }}'
 RETURNING

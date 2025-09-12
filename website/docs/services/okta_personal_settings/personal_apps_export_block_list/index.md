@@ -120,7 +120,8 @@ Lists all blocked email domains which are excluded from app migration
 SELECT
 domains
 FROM okta.okta_personal_settings.personal_apps_export_block_list
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>

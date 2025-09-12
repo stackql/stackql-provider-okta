@@ -133,7 +133,8 @@ SELECT
 defaultMode,
 useCaseModeOverrides
 FROM okta.rate_limit_settings.rate_limit_settings_per_client
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -161,7 +162,8 @@ subdomain = '{{ subdomain }}' --required
 AND data__defaultMode = '{{ defaultMode }}' --required
 RETURNING
 defaultMode,
-useCaseModeOverrides;
+useCaseModeOverrides
+;
 ```
 </TabItem>
 </Tabs>

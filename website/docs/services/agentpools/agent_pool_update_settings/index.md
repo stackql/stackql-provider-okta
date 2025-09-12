@@ -163,7 +163,8 @@ poolId,
 poolName,
 releaseChannel
 FROM okta.agentpools.agent_pool_update_settings
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -199,7 +200,8 @@ latestVersion,
 minimalSupportedVersion,
 poolId,
 poolName,
-releaseChannel;
+releaseChannel
+;
 ```
 </TabItem>
 </Tabs>

@@ -133,7 +133,8 @@ SELECT
 _links,
 userId
 FROM okta.org.contacts
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -159,7 +160,8 @@ WHERE
 subdomain = '{{ subdomain }}' --required
 RETURNING
 _links,
-userId;
+userId
+;
 ```
 </TabItem>
 </Tabs>

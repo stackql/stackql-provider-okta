@@ -187,7 +187,8 @@ SELECT
 displayName,
 userName
 FROM okta.email_domains.email_domains
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 <TabItem value="get_email_domain">
@@ -199,7 +200,8 @@ SELECT
 displayName,
 userName
 FROM okta.email_domains.email_domains
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -225,8 +227,8 @@ data__userName,
 subdomain
 )
 SELECT 
-'{{ displayName }}' --required,
-'{{ userName }}' --required,
+'{{ displayName }}' /* required */,
+'{{ userName }}' /* required */,
 '{{ subdomain }}'
 RETURNING
 displayName,
@@ -275,7 +277,8 @@ AND data__displayName = '{{ displayName }}' --required
 AND data__userName = '{{ userName }}' --required
 RETURNING
 displayName,
-userName;
+userName
+;
 ```
 </TabItem>
 </Tabs>
@@ -295,7 +298,8 @@ Deletes an Email Domain by `emailDomainId`
 
 ```sql
 DELETE FROM okta.email_domains.email_domains
-WHERE subdomain = '{{ subdomain }}' --required;
+WHERE subdomain = '{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>
@@ -315,7 +319,8 @@ Verifies an Email Domain by `emailDomainId`
 
 ```sql
 EXEC okta.email_domains.email_domains.verify_email_domain 
-@subdomain='{{ subdomain }}' --required;
+@subdomain='{{ subdomain }}' --required
+;
 ```
 </TabItem>
 </Tabs>

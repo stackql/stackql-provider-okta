@@ -68,7 +68,7 @@ Successfully retrieved the customized sign-in page.
 <tr>
     <td><CopyableCode code="widgetVersion" /></td>
     <td><code>string</code></td>
-    <td>The version specified as a [Semantic Version](https://semver.org/). (pattern: ^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$)</td>
+    <td>The version specified as a [Semantic Version](https://semver.org/). (pattern: <code>^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$</code>)</td>
 </tr>
 </tbody>
 </table>
@@ -147,7 +147,8 @@ pageContent,
 widgetCustomizations,
 widgetVersion
 FROM okta.brands.customized_sign_in_page
-WHERE subdomain = '{{ subdomain }}' -- required;
+WHERE subdomain = '{{ subdomain }}' -- required
+;
 ```
 </TabItem>
 </Tabs>
@@ -178,7 +179,8 @@ RETURNING
 contentSecurityPolicySetting,
 pageContent,
 widgetCustomizations,
-widgetVersion;
+widgetVersion
+;
 ```
 </TabItem>
 </Tabs>
